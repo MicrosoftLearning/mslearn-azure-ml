@@ -1,13 +1,6 @@
-#! /bin/sh
+#! /usr/bin/sh
 
 # Create workspace
-echo "Remove any ML CLI extensions to avoid conflicts:"
-az extension remove -n azure-cli-ml
-az extension remove -n ml
-
-echo "Install the Azure Machine Learning extension:"
-az extension add -n ml -y
-
 echo "Create a resource group:"
 az group create --name "rg-dp100-labs" --location "eastus"
 
