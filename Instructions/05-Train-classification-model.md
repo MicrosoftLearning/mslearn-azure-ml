@@ -36,7 +36,7 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
     cd azure-ml-labs/Labs/05
     ./setup.sh
     ```
-1. When asked, enter your initials to name your compute instance. Any random string of letters will do (not more than 5 letters).
+1. When asked, **enter your initials to name your compute instance**. Any random string of letters will do (not more than 5 letters).
 1. Wait for the script to complete - this typically takes around 5-10 minutes. 
 
 ## Clone the lab materials
@@ -76,17 +76,8 @@ Note that the Automated Machine Learning jobs contains child jobs, which represe
 
 ## Delete Azure resources
 
-When you finish exploring Azure Machine Learning, you should **either**:
-- Minimize costs by stopping the compute instance if you want to reuse the workspace for other exercises.
-- Delete all Azure resources you created.
+When you finish exploring Azure Machine Learning, you should delete the resources you've created to avoid unnecessary Azure costs.
 
-### Minimize costs and stop the compute instance
-1. In Azure Machine Learning studio, on the **Compute** page, select your compute instance.
-2. Click **Stop** to stop your compute instance. When it has shut down, its status will change to **Stopped**.
-
-> **Note**: Stopping your compute ensures your subscription won't be charged for compute resources. You will however be charged a small amount for data storage as long as the Azure Machine Learning workspace exists in your subscription.
-
-### Delete all Azure resources you created
 1. Close the Azure Machine Learning Studio tab and return to the Azure portal.
 1. In the Azure portal, on the **Home** page, select **Resource groups**.
 1. Select the **rg-dp100-labs** resource group.
