@@ -41,7 +41,7 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
 
 ## Clone the lab materials
 
-When you've created the workspace and necessary compute resources, you can open the Azure Machine Learning Studio and clone the lab materials in to the workspace. 
+When you've created the workspace and necessary compute resources, you can open the Azure Machine Learning Studio and clone the lab materials into the workspace. 
 
 1. In the Azure portal, navigate to the Azure Machine Learning workspace named `mlw-dp100-labs`.
 1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning Studio.
@@ -54,15 +54,15 @@ When you've created the workspace and necessary compute resources, you can open 
     ```
 1. Run the following command to clone a Git repository containing a notebook, data, and other files to your workspace:
     ```
-    git clone https://github.com/MicrosoftLearning/dp100-auto-ml.git dp100-auto-ml
+    git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ``` 
-1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **/users/*your-user-name*/dp100-auto-ml** folder has been created. 
+1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **/users/*your-user-name*/azure-ml-labs** folder has been created. 
 
 ## Train a classification model with automated machine learning
 
 Now that you have all the necessary resources, you can run the notebook to configure and submit the Automated Machine Learning job.
 
-1. Open the **Labs/Run-training-script.ipynb** notebook.
+1. Open the **Labs/05/Classification with Automated Machine Learning.ipynb** notebook.
 1. Run all cells in the notebook. 
 
 A new job will be created in the Azure Machine Learning workspace. The job tracks the inputs defined in the job configuration, the data asset used, and the outputs like metrics to evaluate the models.
