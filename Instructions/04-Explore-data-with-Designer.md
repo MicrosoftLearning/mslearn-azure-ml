@@ -1,9 +1,9 @@
 ---
 lab:
-    title: 'Train a model with the Azure Machine Learning Designer'
+    title: 'Ingest and explore data with the Azure Machine Learning Designer'
 ---
 
-# Train a model with the Azure Machine Learning Designer
+# Ingest and explore data with the Azure Machine Learning Designer
 
 Determining the right algorithm and preprocessing transformations for model training can involve a lot of guesswork and experimentation.
 
