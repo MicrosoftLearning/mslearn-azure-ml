@@ -5,9 +5,9 @@ lab:
 
 # Work with compute resources in Azure Machine Learning
 
-Determining the right algorithm and preprocessing transformations for model training can involve a lot of guesswork and experimentation.
+One of the key benefits of the cloud is the ability to use scalable, on-demand compute resources for cost-effective processing of large data.
 
-In this exercise, you'll use automated machine learning to determine the optimal algorithm and preprocessing steps for a model by performing multiple training runs in parallel.
+In this exercise, you'll learn how to use cloud compute in Azure Machine Learning to run experiments and production code at scale.
 
 ## Before you start
 
