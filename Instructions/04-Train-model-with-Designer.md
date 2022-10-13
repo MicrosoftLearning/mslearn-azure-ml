@@ -5,9 +5,9 @@ lab:
 
 # Train a model with the Azure Machine Learning Designer
 
-Determining the right algorithm and preprocessing transformations for model training can involve a lot of guesswork and experimentation.
+Azure Machine Learning Designer provides a drag and drop interface with which you can define a workflow. You can create a workflow to train a model, testing and comparing multiple algorithms with ease.
 
-In this exercise, you'll use automated machine learning to determine the optimal algorithm and preprocessing steps for a model by performing multiple training runs in parallel.
+In this exercise, you'll use the Designer to quickly train and compare two classification algorithms.
 
 ## Before you start
 
@@ -19,9 +19,9 @@ An Azure Machine Learning *workspace* provides a central place for managing all 
 
 You'll use a Shell script which uses the Azure CLI to provision the workspace and necessary resources. Next, you'll use the Designer in the Azure Machine Learning Studio to train and compare models.
 
-### Create the workspace and compute resources
+### Create the workspace and compute cluster
 
-To create the Azure Machine Learning workspace, a compute cluster, and a data assets, you'll use the Azure CLI. All necessary commands are grouped in a Shell script for you to execute.
+To create the Azure Machine Learning workspace and a compute cluster, you'll use the Azure CLI. All necessary commands are grouped in a Shell script for you to execute.
 1. In a browser, open the Azure portal at [http://portal.azure.com](https://portal.azure.com/?azure-portal=true), signing in with your Microsoft account.
 1. Select the [>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
 1. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
@@ -36,12 +36,11 @@ To create the Azure Machine Learning workspace, a compute cluster, and a data as
     cd azure-ml-labs/Labs/04
     ./setup.sh
     ```
-1. When asked, **enter your initials to name your compute instance**. Any random string of letters will do (not more than 5 letters).
 1. Wait for the script to complete - this typically takes around 5-10 minutes. 
 
 ## Create a new pipeline
 
-When you've created the workspace and necessary compute resources, you can open the Azure Machine Learning Studio and create a training pipeline with the Designer. 
+When you've created the workspace and necessary compute cluster, you can open the Azure Machine Learning Studio and create a training pipeline with the Designer. 
 
 1. In the Azure portal, navigate to the Azure Machine Learning workspace named `mlw-dp100-labs`.
 1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning Studio.
