@@ -111,7 +111,7 @@ When you've created the the compute instance, you can run notebooks on it. You m
 
 ## Create a compute cluster
 
-Notebooks are ideal for development or iterative work during experimentation. When experimenting, you'll want to run notebooks on a compute instance to quickly test and review code. When moving to production, you'll want to run scripts on a compute cluster. You'll create a compute cluster with the Python SDK.
+Notebooks are ideal for development or iterative work during experimentation. When experimenting, you'll want to run notebooks on a compute instance to quickly test and review code. When moving to production, you'll want to run scripts on a compute cluster. You'll create a compute cluster with the Python SDK, and then use it to run a script as a job.
 
 1. Open the **Labs/03/Work with Compute.ipynb** notebook.
 1. Run all cells in the notebook.
