@@ -90,7 +90,7 @@ In this exercise, you'll create a compute instance with the following settings:
 
 <br>
 <details>
-<summary>Click to troubleshoot the error: <b>A compute instance with this name already exists.</b></summary>
+<summary><mark>Click to troubleshoot the error: <b>A compute instance with this name already exists.</b></mark></summary>
 
 If the following message appears in the Azure Cloud Shell:
 
@@ -106,7 +106,6 @@ az ml compute delete "&lt;your-compute-instance-name&gt;"
 
 And rerun the command to create a compute instance with a different name for your compute.
 </details>
-
 
 ## Create a compute cluster with the Azure CLI
 
@@ -124,7 +123,7 @@ You'll create a compute cluster with the following settings:
 
 1. Replace "XX" with your initials in the command below. Then, use the command to create a compute cluster in your workspace.
     ```azurecli
-    az ml compute create --name "vm-cluster-XX" --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute -w mlw-dp100-labs -g rg-dp100-labs
+    az ml compute create --name "aml-cluster-XX" --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute -w mlw-dp100-labs -g rg-dp100-labs
     ```
 
 ## Configure your work station with the Azure Machine Learning Studio
