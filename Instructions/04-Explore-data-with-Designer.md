@@ -5,9 +5,7 @@ lab:
 
 # Ingest and explore data with the Azure Machine Learning Designer
 
-Azure Machine Learning Designer provides a drag and drop interface with which you can define a workflow. You can create a workflow by combining components.
-
-In this exercise, you'll use the Designer to ingest, explore, and prepare data for machine learning workloads.
+INTRODUCTION HERE
 
 ## Before you start
 
@@ -17,7 +15,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 An Azure Machine Learning *workspace* provides a central place for managing all resources and assets you need to train and manage your models. You can interact with the Azure Machine Learning workspace through the Studio, Python SDK, and Azure CLI. 
 
-You'll use the Azure CLI to provision the workspace and necessary compute, and you'll use the Python SDK to train a classification model with Automated Machine Learning.
+You'll use a Shell script which uses the Azure CLI to provision the workspace and necessary resources. Next, you'll use the Designer in the Azure Machine Learning Studio to train and compare models.
 
 ### Create the workspace and compute cluster
 
@@ -38,49 +36,14 @@ To create the Azure Machine Learning workspace and a compute cluster, you'll use
     ```
 1. Wait for the script to complete - this typically takes around 5-10 minutes. 
 
-### Create a compute instance
-
-You'll train multiple models with Automated Machine Learning and compare them to decide which is the *best* (according to your primary metric). To train multiple models at the same time, you'll need a compute cluster with multiple nodes.
-
-1. Use the command to create a compute cluster in your workspace.
-
-
-## Clone the lab materials
-
-When you've created the workspace and necessary compute resources, you can open the Azure Machine Learning Studio and clone the lab materials. 
-
-1. In the Azure portal, navigate to the Azure Machine Learning workspace named `mlw-dp100-labs`.
-1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning Studio.
-1. Within the Azure Machine Learning Studio, navigate to the **Compute** page and verify that the compute instance and cluster you created in the previous section exist. The compute instance should be running, the cluster should be idle and have 0 nodes running.
-1. In the **Compute instances** tab, find your compute instance, and select the **Terminal** application.
-1. In the terminal, install the Python SDK on the compute instance by running the following commands in the terminal:
-    ```
-    pip uninstall azure-ai-ml
-    pip install azure-ai-ml
-    ```
-1. Run the following command to clone a Git repository containing a notebook, data, and other files to your workspace:
-    ```
-    git clone https://github.com/MicrosoftLearning/dp100-auto-ml.git dp100-auto-ml
-    ``` 
-1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **/users/*your-user-name*/dp100-auto-ml** folder has been created. 
-
-## Train a computer vision model with Automated Machine Learning
+## Explore Data Explorer
 
 INSTRUCTIONS HERE
 
 ## Delete Azure resources
 
-When you finish exploring Azure Machine Learning, you should **either**:
-- Minimize costs by stopping the compute instance if you want to reuse the workspace for other exercises.
-- Delete all Azure resources you created.
+When you finish exploring Azure Machine Learning, you should delete the resources you've created to avoid unnecessary Azure costs.
 
-### Minimize costs and stop the compute instance
-1. In Azure Machine Learning studio, on the **Compute** page, select your compute instance.
-2. Click **Stop** to stop your compute instance. When it has shut down, its status will change to **Stopped**.
-
-> **Note**: Stopping your compute ensures your subscription won't be charged for compute resources. You will however be charged a small amount for data storage as long as the Azure Machine Learning workspace exists in your subscription.
-
-### Delete all Azure resources you created
 1. Close the Azure Machine Learning Studio tab and return to the Azure portal.
 1. In the Azure portal, on the **Home** page, select **Resource groups**.
 1. Select the **rg-dp100-labs** resource group.

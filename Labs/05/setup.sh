@@ -24,4 +24,4 @@ az ml compute create --name "aml-cluster" --size STANDARD_DS11_V2 --max-instance
 
 # Create data asset
 echo "Create training data asset:"
-az ml data create --type mltable --name "diabetes-training" --path ./data -w mlw-dp100-labs -g rg-dp100-labs
+az ml data create --type mltable --name "diabetes-training" --path ./diabetes-data -w mlw-dp100-labs -g rg-dp100-labs

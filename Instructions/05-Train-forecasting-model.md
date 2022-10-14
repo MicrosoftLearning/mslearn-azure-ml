@@ -17,11 +17,11 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 An Azure Machine Learning *workspace* provides a central place for managing all resources and assets you need to train and manage your models. You can interact with the Azure Machine Learning workspace through the Studio, Python SDK, and Azure CLI. 
 
-You'll use the Azure CLI to provision the workspace and necessary compute, and you'll use the Python SDK to train a classification model with Automated Machine Learning.
+You'll use a Shell script which uses the Azure CLI to provision the workspace and necessary resources. Next, you'll use the Designer in the Azure Machine Learning Studio to train and compare models.
 
-### Create the workspace and compute resources
+### Create the workspace and compute cluster
 
-To create the Azure Machine Learning workspace, a compute instance, and a compute cluster, you'll use the Azure CLI. All necessary commands are grouped in a Shell script for you to execute.
+To create the Azure Machine Learning workspace and a compute cluster, you'll use the Azure CLI. All necessary commands are grouped in a Shell script for you to execute.
 1. In a browser, open the Azure portal at [http://portal.azure.com](https://portal.azure.com/?azure-portal=true), signing in with your Microsoft account.
 1. Select the [>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
 1. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
@@ -36,31 +36,23 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
     cd azure-ml-labs/Labs/05
     ./setup.sh
     ```
-1. When asked, **enter your initials to name your compute instance**. Any random string of letters will do (not more than 5 letters).
 1. Wait for the script to complete - this typically takes around 5-10 minutes. 
 
-## Clone the lab materials
+## Train a forecasting model with automated machine learning
 
-When you've created the workspace and necessary compute resources, you can open the Azure Machine Learning Studio and clone the lab materials into the workspace. 
+Now that you have all the necessary resources, you can run the notebook to configure and submit the Automated Machine Learning job.
 
-1. In the Azure portal, navigate to the Azure Machine Learning workspace named `mlw-dp100-labs`.
-1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning Studio.
-1. Within the Azure Machine Learning Studio, navigate to the **Compute** page and verify that the compute instance and cluster you created in the previous section exist. The compute instance should be running, the cluster should be idle and have 0 nodes running.
-1. In the **Compute instances** tab, find your compute instance, and select the **Terminal** application.
-1. In the terminal, install the Python SDK on the compute instance by running the following commands in the terminal:
-    ```
-    pip uninstall azure-ai-ml
-    pip install azure-ai-ml
-    ```
-1. Run the following command to clone a Git repository containing a notebook, data, and other files to your workspace:
-    ```
-    git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
-    ``` 
-1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **/users/*your-user-name*/azure-ml-labs** folder has been created. 
+1. Open the **Labs/05/Forecasting with Automated Machine Learning.ipynb** notebook.
+1. Run all cells in the notebook. 
 
-## Train a forecasting model with Automated Machine Learning
+A new job will be created in the Azure Machine Learning workspace. The job tracks the inputs defined in the job configuration, the data asset used, and the outputs like metrics to evaluate the models.
 
-INSTRUCTIONS HERE
+Note that the Automated Machine Learning jobs contains child jobs, which represent individual models that have been trained and other tasks needed to execute. 
+
+3. When the Automate Machine Learning job has completed, explore the job details in the Studio:
+    - The **Data guardrails** tab shows whether your training data had any issues.
+    - The **Models** tab will show all models that have been trained.
+    - Select **View explanation** for the best model to understand which features influenced the target value the most.
 
 ## Delete Azure resources
 
