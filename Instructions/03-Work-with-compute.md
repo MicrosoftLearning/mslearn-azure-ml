@@ -79,7 +79,7 @@ To create the compute instance, you can use the Studio, Python SDK, or Azure CLI
 
 <br>
 <details>
-<summary><mark>Click to troubleshoot the error: A compute instance with this name already exists.</mark></summary>
+<summary><mark>Click to troubleshoot the error: <b>A compute instance with this name already exists.</b></mark></summary>
 If the following message appears in the Azure Cloud Shell:
 
 <code>
