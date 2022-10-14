@@ -21,41 +21,67 @@ You'll use the Azure CLI to provision the workspace and necessary compute, and y
 
 ### Create the workspace
 
+To create the Azure Machine Learning workspace, you'll use the Azure CLI. All necessary commands are grouped in a Shell script for you to execute.
 1. In a browser, open the Azure portal at [http://portal.azure.com](https://portal.azure.com/?azure-portal=true), signing in with your Microsoft account.
 1. Select the [>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
 1. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 1. If you are asked to create storage for your cloud shell, check that the correct subscription is specified and select **Create storage**. Wait for the storage to be created.
-1. To avoid any conflicts with previous versions, remove any ML CLI extensions (both version 1 and 2) with this command:
+1. In the terminal, enter the following commands to clone this repo:
+    ```bash
+    rm -r azure-ml-labs -f
+    git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ```
-    az extension remove -n azure-cli-ml
-    az extension remove -n ml
+1. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the `setup.sh` script it contains:
+    ```bash
+    cd azure-ml-labs/Labs/03
+    ./setup.sh
     ```
-1. Install the Azure Machine Learning (v2) extension with the following command:
-    ```
-    az extension add -n ml -y
-    ```
-1. Create a resource group. Choose a location close to you.
-    ```azurecli
-    az group create --name "rg-dp100-labs" --location "eastus"
-    ```
-1. Create a workspace:
-    ```azurecli
-    az ml workspace create --name "mlw-dp100-labs" -g "rg-dp100-labs"
-    ```
-1. Wait for the workspace and its associated resources to be created - this typically takes around 5 minutes. 
+1. Wait for the script to complete - this typically takes around 5-10 minutes. 
 
-### Create a compute instance
+### Create the setup script
 
-You'll use a compute instance to run a Jupyter notebook. From the notebook, you'll submit the automated machine learning job.
+To run notebooks within the Azure Machine Learning workspace, you'll need a compute instance. You can use a setup script to configure the compute instance on creation.
 
-1. Replace "XX" with your initials in the command below. Then, use the command to create a compute instance in your workspace.
-    ```azurecli
-    az ml compute create --name "vm-dev-XX" --size STANDARD_DS11_V2 --type ComputeInstance -w mlw-dp100-labs -g rg-dp100-labs
+1. In the Azure portal, navigate to the Azure Machine Learning workspace named `mlw-dp100-labs`.
+1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning Studio.
+1. Within the Azure Machine Learning Studio, navigate to the **Notebooks** page.
+1. In the **Files** pane, select the &#10753; icon to **Add files**. 
+1. Select **Create new file**.
+1. Verify that the file location is `Users/<your-user-name>`.
+1. Change the file type to `Bash (*.sh)`.
+1. Change the file name to `compute-setup.sh`.
+1. Open the newly created `compute-setup.sh` file and paste the following to its content:
+
+    ```bash
+    #!/bin/bash
+
+    # clone repository
+    git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs-setup
     ```
+
+### Create the compute instance
+
+To create the compute instance, you can use the Studio, Python SDK, or Azure CLI. You'll use the Studio to create the compute instance with the setup script you just created.
+
+1. Navigate to the **Compute** page, using the menu on the left.
+1. In the **Compute instances** tab, select **New**.
+1. Configure (don't create yet) the compute instance with the following settings: 
+    - **Compute name**: *enter a unique name*
+    - **Virtual machine type**: CPU
+    - **Virtual machine size**: Standard_DS11_v2
+1. Select **Next: Advanced settings**.
+1. Select **Add schedule** and configure the schedule to **stop** the compute instance every day at `18:00`. 
+1. Select **Provision with setup script**, and select the `compute-setup.sh` script you created previously.
+    - **Advanced settings**: Note the following settings, but do not select them:
+        - **Enable SSH access**: Unselected *(you can use this to enable direct access to the virtual machine using an SSH client)*
+        - **Enable virtual network**: Unselected *(you would typically use this in an enterprise environment to enhance network security)*
+        - **Assign to another user**: Unselected *(you can use this to assign a compute instance to a data scientist)*
+        - **Provision with setup script**: Unselected *(you can use this to add a script to run on the remote instance when created)*
+1. **Create** the compute instance and wait for it to start and its state to change to **Running**.
 
 <br>
 <details>
-<summary>Click to troubleshoot the error: <span style="background-color: #FF0000"><font color="white">A compute instance with this name already exists.</span></font></summary>
+<summary><mark>Click to troubleshoot the error: A compute instance with this name already exists.</mark></summary>
 If the following message appears in the Azure Cloud Shell:
 
 <code>
