@@ -1,7 +1,4 @@
----
-lab:
-    title: 'Work with tabular data using MLTable data assets'
----
+
 
 # Work with tabular data using MLTable data assets
 

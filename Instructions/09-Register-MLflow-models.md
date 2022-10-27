@@ -1,9 +1,9 @@
 ---
 lab:
-    title: 'Use MLflow to track training jobs'
+    title: 'Register an Mlflow model in Azure Machine Learning'
 ---
 
-# Use MLflow to track training jobs
+# Register an Mlflow model in Azure Machine Learning
 
 MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. MLflow Tracking is a component that logs and tracks your training job metrics, parameters and model artifacts.
 

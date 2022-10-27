@@ -1,7 +1,4 @@
----
-lab:
-    title: 'Classify images Automated Machine Learning'
----
+
 
 # Classify images Automated Machine Learning 
 

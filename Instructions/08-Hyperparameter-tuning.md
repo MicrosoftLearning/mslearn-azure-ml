@@ -1,9 +1,9 @@
 ---
 lab:
-    title: 'Use MLflow to track training jobs'
+    title: 'Perform hyperparameter tuning with Azure Machine Learning pipelines'
 ---
 
-# Use MLflow to track training jobs
+# Perform hyperparameter tuning with Azure Machine Learning pipelines
 
 MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. MLflow Tracking is a component that logs and tracks your training job metrics, parameters and model artifacts.
 

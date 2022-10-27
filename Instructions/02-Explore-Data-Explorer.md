@@ -1,7 +1,4 @@
----
-lab:
-    title: 'Introduction to using Data Explorer'
----
+
 
 # Introduction to using Data Explorer
 

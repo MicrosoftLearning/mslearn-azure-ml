@@ -1,9 +1,9 @@
 ---
 lab:
-    title: 'Run a training script as a command job in Azure Machine Learning'
+    title: 'Run pipelines in Azure Machine Learning'
 ---
 
-# Run a training script as a command job in Azure Machine Learning
+# Run pipelines in Azure Machine Learning
 
 A notebook is ideal for experimentation and development. Once you've developed a machine learning model and it's ready for production, you'll want to train it with a script. You can run a script as a command job. 
 

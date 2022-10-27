@@ -1,9 +1,9 @@
 ---
 lab:
-    title: 'Use MLflow to track training jobs'
+    title: 'Deploy a model to a managed online endpoint'
 ---
 
-# Use MLflow to track training jobs
+# Deploy a model to a managed online endpoint
 
 MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. MLflow Tracking is a component that logs and tracks your training job metrics, parameters and model artifacts.
 
