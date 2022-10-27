@@ -1,7 +1,4 @@
----
-lab:
-    title: 'Assess and evaluate models with the Responsible AI dashboard in notebooks'
----
+
 
 # Assess and evaluate models with the Responsible AI dashboard in notebooks
 

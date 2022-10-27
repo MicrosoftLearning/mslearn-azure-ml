@@ -1,7 +1,4 @@
----
-lab:
-    title: 'Find the best forecasting model with Automated Machine Learning'
----
+
 
 # Find the best forecasting model with Automated Machine Learning 
 

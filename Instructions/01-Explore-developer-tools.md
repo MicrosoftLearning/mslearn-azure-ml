@@ -83,9 +83,9 @@ In this exercise, you'll create a compute instance with the following settings:
 - **Azure Machine Learning workspace name**: mlw-dp100-labs
 - **Resource group**: rg-dp100-labs
 
-1. Replace "XX" with your initials in the command below. Then, use the command to create a compute instance in your workspace.
+1. Replace "XX-XXXX" with your initials and four random numbers in the command below. Then, use the command to create a compute instance in your workspace.
     ```azurecli
-    az ml compute create --name "vm-dev-XX" --size STANDARD_DS11_V2 --type ComputeInstance -w mlw-dp100-labs -g rg-dp100-labs
+    az ml compute create --name "ci-XX-XXXX" --size STANDARD_DS11_V2 --type ComputeInstance -w mlw-dp100-labs -g rg-dp100-labs
     ```
 
 <br>
@@ -114,7 +114,7 @@ Though a compute instance is ideal for development, a compute cluster is better 
 To create a compute cluster, you can use the Azure CLI, similar to creating a compute instance. 
 
 You'll create a compute cluster with the following settings:
-- **Compute name**: *Name of compute cluster. Has to be unique and fewer than 24 characters.*
+- **Compute name**: `aml-cluster`
 - **Virtual machine size**: STANDARD_DS11_V2
 - **Compute type**: AmlCompute *(Creates a compute cluster)*
 - **Maximum instances**: *Maximum number of nodes*
@@ -123,7 +123,7 @@ You'll create a compute cluster with the following settings:
 
 1. Replace "XX" with your initials in the command below. Then, use the command to create a compute cluster in your workspace.
     ```azurecli
-    az ml compute create --name "aml-cluster-XX" --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute -w mlw-dp100-labs -g rg-dp100-labs
+    az ml compute create --name "aml-cluster" --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute -w mlw-dp100-labs -g rg-dp100-labs
     ```
 
 ## Configure your work station with the Azure Machine Learning Studio
@@ -146,11 +146,11 @@ Now that you've verified that the necessary compute has been created, you can us
     ```
 1. Run the following command to clone a Git repository containing a notebook, data, and other files to your workspace:
     ```
-    git clone https://github.com/MicrosoftLearning/dp100-explore-workspace.git dp100-explore-workspace
+    git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ``` 
-1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **/users/*your-user-name*/dp100-explore-workspace** folder has been created. 
+1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **/users/*your-user-name*/azure-ml-labs** folder has been created. 
 1. Expand the folder to find a notebook, a YAML file which defines the environment, and a folder containing the training script and a dataset. Explore all these files to 
-1. Open the **Labs/Run-training-script.ipynb** notebook.
+1. Open the **Labs/Run training script.ipynb** notebook.
 1. Run all cells in the notebook. 
 
 A new job will be created in the Azure Machine Learning workspace. The job tracks the inputs defined in the job configuration, the code used, and the outputs like metrics to evaluate the model.
