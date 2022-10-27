@@ -140,14 +140,18 @@ Now that you've verified that the necessary compute has been created, you can us
 
 1. Select the **Terminal** application for your **compute instance** to launch the terminal.
 1. In the terminal, install the Python SDK on the compute instance by running the following commands in the terminal:
+
     ```
     pip uninstall azure-ai-ml
     pip install azure-ai-ml
     ```
-1. Run the following command to clone a Git repository containing a notebook, data, and other files to your workspace:
+
+1. Run the following command to clone a Git repository containing notebook, data, and other files to your workspace:
+
     ```
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ``` 
+
 1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **/users/*your-user-name*/azure-ml-labs** folder has been created. 
 1. Expand the folder to find a notebook, a YAML file which defines the environment, and a folder containing the training script and a dataset. Explore all these files to 
 1. Open the **Labs/Run training script.ipynb** notebook.

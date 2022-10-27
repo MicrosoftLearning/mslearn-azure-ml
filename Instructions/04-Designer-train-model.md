@@ -27,15 +27,19 @@ To create the Azure Machine Learning workspace and a compute cluster, you'll use
 1. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 1. If you are asked to create storage for your cloud shell, check that the correct subscription is specified and select **Create storage**. Wait for the storage to be created.
 1. In the terminal, enter the following commands to clone this repo:
+
     ```bash
     rm -r azure-ml-labs -f
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ```
+
 1. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the `setup.sh` script it contains:
+
     ```bash
     cd azure-ml-labs/Labs/04
     ./setup.sh
     ```
+
 1. Wait for the script to complete - this typically takes around 5-10 minutes. 
 
 ## Create a new pipeline

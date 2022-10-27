@@ -23,16 +23,31 @@ To create the Azure Machine Learning workspace, you'll use the Azure CLI. All ne
 1. Select the [>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
 1. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 1. If you are asked to create storage for your cloud shell, check that the correct subscription is specified and select **Create storage**. Wait for the storage to be created.
-1. In the terminal, enter the following commands to clone this repo:
+1. To avoid any conflicts with previous versions, remove any ML CLI extensions (both version 1 and 2) by running this command in the terminal:
+
     ```bash
-    rm -r azure-ml-labs -f
-    git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
+    az extension remove -n azure-cli-ml
+    az extension remove -n ml
     ```
-1. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the `setup.sh` script it contains:
+
+1. Install the Azure Machine Learning (v2) extension with the following command:
+    
     ```bash
-    cd azure-ml-labs/Labs/03
-    ./setup.sh
+    az extension add -n ml -y
     ```
+
+1. Create a resource group. Choose a location close to you.
+
+    ```azurecli
+    az group create --name "rg-dp100-labs" --location "eastus"
+    ```
+
+1. Create a workspace:
+
+    ```azurecli
+    az ml workspace create --name "mlw-dp100-labs" -g "rg-dp100-labs"
+    ```
+
 1. Wait for the script to complete - this typically takes around 5-10 minutes. 
 
 ## Create the compute setup script
@@ -107,13 +122,14 @@ When you've created the the compute instance, you can run notebooks on it. You m
     pip uninstall azure-ai-ml
     pip install azure-ai-ml
     ```
+
 1. When the packages are installed, you can close the tab to terminate the terminal. 
 
 ## Create a compute cluster
 
 Notebooks are ideal for development or iterative work during experimentation. When experimenting, you'll want to run notebooks on a compute instance to quickly test and review code. When moving to production, you'll want to run scripts on a compute cluster. You'll create a compute cluster with the Python SDK, and then use it to run a script as a job.
 
-1. Open the **Labs/03/Work with Compute.ipynb** notebook.
+1. Open the **Labs/03/Work with compute.ipynb** notebook.
 1. Run all cells in the notebook.
 
 ## Delete Azure resources

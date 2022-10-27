@@ -58,7 +58,7 @@ When you've created the workspace and necessary compute resources, you can open 
     pip install azure-ai-ml
     ```
 
-1. Run the following command to clone a Git repository containing a notebook, data, and other files to your workspace:
+1. Run the following command to clone a Git repository containing notebooks, data, and other files to your workspace:
     
     ```
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
