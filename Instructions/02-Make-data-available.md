@@ -63,9 +63,10 @@ To create a datastore in the Azure Machine Learning workspace, you need to provi
 1. Note that two keys are provided: key1 and key2. Each key has the same functionality. 
 1. Select **Show** for the **Key** field under **key1**.
 1. Copy the value of the **Key** field to a notepad. You'll need to paste this value into the notebook later. 
+1. Copy the name of your storage account from the top of the page. The name should start with **mlwdp100storage...** You'll need to paste this value into the notebook later too. 
 
 > **Note**:
-> Copy the account key to a notepad to avoid automatic capitalization (which happens in Word). The key is case-sensitive.
+> Copy the account key and name to a notepad to avoid automatic capitalization (which happens in Word). The key is case-sensitive.
 
 ## Clone the lab materials
 
