@@ -7,7 +7,7 @@ lab:
 
 To consume a model in an application, and get real-time predictions, you'll want to deploy the model to a managed online endpoint. An MLflow model is easily deployed since you won't need to define the environment or create the scoring script.
 
-In this exercise, you'll deploy an MLflow model to a managed online endpoint and test it on sample data. 
+In this exercise, you'll deploy an MLflow model to a managed online endpoint, and test it on sample data. 
 
 ## Before you start
 
@@ -66,11 +66,11 @@ When you've created the workspace and necessary compute resources, you can open 
  
 1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **/users/*your-user-name*/azure-ml-labs** folder has been created. 
 
-## Submit MLflow jobs from a notebook
+## Deploy a model to an online endpoint
 
-Now that you have all the necessary resources, you can run the notebook to submit the job, which uses MLflow to track model parameters, metrics, and artifacts.
+The code to create the endpoint and deploy an MLflow with the Python SDK is provided in a notebook. 
 
-1. Open the **Labs/07/Use MLflow to track jobs.ipynb** notebook.
+1. Open the **Labs/10/Deploy to online endpoint.ipynb** notebook.
 1. Run all cells in the notebook.
 
 ## Delete Azure resources
