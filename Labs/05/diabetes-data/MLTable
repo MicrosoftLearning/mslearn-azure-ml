@@ -1,0 +1,8 @@
+# MLTable definition file
+
+paths:
+  - file: ./*.csv
+transformations:
+  - read_delimited:
+        delimiter: ','
+        encoding: 'ascii'
