@@ -5,9 +5,9 @@ lab:
 
 # Deploy a model to a managed online endpoint
 
-MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. MLflow Tracking is a component that logs and tracks your training job metrics, parameters and model artifacts.
+To consume a model in an application, and get real-time predictions, you'll want to deploy the model to a managed online endpoint. An MLflow model is easily deployed since you won't need to define the environment or create the scoring script.
 
-In this exercise, you'll use MLflow to track model training run as a command job.
+In this exercise, you'll deploy an MLflow model to a managed online endpoint and test it on sample data. 
 
 ## Before you start
 
@@ -36,7 +36,7 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
 1. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the `setup.sh` script it contains:
     
     ```bash
-    cd azure-ml-labs/Labs/07
+    cd azure-ml-labs/Labs/10
     ./setup.sh
     ```
 
