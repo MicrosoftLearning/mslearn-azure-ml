@@ -81,6 +81,7 @@ To create a datastore and data assets with the Python SDK, you'll need to clone 
     ```
     pip uninstall azure-ai-ml
     pip install azure-ai-ml
+    pip install mltable
     ```
 
 1. Run the following command to clone a Git repository containing notebooks, data, and other files to your workspace:
