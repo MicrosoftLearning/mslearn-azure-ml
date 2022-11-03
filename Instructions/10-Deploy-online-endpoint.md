@@ -68,7 +68,7 @@ When you've created the workspace and necessary compute resources, you can open 
 
 ## Deploy a model to an online endpoint
 
-The code to create the endpoint and deploy an MLflow with the Python SDK is provided in a notebook. 
+The code to create the endpoint and deploy an MLflow model with the Python SDK is provided in a notebook. 
 
 1. Open the **Labs/10/Deploy to online endpoint.ipynb** notebook.
 1. Run all cells in the notebook.
