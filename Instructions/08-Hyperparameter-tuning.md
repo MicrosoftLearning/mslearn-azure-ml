@@ -5,9 +5,9 @@ lab:
 
 # Perform hyperparameter tuning with Azure Machine Learning pipelines
 
-MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. MLflow Tracking is a component that logs and tracks your training job metrics, parameters and model artifacts.
+Hyperparameters are variables that affect how a model is trained, but which can't be derived from the training data. Choosing the optimal hyperparameter values for model training can be difficult, and usually involved a great deal of trial and error.
 
-In this exercise, you'll use MLflow to track model training run as a command job.
+In this exercise, you'll use Azure Machine Learning to tune hyperparameters by performing multiple training trials in parallel.
 
 ## Before you start
 
@@ -36,7 +36,7 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
 1. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the `setup.sh` script it contains:
     
     ```bash
-    cd azure-ml-labs/Labs/07
+    cd azure-ml-labs/Labs/08
     ./setup.sh
     ```
 
@@ -58,7 +58,7 @@ When you've created the workspace and necessary compute resources, you can open 
     pip install azure-ai-ml
     ```
 
-1. Run the following command to clone a Git repository containing a notebook, data, and other files to your workspace:
+1. Run the following command to clone a Git repository containing notebooks, data, and other files to your workspace:
     
     ```
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
@@ -66,11 +66,11 @@ When you've created the workspace and necessary compute resources, you can open 
  
 1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **/users/*your-user-name*/azure-ml-labs** folder has been created. 
 
-## Submit MLflow jobs from a notebook
+## Tune hyperparameters with a sweep job
 
-Now that you have all the necessary resources, you can run the notebook to submit the job, which uses MLflow to track model parameters, metrics, and artifacts.
+Now that you have all the necessary resources, you can run the notebook to submit a sweep job.
 
-1. Open the **Labs/07/Use MLflow to track jobs.ipynb** notebook.
+1. Open the **Labs/07/Hyperparameter tuning.ipynb** notebook.
 1. Run all cells in the notebook.
 
 ## Delete Azure resources

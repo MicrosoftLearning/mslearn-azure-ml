@@ -66,7 +66,7 @@ When you've created the workspace and necessary compute resources, you can open 
  
 1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **/users/*your-user-name*/azure-ml-labs** folder has been created. 
 
-## Run scripts as a pipeline
+## Run scripts as a pipeline job
 
 The code to build and submit a pipeline with the Python SDK is provided in a notebook. 
 
