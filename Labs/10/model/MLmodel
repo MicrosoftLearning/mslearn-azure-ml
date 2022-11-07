@@ -4,10 +4,8 @@ flavors:
     env: conda.yaml
     loader_module: mlflow.sklearn
     model_path: model.pkl
-    predict_fn: predict
     python_version: 3.7.13
   sklearn:
-    code: null
     pickled_model: model.pkl
     serialization_format: cloudpickle
     sklearn_version: 0.24.1
@@ -15,6 +13,9 @@ mlflow_version: 1.30.0
 model_uuid: ba8abd76e4cb479a81145f1bb76472e4
 run_id: 36b85079-2e17-43da-b4b4-775944b9a2d3
 signature:
-  inputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1, 8]}}]'
-  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  inputs: '[{"name": "Pregnancies", "type": "double"}, {"name": "PlasmaGlucose", "type": "double"},
+    {"name": "DiastolicBloodPressure", "type": "double"}, {"name": "TricepsThickness", "type": "double"}, {"name":
+    "SerumInsulin", "type": "double"}, {"name": "BMI", "type": "double"}, {"name": "DiabetesPedigree", "type":
+    "double"}, {"name": "Age", "type": "double"}]'
+  outputs: '[{"type": "double"}]'
 utc_time_created: '2022-11-01 20:46:17.296023'
