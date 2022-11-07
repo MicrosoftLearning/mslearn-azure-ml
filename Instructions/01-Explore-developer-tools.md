@@ -1,7 +1,6 @@
 ---
 lab:
-    title: 'Explore developer tools for workspace interaction
-'
+    title: 'Explore developer tools for workspace interaction'
 ---
 
 # Explore developer tools for workspace interaction
@@ -32,41 +31,31 @@ To start, open the Azure Cloud Shell, install the Azure Machine Learning extensi
 1. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 1. If you are asked to create storage for your cloud shell, check that the correct subscription is specified and select **Create storage**. Wait for the storage to be created.
 1. To avoid any conflicts with previous versions, remove any ML CLI extensions (both version 1 and 2) with this command:
+    
     ```
     az extension remove -n azure-cli-ml
     az extension remove -n ml
     ```
+
 1. Install the Azure Machine Learning (v2) extension with the following command:
+    
     ```
     az extension add -n ml -y
     ```
+
 1. Create a resource group. Choose a location close to you.
+    
     ```azurecli
     az group create --name "rg-dp100-labs" --location "eastus"
     ```
+
 1. Create a workspace:
+    
     ```azurecli
     az ml workspace create --name "mlw-dp100-labs" -g "rg-dp100-labs"
     ```
+
 1. Wait for the workspace and its associated resources to be created - this typically takes around 5 minutes. 
-
-<br>
-<details>
-<summary>Click to troubleshoot the error: Failed to connect to MSI.</summary>
-If the following message appears in the Azure Cloud Shell:
-
-<code>
-Failed to connect to MSI. Please make sure MSI is configured correctly.
-Get Token request returned: &lt;Response [400]&gt;
-</code>
-
-Sign in to Azure again using:
-<code>
-az login
-</code>
-
-And follow the instructions for interactive login.
-</details>
 
 ## Create a compute instance with the Azure CLI
 
@@ -84,28 +73,10 @@ In this exercise, you'll create a compute instance with the following settings:
 - **Resource group**: rg-dp100-labs
 
 1. Replace "XX-XXXX" with your initials and four random numbers in the command below. Then, use the command to create a compute instance in your workspace.
+
     ```azurecli
     az ml compute create --name "ci-XX-XXXX" --size STANDARD_DS11_V2 --type ComputeInstance -w mlw-dp100-labs -g rg-dp100-labs
     ```
-
-<br>
-<details>
-<summary><mark>Click to troubleshoot the error: <b>A compute instance with this name already exists.</b></mark></summary>
-
-If the following message appears in the Azure Cloud Shell:
-
-<code>
-Failed to connect to MSI. Please make sure MSI is configured correctly.
-Get Token request returned: &lt;Response [400]&gt;
-</code>
-<br>
-Delete the (partially) created compute instance using:
-<code>
-az ml compute delete "&lt;your-compute-instance-name&gt;"
-</code>
-
-And rerun the command to create a compute instance with a different name for your compute.
-</details>
 
 ## Create a compute cluster with the Azure CLI
 
@@ -122,6 +93,7 @@ You'll create a compute cluster with the following settings:
 - **Resource group**: rg-dp100-labs
 
 1. Replace "XX" with your initials in the command below. Then, use the command to create a compute cluster in your workspace.
+    
     ```azurecli
     az ml compute create --name "aml-cluster" --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute -w mlw-dp100-labs -g rg-dp100-labs
     ```
