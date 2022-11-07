@@ -20,7 +20,7 @@ An Azure Machine Learning *workspace* provides a central place for managing all 
 In this exercise, you'll use the Azure portal to provision Azure Machine Learning to explore all options.
 
 1. Sign into the [Azure portal](https://portal.azure.com).
-2. Create a new **Machine Learning** resource with the following settings:
+2. Create a new **Azure Machine Learning** resource with the following settings:
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: `rg-dp100-labs`
     - **Workspace name**: `mlw-dp100-labs`
@@ -29,17 +29,18 @@ In this exercise, you'll use the Azure portal to provision Azure Machine Learnin
     - **Key vault**: *Note the default new key vault that will be created for your workspace*
     - **Application insights**: *Note the default new application insights resource that will be created for your workspace*
     - **Container registry**: None (*one will be created automatically the first time you deploy a model to a container*)
+3. Wait for the workspace and its associated resources to be created - this typically takes around 5 minutes. 
 
 > **Note**: When you create an Azure Machine Learning workspace, you can use some advanced options to restrict access through a *private endpoint* and specify custom keys for data encryption. We won't use these options in this exercise - but you should be aware of them!
 
-3. Wait for the workspace and its associated resources to be created - this typically takes around 5 minutes. 
-
 ## Explore the Azure Machine Learning Studio
 
-*Azure Machine Learning Studio* is a web-based portal through which you can access the Azure Machine Learning workspace. You can use the Azure Machine Learning Studio to manage all assets and resources within your workspace to train and deploy machine learning models. 
+*Azure Machine Learning Studio* is a web-based portal through which you can access the Azure Machine Learning workspace. You can use the Azure Machine Learning Studio to manage all assets and resources within your workspace. 
 
-1. When the Azure Machine Learning workspace is created in the Azure portal, go to the resource group in which it has been created. Notice that the resource group contains your Azure Machine Learning workspace, an Application Insights, a Key Vault, and a Storage Account. 
-1. Select your Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning Studio.
+1. Go to the resource group named `rg-dp100-labs`.
+1. Confirm that the resource group contains your Azure Machine Learning workspace, an Application Insights, a Key Vault, and a Storage Account. 
+1. Select your Azure Machine Learning workspace.
+1. On the **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning Studio.
 1. On the left side of the Studio, the different pages within the Studio are shown. If only the symbols are visible in the menu, select the &#9776; icon to expand the menu and explore the names of the pages. 
 1. Note the **Author** section, which includes **Notebooks**, **Automated ML**, and the **Designer**. These are the three ways you can create your own machine learning models within the Azure Machine Learning Studio.
 1. Note the **Assets** section, which includes **Data**, **Jobs**, and **Models** among other things. Assets are either consumed or created when training or scoring a model. Assets are used to train, deploy, and manage your models and can be versioned to keep track of your history.
@@ -53,7 +54,7 @@ A quick way to author a model training pipeline is by using the **Designer**.
 
 1. On the left side of the Studio, form the menu, select the **Designer** page.
 1. You can create a new pipeline from scratch using prebuilt components, but you can also explore a sample. Select the **Regression - Automobile Price Prediction (Basic)** sample.
-1. Note a new pipeline appears. At the top of the pipeline, a component is shown to load **Automobile price data (raw)**. Next, the pipeline processes the data and trains a linear regression model to predict the price for each automobile.
+1. A new pipeline appears. At the top of the pipeline, a component is shown to load **Automobile price data (raw)**. The pipeline processes the data and trains a linear regression model to predict the price for each automobile.
 1. Select **Submit** at the top of the page. An error appears as you have not select a compute target yet. The pipeline can't run without compute resources. 
 
 Let's create a compute target.
@@ -84,8 +85,7 @@ To train a machine learning model that you authored with the Designer, you can u
 
 3. Wait for the compute instance to start and its state to change to **Running**.
 
-> **Note**:
-> Compute instances and clusters are based on standard Azure virtual machine images. For this exercise, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
+> **Note**: Compute instances and clusters are based on standard Azure virtual machine images. For this exercise, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
 
 ## Run your training pipeline
 
@@ -109,13 +109,15 @@ The training pipeline will now be submitted to the compute instance. It will tak
 Any time you run a script or pipeline in the Azure Machine Learning workspace, it's recorded as a **job**. Jobs allow you to keep track of the workloads you ran and compare them with each other. Jobs can belong to an **experiment**, which allows you to group job runs together.
 
 1. Navigate to the **Jobs** page, using the menu on the left side of the Azure Machine Learning Studio.
-1. Select the `train-regression-designer` experiment to view its job runs. Here, you'll see an overview of all jobs that are part of this experiment. If you ran multiple training pipelines, this view allows you to compare the pipelines and identify the best one.
-1. Select the last job in the `train-regression-designer` experiment.
+1. Select the **train-regression-designer** experiment to view its job runs. Here, you'll see an overview of all jobs that are part of this experiment. If you ran multiple training pipelines, this view allows you to compare the pipelines and identify the best one.
+1. Select the last job in the **train-regression-designer** experiment.
 1. Note that the training pipeline is shown where you can view which components ran successfully or failed. If the job is still running, you can also identify what is currently being run.
 1. To view the pipeline job details, select the **Job overview** at the top right to expand the **Pipeline job overview**. 
 1. Note that in the **Overview** parameters, you can find the job's status, who created the pipeline, when it was created and how long it took to run the complete pipeline (among other things).
 
-When you run a script or pipeline as a job, you can define any inputs and document any outputs. Azure Machine Learning also automatically keeps track of your job's properties. By using jobs, you can easily view your history to understand what you or your colleagues have already done. During experimentation, jobs help keep track of the different models you train to compare and identify the best model. During production, jobs allow you to check whether automated workloads ran as expected.
+When you run a script or pipeline as a job, you can define any inputs and document any outputs. Azure Machine Learning also automatically keeps track of your job's properties. By using jobs, you can easily view your history to understand what you or your colleagues have already done. 
+
+During experimentation, jobs help keep track of the different models you train to compare and identify the best model. During production, jobs allow you to check whether automated workloads ran as expected.
 
 7. When your job is completed, you can also view the details of each individual component run, including the output. Feel free to explore the pipeline to understand how the model is trained.
 
