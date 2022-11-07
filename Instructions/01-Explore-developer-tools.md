@@ -25,7 +25,7 @@ For a data scientist to train a machine learning model with Azure Machine Learni
 To start, open the Azure Cloud Shell, install the Azure Machine Learning extension and clone the Git repo.
 
 1. In a browser, open the Azure portal at [http://portal.azure.com](https://portal.azure.com/?azure-portal=true), signing in with your Microsoft account.
-1. Select the [>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
+1. Select the \[>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
 1. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 1. If you are asked to create storage for your cloud shell, check that the correct subscription is specified and select **Create storage**. Wait for the storage to be created.
 1. To avoid any conflicts with previous versions, remove any ML CLI extensions (both version 1 and 2) with this command:
@@ -70,7 +70,7 @@ In this exercise, you'll create a compute instance with the following settings:
 - **Azure Machine Learning workspace name**: mlw-dp100-labs
 - **Resource group**: rg-dp100-labs
 
-1. Replace "XX-XXXX" with your initials and four random numbers in the command below. Then, use the command to create a compute instance in your workspace.
+1. Use the following command to create a compute instance in your workspace.
 
     ```azurecli
     az ml compute create --name "ci-XX-XXXX" --size STANDARD_DS11_V2 --type ComputeInstance -w mlw-dp100-labs -g rg-dp100-labs
