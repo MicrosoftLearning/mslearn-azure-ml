@@ -70,7 +70,7 @@ In this exercise, you'll create a compute instance with the following settings:
 - **Azure Machine Learning workspace name**: mlw-dp100-labs
 - **Resource group**: rg-dp100-labs
 
-1. Replace the "XXXX" with random numbers, and use the following command to create a compute instance in your workspace.
+1. The "XXXX" should be replaced with random numbers to create a unique name. Use the following command to create a compute instance in your workspace.
 
     ```azurecli
     az ml compute create --name "ciXXXX" --size STANDARD_DS11_V2 --type ComputeInstance -w mlw-dp100-labs -g rg-dp100-labs
@@ -90,7 +90,7 @@ You'll create a compute cluster with the following settings:
 - **Azure Machine Learning workspace name**: mlw-dp100-labs
 - **Resource group**: rg-dp100-labs
 
-1. Replace "XX" with your initials in the command below. Then, use the command to create a compute cluster in your workspace.
+1. Use the following command to create a compute cluster in your workspace.
     
     ```azurecli
     az ml compute create --name "aml-cluster" --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute -w mlw-dp100-labs -g rg-dp100-labs
