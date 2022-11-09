@@ -70,10 +70,10 @@ In this exercise, you'll create a compute instance with the following settings:
 - **Azure Machine Learning workspace name**: mlw-dp100-labs
 - **Resource group**: rg-dp100-labs
 
-1. Use the following command to create a compute instance in your workspace.
+1. Replace the "XXXX" with random numbers, and use the following command to create a compute instance in your workspace.
 
     ```azurecli
-    az ml compute create --name "ci-XX-XXXX" --size STANDARD_DS11_V2 --type ComputeInstance -w mlw-dp100-labs -g rg-dp100-labs
+    az ml compute create --name "ciXXXX" --size STANDARD_DS11_V2 --type ComputeInstance -w mlw-dp100-labs -g rg-dp100-labs
     ```
 
 ## Create a compute cluster with the Azure CLI
@@ -83,7 +83,7 @@ Though a compute instance is ideal for development, a compute cluster is better 
 To create a compute cluster, you can use the Azure CLI, similar to creating a compute instance. 
 
 You'll create a compute cluster with the following settings:
-- **Compute name**: `aml-cluster`
+- **Compute name**: aml-cluster
 - **Virtual machine size**: STANDARD_DS11_V2
 - **Compute type**: AmlCompute *(Creates a compute cluster)*
 - **Maximum instances**: *Maximum number of nodes*
@@ -100,7 +100,7 @@ You'll create a compute cluster with the following settings:
 
 Though the Azure CLI is ideal for automation, you may want to review the output of the commands you executed. You can use the Azure Machine Learning Studio to check whether resources and assets have been created, and to check whether jobs ran successfully or review why a job failed. 
 
-1. In the Azure portal, navigate to the Azure Machine Learning workspace named `mlw-dp100-labs`.
+1. In the Azure portal, navigate to the Azure Machine Learning workspace named **mlw-dp100-labs**.
 1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning Studio.
 1. Within the Azure Machine Learning Studio, navigate to the **Compute** page and verify that the compute instance and cluster you created in the previous section exist. The compute instance should be running, the cluster should be idle and have 0 nodes running.
 
@@ -145,7 +145,7 @@ When you submit a job to the Azure Machine Learning workspace, you can review it
 1. When the job is completed, you can find the *AUC* and *Accuracy* of the model under **Metrics**. 
 1. Under **Outputs + logs**, you'll find:
     - The model pickle file in the folder **outputs**. 
-    - The output of the script in **user_logs/std_log.txt**. Output from `print` statements in the script will show here. If there's an error because of a problem with your script, you'll find the error message here too.
+    - The output of the script in **user_logs/std_log.txt**. Output from **print** statements in the script will show here. If there's an error because of a problem with your script, you'll find the error message here too.
 1. Under **Code**, you'll find the folder you specified in the job configuration. This folder includes the training script and dataset.
 
 ## Delete Azure resources

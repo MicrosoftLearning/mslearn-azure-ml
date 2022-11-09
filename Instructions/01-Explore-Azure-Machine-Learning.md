@@ -35,7 +35,7 @@ In this exercise, you'll use the Azure portal to provision Azure Machine Learnin
 
 *Azure Machine Learning Studio* is a web-based portal through which you can access the Azure Machine Learning workspace. You can use the Azure Machine Learning Studio to manage all assets and resources within your workspace. 
 
-1. Go to the resource group named `rg-dp100-labs`.
+1. Go to the resource group named **rg-dp100-labs**.
 1. Confirm that the resource group contains your Azure Machine Learning workspace, an Application Insights, a Key Vault, and a Storage Account. 
 1. Select your Azure Machine Learning workspace.
 1. On the **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning Studio.
@@ -97,7 +97,7 @@ You've created a compute target and can now run your sample training pipeline in
 1. Select **Submit** to run the training pipeline again.
 1. A pop-up will appear to set up the pipeline job. Configure and submit a new pipeline job with the following settings:
     - **Experiment**: Create new
-    - **New experiment name**: `train-regression-designer`
+    - **New experiment name**: train-regression-designer
     - Keep all other default settings.
 
 The training pipeline will now be submitted to the compute instance. It will take approximately 10 minutes for the pipeline to complete. Let's explore some other pages in the meantime.
