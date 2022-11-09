@@ -7,11 +7,9 @@ lab:
 
 Azure Machine Learning provides a data science platform to train and manage machine learning models. In this lab, you'll create an Azure Machine Learning workspace and explore the various ways to work with the workspace. The lab is designed as an introduction of the various core capabilities of Azure Machine Learning and the developer tools. If you want to learn about the capabilities in more depth, there are other labs to explore.
 
-This lab will take approximately **30** minutes to complete.
-
 ## Before you start
 
-You'll need an [Azure subscription](https://azure.microsoft.com/free) in which you have administrative-level access.
+You'll need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative-level access.
 
 ## Provision an Azure Machine Learning workspace
 
@@ -19,11 +17,11 @@ An Azure Machine Learning *workspace* provides a central place for managing all 
 
 In this exercise, you'll use the Azure portal to provision Azure Machine Learning to explore all options.
 
-1. Sign into the [Azure portal](https://portal.azure.com).
+1. Sign into the [http://portal.azure.com](https://portal.azure.com/?azure-portal=true).
 2. Create a new **Azure Machine Learning** resource with the following settings:
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: `rg-dp100-labs`
-    - **Workspace name**: `mlw-dp100-labs`
+    - **Resource group**: rg-dp100-labs
+    - **Workspace name**: mlw-dp100-labs
     - **Region**: *Select the geographical region closest to you*
     - **Storage account**: *Note the default new storage account that will be created for your workspace*
     - **Key vault**: *Note the default new key vault that will be created for your workspace*
