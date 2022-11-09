@@ -75,10 +75,10 @@ Using a notebook attached to a compute instance is ideal for experimentation and
 1. Run all cells to explore the code and train a model.
 1. Select the &#9776; icon at the top of the notebook to view the **notebook menu**. 
 1. Expand **Export as**, and select **Python (.py)** to convert the notebook to a Python script.
-1. Name the new file `train-classification-model.py`. 
+1. Name the new file **train-classification-model.py**. 
 1. Once the new file is created, the script should automatically be opened. Explore the file and note that it contains the same code as the notebook.
 1. Select the &#9655;&#9655; icon at the top of the notebook to **save and run the script in the terminal**.
-1. The script is initiated by the command `python train-classification-model.py` and the output should be shown below the command. 
+1. The script is initiated by the command **python train-classification-model.py** and the output should be shown below the command. 
 
 ## Test a script with the terminal
 
@@ -94,15 +94,15 @@ After converting a notebook to a script, you may want to further refine it. One 
 
     After the main function, each function is defined. Note how each function defines the expected input and output.
 
-1. Select the &#9655;&#9655; icon at the top of the notebook to **save and run the script in the terminal**. You should get an error after `Reading data...` telling you that it couldn't get the data because the file path was invalid. 
+1. Select the &#9655;&#9655; icon at the top of the notebook to **save and run the script in the terminal**. You should get an error after **Reading data...** telling you that it couldn't get the data because the file path was invalid. 
     
-    Scripts allow you to parameterize your code to easily change the input data or parameters. In this case, the script expects an input parameter for the data path which we didn't provide. You can find the defined and expected parameters at the end of the script in the `parse_args()` function. 
+    Scripts allow you to parameterize your code to easily change the input data or parameters. In this case, the script expects an input parameter for the data path which we didn't provide. You can find the defined and expected parameters at the end of the script in the **parse_args()** function. 
 
     There are two input parameters defined:
-    - `--training_data` which expects a string.
-    - `--reg_rate` which expects a number, but has a default value of `0.01`.
+    - **--training_data** which expects a string.
+    - **--reg_rate** which expects a number, but has a default value of 0.01.
     
-    To run the script successfully, you'll need to specify the value for the training data parameters. Let's do that by referring to the `diabetes.csv` file which is stored in the same folder as the training script.
+    To run the script successfully, you'll need to specify the value for the training data parameters. Let's do that by referring to the **diabetes.csv** file which is stored in the same folder as the training script.
 
 1. In the terminal, run the following command:
 
@@ -114,7 +114,7 @@ The script should successfully run and as a result, the output should show the a
 
 Testing the script in the terminal is ideal for verifying whether the script works as expected. If there is any issue with the code, you'll receive an error in the terminal. 
 
-**Optionally**, edit the code to force an error and run the command again in the terminal to run the script. For example, remove the line `import pandas as pd`, save and run the script with the input parameter to review the error message.
+**Optionally**, edit the code to force an error and run the command again in the terminal to run the script. For example, remove the line **import pandas as pd**, save and run the script with the input parameter to review the error message.
 
 ## Run a script as a command job
 
@@ -124,12 +124,12 @@ If you know your script works, you can run it as a command job. By running your 
 1. Run all cells in the notebook.
 1. In the Azure Machine Learning Studio, navigate to the **Jobs** page. 
 1. Navigate to the **diabetes-train-script** job to explore the overview of the command job you ran. 
-1. Review the properties of the job. Note that **Command** shows the value of the `command` parameter of the command job: the command you ran to execute the script.
-1. Navigate to the **Code** tab. All contents of the `src` folder, which was the value of the `code` parameter of the command job, are copied here. You can review the training script which was executed by the command job.
+1. Review the properties of the job. Note that **Command** shows the value of the **command** parameter of the command job: the command you ran to execute the script.
+1. Navigate to the **Code** tab. All contents of the **src** folder, which was the value of the **code** parameter of the command job, are copied here. You can review the training script which was executed by the command job.
 1. Navigate to the **Outputs + logs** tab. 
 1. Open the **std_log.txt** file and explore its contents. The content of this file is the output of the command. Remember the same output was shown in the terminal when you tested the script there. If the job is unsuccessful because of an issue with the script, the error message will be shown here.
 
-**Optionally**, edit the code to force an error and use the notebook to initiate the command job again. For example, remove the line `import pandas as pd` from the script and save the script. Or, edit the command job configuration to explore the error messages when something is wrong with the job configuration itself instead of the script.
+**Optionally**, edit the code to force an error and use the notebook to initiate the command job again. For example, remove the line **import pandas as pd** from the script and save the script. Or, edit the command job configuration to explore the error messages when something is wrong with the job configuration itself instead of the script.
 
 ## Delete Azure resources
 

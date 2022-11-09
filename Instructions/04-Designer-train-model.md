@@ -52,7 +52,7 @@ When you've created the workspace and necessary compute cluster, you can open th
 1. Within the Azure Machine Learning Studio, navigate to the **Compute** page and verify that the compute cluster you created in the previous section exist. The cluster should be idle and have 0 nodes running.
 1. Navigate to the **Designer** page and create a new empty pipeline.
 1. Change the default pipeline name (**Pipeline-Created-on-*date***) to **Visual Diabetes Training** by clicking the **&#9881;** icon at the right to open the **Settings** pane.
-1. You'll need to specify a compute target on which to run the pipeline. In the **Settings** pane, under **Select compute type** and select **Compute cluster**, and under **Select Azure ML compute cluster** and select `aml-cluster`. Close the settings pane.
+1. You'll need to specify a compute target on which to run the pipeline. In the **Settings** pane, under **Select compute type** and select **Compute cluster**, and under **Select Azure ML compute cluster** and select **aml-cluster**. Close the settings pane.
 
 ## Import the data
 To train a model, you'll need data. You can use any data stored in a datastore or use a publicly accessible URL.
