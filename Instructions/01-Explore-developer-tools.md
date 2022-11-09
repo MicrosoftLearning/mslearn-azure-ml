@@ -9,7 +9,7 @@ You can use various tools to interact with the Azure Machine Learning workspace.
 
 ## Before you start
 
-You'll need an [Azure subscription](https://azure.microsoft.com/free) in which you have administrative-level access.
+You'll need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative-level access.
 
 The commonly used developer tools for interacting with the Azure Machine Learning workspace are:
 - **Azure CLI** with the Azure Machine Learning extension: This command-line approach is ideal for the automation of infrastructure.
@@ -24,7 +24,7 @@ For a data scientist to train a machine learning model with Azure Machine Learni
 
 To start, open the Azure Cloud Shell, install the Azure Machine Learning extension and clone the Git repo.
 
-1. In a browser, open the Azure portal at [http://portal.azure.com](https://portal.azure.com/?azure-portal=true), signing in with your Microsoft account.
+1. In a browser, open the Azure portal at [portal.azure.com](https://portal.azure.com/?azure-portal=true), signing in with your Microsoft account.
 1. Select the \[>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
 1. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 1. If you are asked to create storage for your cloud shell, check that the correct subscription is specified and select **Create storage**. Wait for the storage to be created.
@@ -116,13 +116,13 @@ Now that you've verified that the necessary compute has been created, you can us
     pip install azure-ai-ml
     ```
 
-1. Run the following command to clone a Git repository containing notebook, data, and other files to your workspace:
+1. Run the following command to clone a Git repository containing notebooks, data, and other files to your workspace:
 
     ```
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ``` 
 
-1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **/users/*your-user-name*/azure-ml-labs** folder has been created. 
+1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/azure-ml-labs** folder has been created. 
 1. Expand the folder to find a notebook, a YAML file which defines the environment, and a folder containing the training script and a dataset. Explore all these files to 
 1. Open the **Labs/Run training script.ipynb** notebook.
 1. Run all cells in the notebook. 

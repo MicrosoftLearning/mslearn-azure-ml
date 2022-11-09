@@ -17,7 +17,7 @@ An Azure Machine Learning *workspace* provides a central place for managing all 
 
 In this exercise, you'll use the Azure portal to provision Azure Machine Learning to explore all options.
 
-1. Sign into the [http://portal.azure.com](https://portal.azure.com/?azure-portal=true).
+1. Sign into the [portal.azure.com](https://portal.azure.com/?azure-portal=true).
 2. Create a new **Azure Machine Learning** resource with the following settings:
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: rg-dp100-labs

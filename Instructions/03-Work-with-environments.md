@@ -11,7 +11,7 @@ In this exercise, you will learn about environments and how to use them when tra
 
 ## Before you start
 
-You'll need an [Azure subscription](https://azure.microsoft.com/free) in which you have administrative-level access.
+You'll need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative-level access.
 
 ## Provision an Azure Machine Learning workspace
 
@@ -22,8 +22,9 @@ You'll use the Azure CLI to provision the workspace and necessary compute, and y
 ### Create the workspace and compute resources
 
 To create the Azure Machine Learning workspace and compute resources, you'll use the Azure CLI. All necessary commands are grouped in a Shell script for you to execute.
-1. In a browser, open the Azure portal at [http://portal.azure.com](https://portal.azure.com/?azure-portal=true), signing in with your Microsoft account.
-1. Select the [>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
+
+1. In a browser, open the Azure portal at [portal.azure.com](https://portal.azure.com/?azure-portal=true), signing in with your Microsoft account.
+1. Select the \[>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
 1. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
 1. If you are asked to create storage for your cloud shell, check that the correct subscription is specified and select **Create storage**. Wait for the storage to be created.
 1. In the terminal, enter the following commands to clone this repo:
@@ -33,7 +34,7 @@ To create the Azure Machine Learning workspace and compute resources, you'll use
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ```
 
-1. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the `setup.sh` script it contains:
+1. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the **setup.sh** script it contains:
 
     ```bash
     cd azure-ml-labs/Labs/03
@@ -46,7 +47,7 @@ To create the Azure Machine Learning workspace and compute resources, you'll use
 
 When you've created the workspace and necessary compute resources, you can open the Azure Machine Learning Studio and clone the lab materials. 
 
-1. In the Azure portal, navigate to the Azure Machine Learning workspace named `mlw-dp100-labs`.
+1. In the Azure portal, navigate to the Azure Machine Learning workspace named **mlw-dp100-labs**.
 1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning Studio.
 1. Within the Azure Machine Learning Studio, navigate to the **Compute** page and verify that the compute instance and cluster you created in the previous section exist. The compute instance should be running, the cluster should be idle and have 0 nodes running.
 1. In the **Compute instances** tab, find your compute instance, and select the **Terminal** application.
@@ -63,7 +64,7 @@ When you've created the workspace and necessary compute resources, you can open 
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ``` 
 
-1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **/users/*your-user-name*/azure-ml-labs** folder has been created. 
+1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/azure-ml-labs** folder has been created. 
 
 ## Work with environments
 
