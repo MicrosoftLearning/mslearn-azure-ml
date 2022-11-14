@@ -1,9 +1,9 @@
 ---
 lab:
-    title: 'Perform hyperparameter tuning with Azure Machine Learning pipelines'
+    title: 'Perform hyperparameter tuning with a sweep job'
 ---
 
-# Perform hyperparameter tuning with Azure Machine Learning pipelines
+# Perform hyperparameter tuning with a sweep job
 
 Hyperparameters are variables that affect how a model is trained, but which can't be derived from the training data. Choosing the optimal hyperparameter values for model training can be difficult, and usually involved a great deal of trial and error.
 
