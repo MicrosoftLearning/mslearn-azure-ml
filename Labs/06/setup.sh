@@ -14,7 +14,3 @@ ComputeName="ci${RANDOM}"
 
 echo "Creating a compute instance with name: " $ComputeName
 az ml compute create --name ${ComputeName} --size STANDARD_DS11_V2 --type ComputeInstance -w mlw-dp100-labs -g rg-dp100-labs
-
-# Create compute cluster
-echo "Creating a compute cluster with name: aml-cluster"
-az ml compute create --name "aml-cluster" --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute -w mlw-dp100-labs -g rg-dp100-labs
