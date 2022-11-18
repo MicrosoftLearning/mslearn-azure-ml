@@ -41,7 +41,6 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
     ./setup.sh
     ```
 
-1. When asked, **enter your initials to name your compute instance**. Any random string of letters will do (not more than 5 letters).
 1. Wait for the script to complete - this typically takes around 5-10 minutes. 
 
 ## Clone the lab materials
