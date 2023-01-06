@@ -31,9 +31,9 @@ In this exercise, you'll use the Azure portal to provision Azure Machine Learnin
 
 > **Note**: When you create an Azure Machine Learning workspace, you can use some advanced options to restrict access through a *private endpoint* and specify custom keys for data encryption. We won't use these options in this exercise - but you should be aware of them!
 
-## Explore the Azure Machine Learning Studio
+## Explore the Azure Machine Learning studio
 
-*Azure Machine Learning Studio* is a web-based portal through which you can access the Azure Machine Learning workspace. You can use the Azure Machine Learning Studio to manage all assets and resources within your workspace. 
+*Azure Machine Learning studio* is a web-based portal through which you can access the Azure Machine Learning workspace. You can use the Azure Machine Learning studio to manage all assets and resources within your workspace. 
 
 1. Go to the resource group named **rg-dp100-labs**.
 1. Confirm that the resource group contains your Azure Machine Learning workspace, an Application Insights, a Key Vault, and a Storage Account. 

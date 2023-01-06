@@ -1,0 +1,19 @@
+# <component>
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+name: normalize_data
+display_name: Normalize Numerical Columns
+version: 1
+type: command
+inputs:
+  input_data: 
+    type: uri_folder 
+outputs:
+  output_data:
+    type: uri_folder
+code: ./src
+environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
+command: >-
+  python normalize-data.py 
+  --input_data ${{inputs.input_data}} 
+  --output_data ${{outputs.output_data}}
+# </component>
