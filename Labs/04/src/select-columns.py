@@ -1,6 +1,5 @@
 # import libraries
 import argparse
-import glob
 from pathlib import Path
 import pandas as pd
 import mlflow
@@ -16,7 +15,7 @@ cols = ['Flight_Number_Reporting_Airline', 'Year', 'Quarter', 'Month', 'DayOfWee
 
 dtypes = {'Flight_Number_Reporting_Airline': 'float32', 'Year': 'float32', 'Quarter': 'float32', 'Month': 'float32', 'DayOfWeek': 'float32', 'DOT_ID_Reporting_Airline': 'float32', 'OriginCityMarketID': 'float32', 'DestCityMarketID': 'float32', 'DepTime': 'float32', 'DepDelay': 'float32', 'DepDel15': 'int', 'ArrTime': 'float32', 'ArrDelay': 'float32', 'ArrDel15': 'int', 'CRSDepTime': 'float32', 'CRSArrTime': 'float32', 'AirTime': 'float32', 'Distance': 'float32', 'Reporting_Airline': 'str', 'IATA_CODE_Reporting_Airline': 'str', 'Origin': 'str', 'OriginCityName': 'str', 'Dest': 'str', 'DestCityName': 'str', 'Cancelled': 'str'}
 
-df = pd.read_csv((args.input_data), cols=cols, dtypes=dtypes)[cols]
+df = pd.read_csv((args.input_data), names=cols, dtype=dtypes)[cols]
 
 # log processed columns
 column_count = (len(df.columns))

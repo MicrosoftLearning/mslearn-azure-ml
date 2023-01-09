@@ -26,3 +26,5 @@ az ml component create --file ./fix-missing-data.yml -w mlw-dp100-labs -g rg-dp1
 az ml component create --file ./normalize-data.yml -w mlw-dp100-labs -g rg-dp100-labs
 az ml component create --file ./train-decision-tree.yml -w mlw-dp100-labs -g rg-dp100-labs
 az ml component create --file ./train-logistic-regression.yml -w mlw-dp100-labs -g rg-dp100-labs
+
+az ml component create --file ./select-columns.yml -w mlw-dp100-labs -g rg-dp100-labs
