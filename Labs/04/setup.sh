@@ -15,6 +15,11 @@ az ml compute create --name "aml-cluster" --size STANDARD_DS11_V2 --max-instance
 echo "Creating a data asset with name: diabetes-folder"
 az ml data create --name diabetes-folder --path ./data -w mlw-dp100-labs -g rg-dp100-labs
 
+az ml data create --name airlines --path ./data/airlines_raw.csv --type uri_file -w mlw-dp100-labs -g rg-dp100-labs
+az ml data create --name airports --path ./data/airports.csv --type uri_file -w mlw-dp100-labs -g rg-dp100-labs
+az ml data create --name carriers --path ./data/carriers.csv --type uri_file -w mlw-dp100-labs -g rg-dp100-labs
+
+
 # Create components
 echo "Creating components"
 az ml component create --file ./fix-missing-data.yml -w mlw-dp100-labs -g rg-dp100-labs

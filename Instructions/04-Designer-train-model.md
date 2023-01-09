@@ -79,8 +79,6 @@ To train a model, you'll need data. You can use any data stored in a datastore o
 
 1. You can view the status of the pipeline run by selecting **Job detail** in the **Submitted jobs** pane on the left.
 
-![Submitted jobs](./images/04-02-submitted-jobs.png)
-
 You'll be able to track the run of each component. When the pipeline fails, you'll be able to explore which component failed and why it failed. Error messages will show in the **Outputs + logs** tab of the job overview. 
 
 ## Train a second model to compare
