@@ -70,7 +70,7 @@ When you've created the workspace and necessary compute resources, you can open 
 
 Now that you have all the necessary resources, you can run the notebook to submit a sweep job.
 
-1. Open the **Labs/07/Hyperparameter tuning.ipynb** notebook.
+1. Open the **Labs/08/Hyperparameter tuning.ipynb** notebook.
 1. Run all cells in the notebook.
 
 ## Delete Azure resources
