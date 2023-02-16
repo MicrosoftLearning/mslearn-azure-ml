@@ -70,7 +70,7 @@ When you've created the workspace and necessary compute resources, you can open 
 
 Now that you have all the necessary resources, you can run the notebook to submit the job, which uses MLflow to track model parameters, metrics, and artifacts.
 
-1. Open the **Labs/07/Use MLflow to track jobs.ipynb** notebook.
+1. Open the **Labs/09/Use MLflow to track jobs.ipynb** notebook.
 1. Run all cells in the notebook.
 
 ## Delete Azure resources

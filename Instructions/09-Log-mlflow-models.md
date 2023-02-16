@@ -1,13 +1,13 @@
 ---
 lab:
-    title: 'Use MLflow to track training jobs'
+    title: 'Log and register models with MLflow'
 ---
 
-# Use MLflow to track training jobs
+# Log and register models with MLflow
 
-MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. MLflow Tracking is a component that logs and tracks your training job metrics, parameters and model artifacts.
+MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. When you log models with MLflow, you can easily move the model across platforms and workloads.
 
-In this exercise, you'll use MLflow to track model training run as a command job.
+In this exercise, you'll use MLflow to log machine learning models.
 
 ## Before you start
 
@@ -68,9 +68,9 @@ When you've created the workspace and necessary compute resources, you can open 
 
 ## Submit MLflow jobs from a notebook
 
-Now that you have all the necessary resources, you can run the notebook to submit the job, which uses MLflow to track model parameters, metrics, and artifacts.
+Now that you have all the necessary resources, you can run the notebook to train and log models with MLflow.
 
-1. Open the **Labs/07/Use MLflow to track jobs.ipynb** notebook.
+1. Open the **Labs\09\Log models with MLflow.ipynb** notebook.
 1. Run all cells in the notebook.
 
 ## Delete Azure resources
