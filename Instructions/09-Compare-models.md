@@ -1,13 +1,13 @@
 ---
 lab:
-    title: 'Use MLflow to track training jobs'
+    title: 'Compare and evaluate models'
 ---
 
-# Use MLflow to track training jobs
+# Compare and evaluate models
 
-MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. MLflow Tracking is a component that logs and tracks your training job metrics, parameters and model artifacts.
+After you train your model, you'll want to evaluate your model to explore whether it's performing as expected. Next to performance metrics, there are other factors you can take into consideration. The responsible AI dashboard in Azure Machine Learning allows you to analyze the data and the model's predictions to identify any bias or unfairness.
 
-In this exercise, you'll use MLflow to track model training run as a command job.
+In this exercise, you'll prepare your data and create a responsible AI dashboard in Azure Machine Learning.
 
 ## Before you start
 
@@ -37,7 +37,7 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
 1. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the **setup.sh** script it contains:
     
     ```bash
-    cd azure-ml-labs/Labs/07
+    cd azure-ml-labs/Labs/09
     ./setup.sh
     ```
 
@@ -70,7 +70,7 @@ When you've created the workspace and necessary compute resources, you can open 
 
 Now that you have all the necessary resources, you can run the notebook to submit the job, which uses MLflow to track model parameters, metrics, and artifacts.
 
-1. Open the **Labs/09/Use MLflow to track jobs.ipynb** notebook.
+1. Open the **Labs/09/Create Responsible AI dashboard.ipynb** notebook.
 1. Run all cells in the notebook.
 
 ## Delete Azure resources

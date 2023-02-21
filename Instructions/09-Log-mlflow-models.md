@@ -37,7 +37,7 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
 1. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the **setup.sh** script it contains:
     
     ```bash
-    cd azure-ml-labs/Labs/07
+    cd azure-ml-labs/Labs/09
     ./setup.sh
     ```
 
