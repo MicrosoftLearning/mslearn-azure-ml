@@ -1,45 +1,43 @@
 ---
 lab:
-    title: 'Log and register models with MLflow'
+    title: 'Track model training in notebooks with MLflow'
 ---
 
-# Log and register models with MLflow
+# Track model training in notebooks with MLflow
 
-MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. When you log models with MLflow, you can easily move the model across platforms and workloads.
+Often, you'll start a new data science project by experimenting and training multiple models. To track your work and keep an overview of the models you train and how they perform, you can use MLflow tracking.
 
-In this exercise, you'll use MLflow to log machine learning models.
+In this exercise, you'll MLflow within a notebook running on a compute instance to log model training.
 
 ## Before you start
 
-You'll need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative-level access.
+You'll need an [Azure subscription](https://azure.microsoft.com/free) in which you have administrative-level access.
 
 ## Provision an Azure Machine Learning workspace
 
 An Azure Machine Learning *workspace* provides a central place for managing all resources and assets you need to train and manage your models. You can interact with the Azure Machine Learning workspace through the Studio, Python SDK, and Azure CLI. 
 
-You'll use the Azure CLI to provision the workspace and necessary compute, and you'll use the Python SDK to run a command job.
+You'll use the Azure CLI to provision the workspace and necessary compute, and you'll use the Python SDK to train a classification model with Automated Machine Learning.
 
 ### Create the workspace and compute resources
 
-To create the Azure Machine Learning workspace, a compute instance, and a compute cluster, you'll use the Azure CLI. All necessary commands are grouped in a Shell script for you to execute.
-
-1. In a browser, open the Azure portal at [portal.azure.com](https://portal.azure.com/?azure-portal=true), signing in with your Microsoft account.
+To create the Azure Machine Learning workspace and a compute instance, you'll use the Azure CLI. All necessary commands are grouped in a Shell script for you to execute.
+1. In a browser, open the Azure portal at [http://portal.azure.com](https://portal.azure.com/?azure-portal=true), signing in with your Microsoft account.
 1. Select the \[>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
-1. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
-1. If you are asked to create storage for your cloud shell, check that the correct subscription is specified and select **Create storage**. Wait for the storage to be created.
+1. Select **Bash** if asked. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). 
+1. Check that the correct subscription is specified and select **Create storage** if you are asked to create storage for your cloud shell. Wait for the storage to be created.
 1. In the terminal, enter the following commands to clone this repo:
-
     ```bash
     rm -r azure-ml-labs -f
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ```
-
 1. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the **setup.sh** script it contains:
-    
     ```bash
-    cd azure-ml-labs/Labs/09
+    cd azure-ml-labs/Labs/07
     ./setup.sh
     ```
+
+    > Ignore any (error) messages that say that the extensions were not installed. 
 
 1. Wait for the script to complete - this typically takes around 5-10 minutes. 
 
@@ -52,26 +50,29 @@ When you've created the workspace and necessary compute resources, you can open 
 1. Within the Azure Machine Learning Studio, navigate to the **Compute** page and verify that the compute instance and cluster you created in the previous section exist. The compute instance should be running, the cluster should be idle and have 0 nodes running.
 1. In the **Compute instances** tab, find your compute instance, and select the **Terminal** application.
 1. In the terminal, install the Python SDK on the compute instance by running the following commands in the terminal:
-    
     ```
     pip uninstall azure-ai-ml
     pip install azure-ai-ml
     ```
 
-1. Run the following command to clone a Git repository containing notebooks, data, and other files to your workspace:
-    
+    > Ignore any (error) messages that say that the packages couldn't be found and uninstalled.
+
+1. Run the following command to clone a Git repository containing a notebook, data, and other files to your workspace:
     ```
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
-    ```
- 
+    ``` 
 1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/azure-ml-labs** folder has been created. 
 
-## Submit MLflow jobs from a notebook
+## Track model training with MLflow
 
-Now that you have all the necessary resources, you can run the notebook to train and log models with MLflow.
+Now that you have all the necessary resources, you can run the notebook to configure and use MLflow when training models in a notebook.
 
-1. Open the **Labs\09\Log models with MLflow.ipynb** notebook.
-1. Run all cells in the notebook.
+1. Open the **Labs/07/Track model training with MLflow.ipynb** notebook.
+
+    > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate. 
+
+1. Run all cells in the notebook. 
+1. Review the new job that's created every time you train a model.
 
 ## Delete Azure resources
 

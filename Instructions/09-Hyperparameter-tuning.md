@@ -1,13 +1,13 @@
 ---
 lab:
-    title: 'Find the best classification model with Automated Machine Learning'
+    title: 'Perform hyperparameter tuning with a sweep job'
 ---
 
-# Find the best classification model with Automated Machine Learning
+# Perform hyperparameter tuning with a sweep job
 
-Determining the right algorithm and preprocessing transformations for model training can involve a lot of guesswork and experimentation.
+Hyperparameters are variables that affect how a model is trained, but which can't be derived from the training data. Choosing the optimal hyperparameter values for model training can be difficult, and usually involved a great deal of trial and error.
 
-In this exercise, you'll use automated machine learning to determine the optimal algorithm and preprocessing steps for a model by performing multiple training runs in parallel.
+In this exercise, you'll use Azure Machine Learning to tune hyperparameters by performing multiple training trials in parallel.
 
 ## Before you start
 
@@ -17,7 +17,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free?azure-porta
 
 An Azure Machine Learning *workspace* provides a central place for managing all resources and assets you need to train and manage your models. You can interact with the Azure Machine Learning workspace through the Studio, Python SDK, and Azure CLI. 
 
-You'll use the Azure CLI to provision the workspace and necessary compute, and you'll use the Python SDK to train a classification model with Automated Machine Learning.
+You'll use the Azure CLI to provision the workspace and necessary compute, and you'll use the Python SDK to run a command job.
 
 ### Create the workspace and compute resources
 
@@ -25,8 +25,8 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
 
 1. In a browser, open the Azure portal at [portal.azure.com](https://portal.azure.com/?azure-portal=true), signing in with your Microsoft account.
 1. Select the \[>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
-1. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
-1. If you are asked to create storage for your cloud shell, check that the correct subscription is specified and select **Create storage**. Wait for the storage to be created.
+1. Select **Bash** if asked. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). 
+1. Check that the correct subscription is specified and select **Create storage** if you are asked to create storage for your cloud shell. Wait for the storage to be created.
 1. In the terminal, enter the following commands to clone this repo:
 
     ```bash
@@ -35,13 +35,14 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
     ```
 
 1. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the **setup.sh** script it contains:
-
+    
     ```bash
-    cd azure-ml-labs/Labs/05
+    cd azure-ml-labs/Labs/09
     ./setup.sh
     ```
 
-1. When asked, **enter your initials to name your compute instance**. Any random string of letters will do (not more than 5 letters).
+    > Ignore any (error) messages that say that the extensions were not installed. 
+
 1. Wait for the script to complete - this typically takes around 5-10 minutes. 
 
 ## Clone the lab materials
@@ -53,35 +54,31 @@ When you've created the workspace and necessary compute resources, you can open 
 1. Within the Azure Machine Learning Studio, navigate to the **Compute** page and verify that the compute instance and cluster you created in the previous section exist. The compute instance should be running, the cluster should be idle and have 0 nodes running.
 1. In the **Compute instances** tab, find your compute instance, and select the **Terminal** application.
 1. In the terminal, install the Python SDK on the compute instance by running the following commands in the terminal:
-
+    
     ```
     pip uninstall azure-ai-ml
     pip install azure-ai-ml
     ```
 
-1. Run the following command to clone a Git repository containing notebooks, data, and other files to your workspace:
+    > Ignore any (error) messages that say that the packages couldn't be found and uninstalled.
 
+1. Run the following command to clone a Git repository containing notebooks, data, and other files to your workspace:
+    
     ```
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
-    ``` 
-
+    ```
+ 
 1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/azure-ml-labs** folder has been created. 
 
-## Train a classification model with automated machine learning
+## Tune hyperparameters with a sweep job
 
-Now that you have all the necessary resources, you can run the notebook to configure and submit the Automated Machine Learning job.
+Now that you have all the necessary resources, you can run the notebook to submit a sweep job.
 
-1. Open the **Labs/05/Classification with Automated Machine Learning.ipynb** notebook.
-1. Run all cells in the notebook. 
+1. Open the **Labs/09/Hyperparameter tuning.ipynb** notebook.
 
-A new job will be created in the Azure Machine Learning workspace. The job tracks the inputs defined in the job configuration, the data asset used, and the outputs like metrics to evaluate the models.
+    > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate. 
 
-Note that the Automated Machine Learning jobs contains child jobs, which represent individual models that have been trained and other tasks needed to execute. 
-
-3. When the Automate Machine Learning job has completed, explore the job details in the Studio:
-    - The **Data guardrails** tab shows whether your training data had any issues.
-    - The **Models** tab will show all models that have been trained.
-    - Select **View explanation** for the best model to understand which features influenced the target value the most.
+1. Run all cells in the notebook.
 
 ## Delete Azure resources
 

@@ -25,8 +25,8 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
 
 1. In a browser, open the Azure portal at [portal.azure.com](https://portal.azure.com/?azure-portal=true), signing in with your Microsoft account.
 1. Select the \[>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
-1. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
-1. If you are asked to create storage for your cloud shell, check that the correct subscription is specified and select **Create storage**. Wait for the storage to be created.
+1. Select **Bash** if asked. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). 
+1. Check that the correct subscription is specified and select **Create storage** if you are asked to create storage for your cloud shell. Wait for the storage to be created.
 1. In the terminal, enter the following commands to clone this repo:
 
     ```bash
@@ -37,9 +37,11 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
 1. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the **setup.sh** script it contains:
     
     ```bash
-    cd azure-ml-labs/Labs/07
+    cd azure-ml-labs/Labs/08
     ./setup.sh
     ```
+
+    > Ignore any (error) messages that say that the extensions were not installed. 
 
 1. Wait for the script to complete - this typically takes around 5-10 minutes. 
 
@@ -58,6 +60,8 @@ When you've created the workspace and necessary compute resources, you can open 
     pip install azure-ai-ml
     ```
 
+    > Ignore any (error) messages that say that the packages couldn't be found and uninstalled.
+
 1. Run the following command to clone a Git repository containing notebooks, data, and other files to your workspace:
     
     ```
@@ -70,7 +74,10 @@ When you've created the workspace and necessary compute resources, you can open 
 
 Using a notebook attached to a compute instance is ideal for experimentation and development as it allows you to immediately run code you've written and review its output. To move from development to production, you'll want to use scripts. As a first step, you can use the Azure Machine Learning Studio to convert your notebook to a script.
 
-1. Open the **Labs/07/src/Train classification model.ipynb** notebook.
+1. Open the **Labs/08/src/Train classification model.ipynb** notebook.
+
+    > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate. 
+
 1. Run all cells to explore the code and train a model.
 1. Select the &#9776; icon at the top of the notebook to view the **notebook menu**. 
 1. Expand **Export as**, and select **Python (.py)** to convert the notebook to a Python script.
@@ -83,7 +90,7 @@ Using a notebook attached to a compute instance is ideal for experimentation and
 
 After converting a notebook to a script, you may want to further refine it. One best practice when working with scripts, is to use functions. When your script consists of functions, it's easier to unit test your code. When you use functions, your script will consist of blocks of code, each block performing a specific task.
 
-1. Open the **Labs/07/src/train-model-parameters.py** script and explore its contents. 
+1. Open the **Labs/08/src/train-model-parameters.py** script and explore its contents. 
     Note that there is a main function which includes four other functions:
     
     - Read data
@@ -119,7 +126,7 @@ Testing the script in the terminal is ideal for verifying whether the script wor
 
 If you know your script works, you can run it as a command job. By running your script as a command job, you'll be able to track all the inputs and outputs of the script.
 
-1. Open the **Labs/07/Run script as command job.ipynb** notebook.
+1. Open the **Labs/08/Run script as command job.ipynb** notebook.
 1. Run all cells in the notebook.
 1. In the Azure Machine Learning Studio, navigate to the **Jobs** page. 
 1. Navigate to the **diabetes-train-script** job to explore the overview of the command job you ran. 

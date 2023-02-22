@@ -1,13 +1,13 @@
 ---
 lab:
-    title: 'Deploy a model to a batch endpoint'
+    title: 'Deploy a model to a managed online endpoint'
 ---
 
-# Deploy a model to a batch endpoint
+# Deploy a model to a managed online endpoint
 
-In many scenarios, inferencing is performed as a batch process that uses a predictive model to score a large number of cases. To implement this kind of inferencing solution in Azure Machine Learning, you can create a batch endpoint.
+To consume a model in an application, and get real-time predictions, you'll want to deploy the model to a managed online endpoint. An MLflow model is easily deployed since you won't need to define the environment or create the scoring script.
 
-In this exercise, you'll deploy an MLflow model to a batch endpoint, and test it on sample data by submitting a job. 
+In this exercise, you'll deploy an MLflow model to a managed online endpoint, and test it on sample data. 
 
 ## Before you start
 
@@ -25,8 +25,8 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
 
 1. In a browser, open the Azure portal at [portal.azure.com](https://portal.azure.com/?azure-portal=true), signing in with your Microsoft account.
 1. Select the \[>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
-1. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
-1. If you are asked to create storage for your cloud shell, check that the correct subscription is specified and select **Create storage**. Wait for the storage to be created.
+1. Select **Bash** if asked. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). 
+1. Check that the correct subscription is specified and select **Create storage** if you are asked to create storage for your cloud shell. Wait for the storage to be created.
 1. In the terminal, enter the following commands to clone this repo:
 
     ```bash
@@ -37,11 +37,12 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
 1. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the **setup.sh** script it contains:
     
     ```bash
-    cd azure-ml-labs/Labs/10
+    cd azure-ml-labs/Labs/11
     ./setup.sh
     ```
 
-1. When asked, **enter your initials to name your compute instance**. Any random string of letters will do (not more than 5 letters).
+    > Ignore any (error) messages that say that the extensions were not installed. 
+
 1. Wait for the script to complete - this typically takes around 5-10 minutes. 
 
 ## Clone the lab materials
@@ -59,6 +60,8 @@ When you've created the workspace and necessary compute resources, you can open 
     pip install azure-ai-ml
     ```
 
+    > Ignore any (error) messages that say that the packages couldn't be found and uninstalled.
+
 1. Run the following command to clone a Git repository containing a notebook, data, and other files to your workspace:
     
     ```
@@ -67,11 +70,14 @@ When you've created the workspace and necessary compute resources, you can open 
  
 1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/azure-ml-labs** folder has been created. 
 
-## Deploy a model to an batch endpoint
+## Deploy a model to an online endpoint
 
 The code to create the endpoint and deploy an MLflow model with the Python SDK is provided in a notebook. 
 
-1. Open the **Labs/10/Deploy to batch endpoint.ipynb** notebook.
+1. Open the **Labs/11/Deploy to online endpoint.ipynb** notebook.
+
+    > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate. 
+
 1. Run all cells in the notebook.
 
 ## Delete Azure resources

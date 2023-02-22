@@ -120,7 +120,7 @@ Now that you've verified that the necessary compute has been created, you can us
     pip install azure-ai-ml
     ```
 
-    Ignore any (error) messages that say that the packages were not installed.
+    > Ignore any (error) messages that say that the packages were not installed.
 
 1. Run the following command to clone a Git repository containing notebooks, data, and other files to your workspace:
 
@@ -129,9 +129,11 @@ Now that you've verified that the necessary compute has been created, you can us
     ``` 
 
 1. When the command has completed, in the **Files** pane, select **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/azure-ml-labs** folder has been created. 
-1. Open the **Labs/01/Run training script.ipynb** notebook.
+1. Open the **Labs/02/Run training script.ipynb** notebook.
     
-    > Select **Authenticate** if a notification appears asking you to authenticate. 
+    > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate. 
+
+1. Verify that the notebook uses the **Python 3.8 - AzureML** kernel. Each kernel has its own image with its own set of packages pre-installed.
 1. Run all cells in the notebook. 
 
 A new job will be created in the Azure Machine Learning workspace. The job tracks the inputs defined in the job configuration, the code used, and the outputs like metrics to evaluate the model.

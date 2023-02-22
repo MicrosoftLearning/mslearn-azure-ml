@@ -1,13 +1,13 @@
 ---
 lab:
-    title: 'Use MLflow to track training jobs'
+    title: 'Log and register models with MLflow'
 ---
 
-# Use MLflow to track training jobs
+# Log and register models with MLflow
 
-MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. MLflow Tracking is a component that logs and tracks your training job metrics, parameters and model artifacts.
+MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. When you log models with MLflow, you can easily move the model across platforms and workloads.
 
-In this exercise, you'll use MLflow to track model training run as a command job.
+In this exercise, you'll use MLflow to log machine learning models.
 
 ## Before you start
 
@@ -25,8 +25,8 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
 
 1. In a browser, open the Azure portal at [portal.azure.com](https://portal.azure.com/?azure-portal=true), signing in with your Microsoft account.
 1. Select the \[>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
-1. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
-1. If you are asked to create storage for your cloud shell, check that the correct subscription is specified and select **Create storage**. Wait for the storage to be created.
+1. Select **Bash** if asked. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). 
+1. Check that the correct subscription is specified and select **Create storage** if you are asked to create storage for your cloud shell. Wait for the storage to be created.
 1. In the terminal, enter the following commands to clone this repo:
 
     ```bash
@@ -37,9 +37,11 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
 1. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the **setup.sh** script it contains:
     
     ```bash
-    cd azure-ml-labs/Labs/07
+    cd azure-ml-labs/Labs/10
     ./setup.sh
     ```
+
+    > Ignore any (error) messages that say that the extensions were not installed.
 
 1. Wait for the script to complete - this typically takes around 5-10 minutes. 
 
@@ -58,6 +60,8 @@ When you've created the workspace and necessary compute resources, you can open 
     pip install azure-ai-ml
     ```
 
+    > Ignore any (error) messages that say that the packages couldn't be found and uninstalled.
+
 1. Run the following command to clone a Git repository containing notebooks, data, and other files to your workspace:
     
     ```
@@ -68,9 +72,12 @@ When you've created the workspace and necessary compute resources, you can open 
 
 ## Submit MLflow jobs from a notebook
 
-Now that you have all the necessary resources, you can run the notebook to submit the job, which uses MLflow to track model parameters, metrics, and artifacts.
+Now that you have all the necessary resources, you can run the notebook to train and log models with MLflow.
 
-1. Open the **Labs/07/Use MLflow to track jobs.ipynb** notebook.
+1. Open the **Labs\10\Log models with MLflow.ipynb** notebook.
+
+    > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate. 
+
 1. Run all cells in the notebook.
 
 ## Delete Azure resources
