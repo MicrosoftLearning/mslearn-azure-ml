@@ -26,14 +26,16 @@ To start, open the Azure Cloud Shell, install the Azure Machine Learning extensi
 
 1. In a browser, open the Azure portal at [portal.azure.com](https://portal.azure.com/?azure-portal=true), signing in with your Microsoft account.
 1. Select the \[>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
-1. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**.
-1. If you are asked to create storage for your cloud shell, check that the correct subscription is specified and select **Create storage**. Wait for the storage to be created.
-1. To avoid any conflicts with previous versions, remove any ML CLI extensions (both version 1 and 2) with this command:
+1. Select **Bash** if asked. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). 
+1. Check that the correct subscription is specified and select **Create storage** if you are asked to create storage for your cloud shell. Wait for the storage to be created.
+1. Remove any ML CLI extensions (both version 1 and 2) to avoid any conflicts with previous versions with this command:
     
     ```
     az extension remove -n azure-cli-ml
     az extension remove -n ml
     ```
+
+    > Ignore any (error) messages that say that the extensions were not installed. 
 
 1. Install the Azure Machine Learning (v2) extension with the following command:
     
@@ -57,9 +59,9 @@ To start, open the Azure Cloud Shell, install the Azure Machine Learning extensi
 
 ## Create a compute instance with the Azure CLI
 
-Another important part of the infrastructure needed to train a machine learning model is compute. Though you can train models locally, it's more scalable and cost efficient to use cloud compute. 
+Another important part of the infrastructure needed to train a machine learning model is **compute**. Though you can train models locally, it's more scalable and cost efficient to use cloud compute. 
 
-When data scientists are developing a machine learning model in the Azure Machine Learning workspace, they want to use a virtual machine on which they can run Jupyter notebooks. For development, a compute instance is an ideal fit. 
+When data scientists are developing a machine learning model in the Azure Machine Learning workspace, they want to use a virtual machine on which they can run Jupyter notebooks. For development, a **compute instance** is an ideal fit. 
 
 After creating an Azure Machine Learning workspace, you can also create a compute instance using the Azure CLI. 
 
@@ -70,11 +72,13 @@ In this exercise, you'll create a compute instance with the following settings:
 - **Azure Machine Learning workspace name**: mlw-dp100-labs
 - **Resource group**: rg-dp100-labs
 
-1. The "XXXX" should be replaced with random numbers to create a unique name. Use the following command to create a compute instance in your workspace.
+1. Use the following command to create a compute instance in your workspace. If the compute instance name contains "XXXX", replace it with random numbers to create a unique name. 
 
     ```azurecli
     az ml compute create --name "ciXXXX" --size STANDARD_DS11_V2 --type ComputeInstance -w mlw-dp100-labs -g rg-dp100-labs
     ```
+
+    If you get an error message that a compute instance with the name already exists, change the name and retry the command.
 
 ## Create a compute cluster with the Azure CLI
 
@@ -116,15 +120,18 @@ Now that you've verified that the necessary compute has been created, you can us
     pip install azure-ai-ml
     ```
 
+    Ignore any (error) messages that say that the packages were not installed.
+
 1. Run the following command to clone a Git repository containing notebooks, data, and other files to your workspace:
 
     ```
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ``` 
 
-1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/azure-ml-labs** folder has been created. 
-1. Expand the folder to find a notebook, a YAML file which defines the environment, and a folder containing the training script and a dataset. Explore all these files to 
-1. Open the **Labs/Run training script.ipynb** notebook.
+1. When the command has completed, in the **Files** pane, select **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/azure-ml-labs** folder has been created. 
+1. Open the **Labs/01/Run training script.ipynb** notebook.
+    
+    > Select **Authenticate** if a notification appears asking you to authenticate. 
 1. Run all cells in the notebook. 
 
 A new job will be created in the Azure Machine Learning workspace. The job tracks the inputs defined in the job configuration, the code used, and the outputs like metrics to evaluate the model.
