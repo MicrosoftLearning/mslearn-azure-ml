@@ -78,6 +78,7 @@ The code to create the endpoint and deploy an MLflow model with the Python SDK i
 
     > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate. 
 
+1. Verify that the notebook uses the **Python 3.8 - AzureML** kernel. 
 1. Run all cells in the notebook.
 
 ## Delete Azure resources
