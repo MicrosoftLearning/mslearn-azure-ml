@@ -15,9 +15,9 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free?azure-porta
 
 ## Provision an Azure Machine Learning workspace
 
-An Azure Machine Learning *workspace* provides a central place for managing all resources and assets you need to train and manage your models. You can interact with the Azure Machine Learning workspace through the Studio, Python SDK, and Azure CLI. 
+An Azure Machine Learning *workspace* provides a central place for managing all resources and assets you need to train and manage your models. You can interact with the Azure Machine Learning workspace through the studio, Python SDK, and Azure CLI. 
 
-You'll use a Shell script which uses the Azure CLI to provision the workspace and necessary resources. Next, you'll use the Designer in the Azure Machine Learning Studio to train and compare models.
+You'll use a Shell script which uses the Azure CLI to provision the workspace and necessary resources. Next, you'll use the Designer in the Azure Machine Learning studio to train and compare models.
 
 ### Create the workspace and compute cluster
 
@@ -47,11 +47,12 @@ To create the Azure Machine Learning workspace and a compute cluster, you'll use
 
 ## Configure a new pipeline
 
-When you've created the workspace and necessary compute cluster, you can open the Azure Machine Learning Studio and create a training pipeline with the Designer. 
+When you've created the workspace and necessary compute cluster, you can open the Azure Machine Learning studio and create a training pipeline with the Designer. 
 
 1. In the Azure portal, navigate to the Azure Machine Learning workspace named **mlw-dp100-labs**.
-1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning Studio.
-1. Within the Azure Machine Learning Studio, navigate to the **Compute** page and verify that the compute cluster you created in the previous section exist. The cluster should be idle and have 0 nodes running.
+1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning studio.
+1. Close any pop-ups that appear in the studio.
+1. Within the Azure Machine Learning studio, navigate to the **Compute** page and verify that the compute cluster you created in the previous section exist. The cluster should be idle and have 0 nodes running.
 1. Navigate to the **Designer** page.
 1. Select the **Custom** tab at the top of the page.
 1. Create a new empty pipeline using custom components.
@@ -99,7 +100,7 @@ To compare between algorithms and evaluate which performs better, you can train 
 
 When you finish exploring Azure Machine Learning, you should delete the resources you've created to avoid unnecessary Azure costs.
 
-1. Close the Azure Machine Learning Studio tab and return to the Azure portal.
+1. Close the Azure Machine Learning studio tab and return to the Azure portal.
 1. In the Azure portal, on the **Home** page, select **Resource groups**.
 1. Select the **rg-dp100-labs** resource group.
 1. At the top of the **Overview** page for your resource group, select **Delete resource group**. 

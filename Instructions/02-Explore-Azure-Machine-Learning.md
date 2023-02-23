@@ -66,7 +66,7 @@ Let's create a compute target.
 
 To run any workload within the Azure Machine Learning workspace, you'll need a compute resource. One of the benefits of Azure Machine Learning is the ability to create cloud-based compute on which you can run experiments and training scripts at scale.
 
-1. In the Azure Machine Learning Studio, select the **Compute** page from the menu on the left side. There are four kinds of compute resources you can use:
+1. In the Azure Machine Learning studio, select the **Compute** page from the menu on the left side. There are four kinds of compute resources you can use:
     - **Compute instances**: A virtual machine managed by Azure Machine Learning. Ideal for development when you're exploring data and iteratively experimenting with machine learning models. 
     - **Compute clusters**: Scalable clusters of virtual machines for on-demand processing of experiment code. Ideal for running production code or automated jobs.
     - **Inference clusters**: A Kubernetes cluster used during inference. Ideal for real-time model deployment at a large scale.

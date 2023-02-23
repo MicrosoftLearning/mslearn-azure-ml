@@ -15,7 +15,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free?azure-porta
 
 ## Provision an Azure Machine Learning workspace
 
-An Azure Machine Learning *workspace* provides a central place for managing all resources and assets you need to train and manage your models. You can interact with the Azure Machine Learning workspace through the Studio, Python SDK, and Azure CLI.
+An Azure Machine Learning *workspace* provides a central place for managing all resources and assets you need to train and manage your models. You can interact with the Azure Machine Learning workspace through the studio, Python SDK, and Azure CLI.
 
 To create the Azure Machine Learning workspace, you'll use the Azure CLI. All necessary commands are grouped in a Shell script for you to execute.
 
@@ -57,8 +57,9 @@ To create the Azure Machine Learning workspace, you'll use the Azure CLI. All ne
 To run notebooks within the Azure Machine Learning workspace, you'll need a compute instance. You can use a setup script to configure the compute instance on creation.
 
 1. In the Azure portal, navigate to the Azure Machine Learning workspace named **mlw-dp100-labs**.
-1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning Studio.
-1. Within the Azure Machine Learning Studio, navigate to the **Notebooks** page.
+1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning studio.
+1. Close any pop-ups that appear in the studio.
+1. Within the Azure Machine Learning studio, navigate to the **Notebooks** page.
 1. In the **Files** pane, select the &#10753; icon to **Add files**. 
 1. Select **Create new file**.
 1. Verify that the file location is **Users/*your-user-name***.
@@ -77,7 +78,7 @@ To run notebooks within the Azure Machine Learning workspace, you'll need a comp
 
 ## Create the compute instance
 
-To create the compute instance, you can use the Studio, Python SDK, or Azure CLI. You'll use the Studio to create the compute instance with the setup script you just created.
+To create the compute instance, you can use the studio, Python SDK, or Azure CLI. You'll use the studio to create the compute instance with the setup script you just created.
 
 1. Navigate to the **Compute** page, using the menu on the left.
 1. In the **Compute instances** tab, select **New**.
@@ -127,7 +128,7 @@ Notebooks are ideal for development or iterative work during experimentation. Wh
 
 When you finish exploring Azure Machine Learning, you should delete the resources you've created to avoid unnecessary Azure costs.
 
-1. Close the Azure Machine Learning Studio tab and return to the Azure portal.
+1. Close the Azure Machine Learning studio tab and return to the Azure portal.
 1. In the Azure portal, on the **Home** page, select **Resource groups**.
 1. Select the **rg-dp100-labs** resource group.
 1. At the top of the **Overview** page for your resource group, select **Delete resource group**. 

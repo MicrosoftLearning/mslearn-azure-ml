@@ -15,9 +15,9 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free?azure-porta
 
 ## Provision an Azure Machine Learning workspace
 
-An Azure Machine Learning *workspace* provides a central place for managing all resources and assets you need to train and manage your models. You can interact with the Azure Machine Learning workspace through the Studio, Python SDK, and Azure CLI. 
+An Azure Machine Learning *workspace* provides a central place for managing all resources and assets you need to train and manage your models. You can interact with the Azure Machine Learning workspace through the studio, Python SDK, and Azure CLI. 
 
-You'll use a Shell script which uses the Azure CLI to provision the workspace and necessary resources. Next, you'll use the Designer in the Azure Machine Learning Studio to train and compare models.
+You'll use a Shell script which uses the Azure CLI to provision the workspace and necessary resources. Next, you'll use the Designer in the Azure Machine Learning studio to train and compare models.
 
 ### Create the workspace and compute resources
 
@@ -75,8 +75,9 @@ To create a datastore in the Azure Machine Learning workspace, you need to provi
 To create a datastore and data assets with the Python SDK, you'll need to clone the lab materials into the workspace.
 
 1. In the Azure portal, navigate to the Azure Machine Learning workspace named **mlw-dp100-labs**.
-1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning Studio.
-1. Within the Azure Machine Learning Studio, navigate to the **Compute** page and verify that the compute instance and cluster you created in the previous section exist. The compute instance should be running, the cluster should be idle and have 0 nodes running.
+1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning studio.
+1. Close any pop-ups that appear in the studio.
+1. Within the Azure Machine Learning studio, navigate to the **Compute** page and verify that the compute instance and cluster you created in the previous section exist. The compute instance should be running, the cluster should be idle and have 0 nodes running.
 1. In the **Compute instances** tab, find your compute instance, and select the **Terminal** application.
 1. In the terminal, install the Python SDK on the compute instance by running the following commands in the terminal:
     
@@ -113,7 +114,7 @@ The code to create a datastore and data assets with the Python SDK is provided i
 
 **Optionally**, you can explore how the data assets are stored in the associated Storage Account.
 
-1. Navigate to the **Data** tab in the Azure Machine Learning Studio to explore the data assets. 
+1. Navigate to the **Data** tab in the Azure Machine Learning studio to explore the data assets. 
 1. Select the **diabetes-local** data asset name to explore its details. 
 
     Under **Data sources** for the **diabetes-local** data asset, you'll find where the file has been uploaded to. The path starting with **LocalUpload/...** shows the path within the Storage Account container **azureml-blobstore-...**. You can verify the file exists by navigating to that path in the Azure portal.
@@ -122,7 +123,7 @@ The code to create a datastore and data assets with the Python SDK is provided i
 
 When you finish exploring Azure Machine Learning, you should delete the resources you've created to avoid unnecessary Azure costs.
 
-1. Close the Azure Machine Learning Studio tab and return to the Azure portal.
+1. Close the Azure Machine Learning studio tab and return to the Azure portal.
 1. In the Azure portal, on the **Home** page, select **Resource groups**.
 1. Select the **rg-dp100-labs** resource group.
 1. At the top of the **Overview** page for your resource group, select **Delete resource group**. 
