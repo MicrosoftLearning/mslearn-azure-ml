@@ -30,6 +30,8 @@ To create the Azure Machine Learning workspace, you'll use the Azure CLI. All ne
     az extension remove -n ml
     ```
 
+    > Use `SHIFT + INSERT` to paste your copied code into the Cloud Shell. 
+
     > Ignore any (error) messages that say that the extensions were not installed. 
 
 1. Install the Azure Machine Learning (v2) extension with the following command:

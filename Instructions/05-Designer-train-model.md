@@ -34,6 +34,8 @@ To create the Azure Machine Learning workspace and a compute cluster, you'll use
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ```
 
+    > Use `SHIFT + INSERT` to paste your copied code into the Cloud Shell. 
+
 1. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the setup.sh script it contains:
 
     ```bash

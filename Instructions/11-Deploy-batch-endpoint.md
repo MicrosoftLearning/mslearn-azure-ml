@@ -34,6 +34,8 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ```
 
+    > Use `SHIFT + INSERT` to paste your copied code into the Cloud Shell. 
+
 1. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the **setup.sh** script it contains:
     
     ```bash
@@ -57,6 +59,7 @@ When you've created the workspace and necessary compute resources, you can open 
 1. In the terminal, install the Python SDK on the compute instance by running the following commands in the terminal:
     
     ```
+
     pip uninstall azure-ai-ml
     pip install azure-ai-ml
     ```
