@@ -66,7 +66,7 @@ To run notebooks within the Azure Machine Learning workspace, you'll need a comp
 1. Select **Create new file**.
 1. Verify that the file location is **Users/*your-user-name***.
 1. Change the file type to **Bash (*.sh)**.
-1. Change the file name to **compute-setup.sh**.
+1. Change the file name to `compute-setup.sh`.
 1. Open the newly created **compute-setup.sh** file and paste the following to its content:
 
     ```bash
@@ -89,7 +89,7 @@ To create the compute instance, you can use the studio, Python SDK, or Azure CLI
     - **Virtual machine type**: `CPU`
     - **Virtual machine size**: `Standard_DS11_v2`
 1. Select **Next: Advanced settings**.
-1. Select **Add schedule** and configure the schedule to **stop** the compute instance every day at **18:00**. 
+1. Select **Add schedule** and configure the schedule to **stop** the compute instance every day at **18:00** or **6:00 PM**. 
 1. Select the toggle for **Provision with setup script**. 
 1. Select the **compute-setup.sh** script you created previously.
 1. Review the other advanced settings but do **not** select them:
