@@ -33,14 +33,6 @@
                 {
                     "field":"type",
                     "equals":"Microsoft.MachineLearningServices/workspaces"
-                },
-                {
-                    "field":"type",
-                    "contains":"Microsoft.MachineLearningServices/workspaces/onlineEndpoints"
-                },
-                {
-                    "field":"type",
-                    "contains":"Microsoft.MachineLearningServices/workspaces/batchEndpoints"
                 }
             ]
             
