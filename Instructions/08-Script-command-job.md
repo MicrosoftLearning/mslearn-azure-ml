@@ -29,7 +29,7 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
 1. Check that the correct subscription is specified and select **Create storage** if you are asked to create storage for your cloud shell. Wait for the storage to be created.
 1. In the terminal, enter the following commands to clone this repo:
 
-    ```bash
+    ```azurecli
     rm -r azure-ml-labs -f
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ```
@@ -38,7 +38,7 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
 
 1. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the **setup.sh** script it contains:
     
-    ```bash
+    ```azurecli
     cd azure-ml-labs/Labs/08
     ./setup.sh
     ```
@@ -85,7 +85,7 @@ Using a notebook attached to a compute instance is ideal for experimentation and
 1. Run all cells to explore the code and train a model.
 1. Select the &#9776; icon at the top of the notebook to view the **notebook menu**. 
 1. Expand **Export as**, and select **Python (.py)** to convert the notebook to a Python script.
-1. Name the new file **train-classification-model.py**. 
+1. Name the new file `train-classification-model.py`. 
 1. Once the new file is created, the script should automatically be opened. Explore the file and note that it contains the same code as the notebook.
 1. Select the &#9655;&#9655; icon at the top of the notebook to **save and run the script in the terminal**.
 1. The script is initiated by the command **python train-classification-model.py** and the output should be shown below the command. 

@@ -28,7 +28,7 @@ To create the Azure Machine Learning workspace and compute resources, you'll use
 1. Check that the correct subscription is specified and select **Create storage** if you are asked to create storage for your cloud shell. Wait for the storage to be created.
 1. Enter the following commands in the terminal to clone this repo:
 
-    ```bash
+    ```azurecli
     rm -r azure-ml-labs -f
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ```
@@ -37,7 +37,7 @@ To create the Azure Machine Learning workspace and compute resources, you'll use
 
 1. Enter the following commands after the repo has been cloned, to change to the folder for this lab and run the **setup.sh** script it contains:
 
-    ```bash
+    ```azurecli
     cd azure-ml-labs/Labs/03
     ./setup.sh
     ```
