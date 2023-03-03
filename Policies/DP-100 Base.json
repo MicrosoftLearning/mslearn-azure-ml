@@ -1,0 +1,44 @@
+{
+    "if": {
+        "not": {
+            "anyOf": [                           
+                {
+                    "field": "type",
+                    "contains": "Microsoft.Storage/storageAccounts"
+                },
+                {
+                    "field": "type",
+                    "contains": "Microsoft.insights/"
+                },
+                {
+                    "field": "type",
+                    "contains": "Microsoft.ContainerInstance/containerGroups"
+                },
+                {
+                    "field": "type",
+                    "contains": "Microsoft.ContainerRegistry/registries"
+                },
+                {
+                    "field": "type",
+                    "contains": "Microsoft.KeyVault/vaults"
+                },
+                {
+                    "field": "type",
+                    "contains": "Microsoft.AlertsManagement/smartDetectorAlertRules"
+                },
+                {
+                    "field": "type",
+                    "contains": "Microsoft.OperationalInsights/workspaces"
+                },
+                {
+                    "field":"type",
+                    "equals":"Microsoft.MachineLearningServices/workspaces"
+                }
+            ]
+            
+        }
+    },
+    "then": {
+        "effect": "Deny"
+    }
+}
