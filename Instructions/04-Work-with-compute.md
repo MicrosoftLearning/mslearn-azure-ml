@@ -25,7 +25,7 @@ To create the Azure Machine Learning workspace, you'll use the Azure CLI. All ne
 1. Check that the correct subscription is specified and select **Create storage** if you are asked to create storage for your cloud shell. Wait for the storage to be created.
 1. To avoid any conflicts with previous versions, remove any ML CLI extensions (both version 1 and 2) by running this command in the terminal:
 
-    ```bash
+    ```azurecli
     az extension remove -n azure-cli-ml
     az extension remove -n ml
     ```
@@ -36,7 +36,7 @@ To create the Azure Machine Learning workspace, you'll use the Azure CLI. All ne
 
 1. Install the Azure Machine Learning (v2) extension with the following command:
     
-    ```bash
+    ```azurecli
     az extension add -n ml -y
     ```
 
@@ -69,7 +69,7 @@ To run notebooks within the Azure Machine Learning workspace, you'll need a comp
 1. Change the file name to `compute-setup.sh`.
 1. Open the newly created **compute-setup.sh** file and paste the following to its content:
 
-    ```bash
+    ```azurecli
     #!/bin/bash
 
     # clone repository
@@ -86,8 +86,8 @@ To create the compute instance, you can use the studio, Python SDK, or Azure CLI
 1. In the **Compute instances** tab, select **New**.
 1. Configure (don't create yet) the compute instance with the following settings: 
     - **Compute name**: *enter a unique name*
-    - **Virtual machine type**: `CPU`
-    - **Virtual machine size**: `Standard_DS11_v2`
+    - **Virtual machine type**: *CPU*
+    - **Virtual machine size**: *Standard_DS11_v2*
 1. Select **Next: Advanced settings**.
 1. Select **Add schedule** and configure the schedule to **stop** the compute instance every day at **18:00** or **6:00 PM**. 
 1. Select the toggle for **Provision with setup script**. 

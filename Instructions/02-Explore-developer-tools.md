@@ -30,7 +30,7 @@ To start, open the Azure Cloud Shell, install the Azure Machine Learning extensi
 1. Check that the correct subscription is specified and select **Create storage** if you are asked to create storage for your cloud shell. Wait for the storage to be created.
 1. Remove any ML CLI extensions (both version 1 and 2) to avoid any conflicts with previous versions with this command:
     
-    ```
+    ```azurecli
     az extension remove -n azure-cli-ml
     az extension remove -n ml
     ```
@@ -41,7 +41,7 @@ To start, open the Azure Cloud Shell, install the Azure Machine Learning extensi
 
 1. Install the Azure Machine Learning (v2) extension with the following command:
     
-    ```
+    ```azurecli
     az extension add -n ml -y
     ```
 
