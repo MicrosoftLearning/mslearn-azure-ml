@@ -56,8 +56,8 @@ When you've created the workspace and necessary compute cluster, you can open th
 1. Close any pop-ups that appear in the studio.
 1. Within the Azure Machine Learning studio, navigate to the **Compute** page and verify that the compute cluster you created in the previous section exist. The cluster should be idle and have 0 nodes running.
 1. Navigate to the **Designer** page.
-1. Select the **Custom** tab at the top of the page.
-1. Create a new empty pipeline using custom components.
+1. Select the **Classic prebuilt** tab at the top of the page.
+1. Create a new empty pipeline using classic prebuilt components.
 1. Change the default pipeline name (**Pipeline-Created-on-*date***) to `Train-Diabetes-Classifier` by clicking the **&#9881;** icon at the right to open the **Settings** pane.
 1. You'll need to specify a compute target on which to run the pipeline. In the **Settings** pane, under **Select compute type** and select **Compute cluster**, and under **Select Azure ML compute cluster** and select **aml-cluster**. Close the settings pane.
 
