@@ -72,9 +72,9 @@ To train a model, you'll need data. You can use any data stored in a datastore o
 1. In the left menu, select the **Components** tab.
 1. Drag and drop the **Remove Empty Rows** component on to the canvas, below the **diabetes-folder**. 
 1. Connect the output of the data to the input of the new component.
-1. Drag and drop the **Normalize numerical columns** component on to the canvas, below the **Remove empty rows**. 
+1. Drag and drop the **Normalize Numerical Columns** component on to the canvas, below the **Remove Empty Rows**. 
 1. Connect the output of the previous component to the input of the new component.
-1. Drag and drop the **Train a Decision Tree Classifier Model** component on to the canvas, below the **Remove empty rows**.
+1. Drag and drop the **Train a Decision Tree Classifier Model** component on to the canvas, below the **Normalize Numerical Columns**.
 1. Connect the output of the previous component to the input of the new component. 
 1. Submit your pipeline. 
 1. Create a new experiment and name it `diabetes-designer-pipeline`. 
@@ -92,7 +92,7 @@ To compare between algorithms and evaluate which performs better, you can train 
 
 1. Within the same pipeline you've been working in so far
 1. Add the **Train a Logistic Regression Classifier Model** component to the canvas, next to the other training component.
-1. Connect the output of the **Normalize numerical columns** component to the input of the new training component. 
+1. Connect the output of the **Normalize Numerical Columns** component to the input of the new training component. 
 1. At the top, select **Submit**. 
 1. When prompted, create a new experiment named `designer-compare-classification`, and run it.  
 1. When the pipeline has completed, review the **Metrics** for both training components.

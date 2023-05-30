@@ -154,7 +154,6 @@ When you submit a job to the Azure Machine Learning workspace, you can review it
     - **Finalizing**: The training script ran and the job is being updated with all final information.
     - **Completed**: The job successfully completed and is terminated.
     - **Failed**: The job failed and is terminated.
-1. When the job is completed, you can find the *AUC* and *Accuracy* of the model under **Metrics**. 
 1. Under **Outputs + logs**, you'll find:
     - The model pickle file in the folder **outputs**. 
     - The output of the script in **user_logs/std_log.txt**. Output from **print** statements in the script will show here. If there's an error because of a problem with your script, you'll find the error message here too.

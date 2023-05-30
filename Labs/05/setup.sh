@@ -32,11 +32,11 @@ az ml compute create --name ${COMPUTE_CLUSTER} --size STANDARD_DS11_V2 --max-ins
 
 # Create data asset
 echo "Creating a data asset with name: diabetes-folder"
-az ml data create --name diabetes-folder --path ./data -w mlw-dp100-labs -g rg-dp100-labs
+az ml data create --name diabetes-folder --path ./data 
 
 # Create components
 echo "Creating components"
-az ml component create --file ./fix-missing-data.yml -w mlw-dp100-labs -g rg-dp100-labs
-az ml component create --file ./normalize-data.yml -w mlw-dp100-labs -g rg-dp100-labs
-az ml component create --file ./train-decision-tree.yml -w mlw-dp100-labs -g rg-dp100-labs
-az ml component create --file ./train-logistic-regression.yml -w mlw-dp100-labs -g rg-dp100-labs
+az ml component create --file ./fix-missing-data.yml 
+az ml component create --file ./normalize-data.yml 
+az ml component create --file ./train-decision-tree.yml 
+az ml component create --file ./train-logistic-regression.yml 

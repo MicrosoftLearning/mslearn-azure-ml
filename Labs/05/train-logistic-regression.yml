@@ -9,6 +9,7 @@ inputs:
     type: uri_folder
   regularization_rate: 
     type: number
+    default: 0.01
 outputs:
   model_output:
     type: uri_folder
