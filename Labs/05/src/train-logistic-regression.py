@@ -46,7 +46,9 @@ X, y = (
 )
 
 # Split data into training set and test set
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.30, random_state=0
+)
 
 # Train a logistic regression model
 print('Training a logistic regression model...')
