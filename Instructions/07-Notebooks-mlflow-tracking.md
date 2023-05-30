@@ -55,10 +55,11 @@ When you've created the workspace and necessary compute resources, you can open 
 1. Close any pop-ups that appear in the studio.
 1. Within the Azure Machine Learning studio, navigate to the **Compute** page and verify that the compute instance and cluster you created in the previous section exist. The compute instance should be running, the cluster should be idle and have 0 nodes running.
 1. In the **Compute instances** tab, find your compute instance, and select the **Terminal** application.
-1. In the terminal, install the Python SDK on the compute instance by running the following commands in the terminal:
+1. In the terminal, install the Python SDK and the MLflow library on the compute instance by running the following commands in the terminal:
     ```
     pip uninstall azure-ai-ml
     pip install azure-ai-ml
+    pip install mlflow
     ```
 
     > Ignore any (error) messages that say that the packages couldn't be found and uninstalled.
