@@ -52,7 +52,9 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # Train a logistic regression model
 print('Training a logistic regression model...')
-model = LogisticRegression(C=1/args.reg_rate, solver="liblinear").fit(X_train, y_train)
+model = LogisticRegression(C=1 / args.reg_rate, solver="liblinear").fit(
+    X_train, y_train
+)
 
 # Calculate accuracy
 y_pred = model.predict(X_test)
