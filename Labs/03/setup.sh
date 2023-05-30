@@ -18,10 +18,6 @@ COMPUTE_CLUSTER="aml-cluster"
 echo "Register the Machine Learning resource provider:"
 az provider register --namespace $RESOURCE_PROVIDER
 
-# Delete the resource group if it already exists to avoid clashes
-echo "Delete the resource group" $RESOURCE_GROUP "to avoid clashes:"
-az group delete --name $RESOURCE_GROUP
-
 # Create the resource group and workspace and set to default
 echo "Create a resource group and set as default:"
 az group create --name $RESOURCE_GROUP --location $RANDOM_REGION
