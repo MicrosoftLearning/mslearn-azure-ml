@@ -37,5 +37,5 @@ az ml compute create --name ${COMPUTE_CLUSTER} --size STANDARD_DS11_V2 --max-ins
 
 # Create data assets
 echo "Create training data asset:"
-az ml data create --type mltable --name "diabetes-training" --path ./diabetes-data -w mlw-dp100-labs -g rg-dp100-labs
-az ml data create --type mltable --name "oj-training" --path ./orange-juice-data -w mlw-dp100-labs -g rg-dp100-labs
+az ml data create --type mltable --name "diabetes-training" --path ./diabetes-data -w $WORKSPACE_NAME -g $RESOURCE_GROUP
+az ml data create --type mltable --name "oj-training" --path ./orange-juice-data -w $WORKSPACE_NAME -g $RESOURCE_GROUP
