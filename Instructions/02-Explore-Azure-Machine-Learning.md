@@ -85,6 +85,7 @@ To train a machine learning model that you authored with the Designer, you can u
         - **Enable virtual network**: `Unselected` *(you would typically use this in an enterprise environment to enhance network security)*
         - **Assign to another user**: `Unselected` *(you can use this to assign a compute instance to a data scientist)*
         - **Provision with setup script**: `Unselected` *(you can use this to add a script to run on the remote instance when created)*
+        - **Assign a managed identity**: `Unselected` *(you can attach system assigned or user assigned managed identities to grant access to resources)*
 
 3. Select **Create** and wait for the compute instance to start and its state to change to **Running**.
 
