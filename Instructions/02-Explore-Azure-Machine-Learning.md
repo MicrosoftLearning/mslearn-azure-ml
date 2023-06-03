@@ -69,7 +69,7 @@ To run any workload within the Azure Machine Learning workspace, you'll need a c
 1. In the Azure Machine Learning studio, select the **Compute** page from the menu on the left side. There are four kinds of compute resources you can use:
     - **Compute instances**: A virtual machine managed by Azure Machine Learning. Ideal for development when you're exploring data and iteratively experimenting with machine learning models. 
     - **Compute clusters**: Scalable clusters of virtual machines for on-demand processing of experiment code. Ideal for running production code or automated jobs.
-    - **Inference clusters**: A Kubernetes cluster used during inference. Ideal for real-time model deployment at a large scale.
+    - **Kubernetes clusters**: A Kubernetes cluster used during inference. Ideal for real-time model deployment at a large scale.
     - **Attached compute**: Attach your existing Azure compute resources to the workspace, such as Virtual Machines or Azure Databricks clusters.
 
 To train a machine learning model that you authored with the Designer, you can use either a compute instance or compute cluster.
