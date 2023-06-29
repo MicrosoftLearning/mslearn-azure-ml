@@ -73,9 +73,9 @@ When you've created the workspace and necessary compute resources, you can open 
  
 1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/azure-ml-labs** folder has been created. 
 
-## Submit MLflow jobs from a notebook
+## Create a pipeline to evaluate models and submit from a notebook
 
-Now that you have all the necessary resources, you can run the notebook to submit the job, which uses MLflow to track model parameters, metrics, and artifacts.
+Now that you have all the necessary resources, you can run the notebook to retrieve the built-in responsible AI components, create a pipeline, and submit the pipeline to generate a responsible AI dashboard.
 
 1. Open the **Labs/10/Create Responsible AI dashboard.ipynb** notebook.
 
