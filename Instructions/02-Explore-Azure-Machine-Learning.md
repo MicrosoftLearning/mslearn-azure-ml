@@ -51,8 +51,7 @@ To explore the use of the assets and resources in the Azure Machine Learning wor
 
 A quick way to author a model training pipeline is by using the **Designer**.
 
-> [!Note]
-> Pop-ups may appear throughout to guide you through the studio. You can close and ignore all pop-ups and focus on the instructions of this lab.
+> **Note**: Pop-ups may appear throughout to guide you through the studio. You can close and ignore all pop-ups and focus on the instructions of this lab.
 
 1. Select the **Designer** page from the menu on the left side of the studio.
 1. Select the **Regression - Automobile Price Prediction (Basic)** sample. 
