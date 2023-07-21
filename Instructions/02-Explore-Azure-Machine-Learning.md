@@ -41,7 +41,7 @@ In this exercise, you'll use the Azure portal to provision Azure Machine Learnin
 1. Select **Launch studio** from the **Overview** page. Another tab will open in your browser to open the Azure Machine Learning studio.
 1. Close any pop-ups that appear in the studio. 
 1. Note the different pages shown on the left side of the studio. If only the symbols are visible in the menu, select the &#9776; icon to expand the menu and explore the names of the pages. 
-1. Note the **Author** section, which includes **Notebooks**, **Automated ML**, and the **Designer**. These are the three ways you can create your own machine learning models within the Azure Machine Learning studio.
+1. Note the **Authoring** section, which includes **Notebooks**, **Automated ML**, and the **Designer**. These are the three ways you can create your own machine learning models within the Azure Machine Learning studio.
 1. Note the **Assets** section, which includes **Data**, **Jobs**, and **Models** among other things. Assets are either consumed or created when training or scoring a model. Assets are used to train, deploy, and manage your models and can be versioned to keep track of your history.
 1. Note the **Manage** section, which includes **Compute** among other things. These are infrastructural resources needed to train or deploy a machine learning model. 
 
