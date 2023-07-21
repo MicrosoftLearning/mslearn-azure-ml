@@ -74,7 +74,7 @@ To run any workload within the Azure Machine Learning workspace, you'll need a c
 To train a machine learning model that you authored with the Designer, you can use either a compute instance or compute cluster.
 
 2. On the **Compute instances** tab, add a new compute instance with the following settings. 
-    - **Compute name**: *enter a unique name*
+    - **Compute name**: *Enter a unique name*
     - **Location**: *Automatically the same location as your workspace*
     - **Virtual machine type**: `CPU`
     - **Virtual machine size**: `Standard_DS11_v2`
