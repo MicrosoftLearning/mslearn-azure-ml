@@ -42,20 +42,20 @@ To create the Azure Machine Learning workspace and compute resources, you'll use
     ./setup.sh
     ```
 
-    > Ignore any (error) messages that say that the extensions were not installed. 
+    > Ignore any (error) messages that say that the extensions were not installed.
 
-1. Wait for the script to complete - this typically takes around 5-10 minutes. 
+1. Wait for the script to complete - this typically takes around 5-10 minutes.
 
 ## Explore the default datastores
 
 When you create an Azure Machine Learning workspace, a Storage Account is automatically created and connected to your workspace. You'll explore how the Storage Account is connected.
 
-1. In the Azure portal, navigate to the new resource group named **rg-dp100-labs**.
+1. In the Azure portal, navigate to the new resource group named **rg-dp100-...**.
 1. Select the Storage Account in the resource group. The name often starts with the name you provided for the workspace (without hyphens).
 1. Review the **Overview** page of the Storage Account. Note that the Storage Account has several options for **Data storage** as shown in the Overview pane, and in the left menu.
-1. Select **Containers** to explore the Blob storage part of the Storage Account. 
-1. Note the **azureml-blobstore-...** container. The default datastore for data assets uses this container to store data. 
-1. Using the &#43; **Container** button at the top of the screen, create a new container and name it `training-data`. 
+1. Select **Containers** to explore the Blob storage part of the Storage Account.
+1. Note the **azureml-blobstore-...** container. The default datastore for data assets uses this container to store data.
+1. Using the &#43; **Container** button at the top of the screen, create a new container and name it `training-data`.
 1. Select **File shares** from the left menu to explore the File share part of the Storage Account.
 1. Note the **code-...** file share. Any notebooks in the workspace are stored here. After cloning the lab materials, you can find the files in this file share, in the **code-.../Users/*your-user-name*/azure-ml-labs** folder.
 
@@ -82,8 +82,8 @@ To create a datastore and data assets with the Python SDK, you'll need to clone 
 1. Within the Azure Machine Learning studio, navigate to the **Compute** page and verify that the compute instance and cluster you created in the previous section exist. The compute instance should be running, the cluster should be idle and have 0 nodes running.
 1. In the **Compute instances** tab, find your compute instance, and select the **Terminal** application.
 1. In the terminal, install the Python SDK on the compute instance by running the following commands in the terminal:
-    
-    ```
+
+    ```azurecli
     pip uninstall azure-ai-ml
     pip install azure-ai-ml
     pip install mltable
@@ -92,12 +92,12 @@ To create a datastore and data assets with the Python SDK, you'll need to clone 
     > Ignore any (error) messages that say that the packages were not installed.
 
 1. Run the following command to clone a Git repository containing notebooks, data, and other files to your workspace:
-    
-    ```
+
+    ```azurecli
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ```
- 
-1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/azure-ml-labs** folder has been created. 
+
+1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/azure-ml-labs** folder has been created.
 
 **Optionally**, in another browser tab, navigate back to the [Azure portal](https://portal.azure.com?azure-portal=true). Explore the file share **code-...** in the Storage account again to find the cloned lab materials in the newly created **azure-ml-labs** folder.
 
@@ -107,16 +107,16 @@ The code to create a datastore and data assets with the Python SDK is provided i
 
 1. Open the **Labs/03/Work with data.ipynb** notebook.
 
-    > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate. 
+    > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate.
 
-1. Verify that the notebook uses the **Python 3.8 - AzureML** kernel. 
+1. Verify that the notebook uses the **Python 3.8 - AzureML** kernel.
 1. Run all cells in the notebook.
 
 ## Optional: Explore the data assets
 
 **Optionally**, you can explore how the data assets are stored in the associated Storage Account.
 
-1. Navigate to the **Data** tab in the Azure Machine Learning studio to explore the data assets. 
+1. Navigate to the **Data** tab in the Azure Machine Learning studio to explore the data assets.
 1. Select the **diabetes-local** data asset name to explore its details. 
 
     Under **Data sources** for the **diabetes-local** data asset, you'll find where the file has been uploaded to. The path starting with **LocalUpload/...** shows the path within the Storage Account container **azureml-blobstore-...**. You can verify the file exists by navigating to that path in the Azure portal.
@@ -127,6 +127,6 @@ When you finish exploring Azure Machine Learning, you should delete the resource
 
 1. Close the Azure Machine Learning studio tab and return to the Azure portal.
 1. In the Azure portal, on the **Home** page, select **Resource groups**.
-1. Select the **rg-dp100-labs** resource group.
-1. At the top of the **Overview** page for your resource group, select **Delete resource group**. 
+1. Select the **rg-dp100-...** resource group.
+1. At the top of the **Overview** page for your resource group, select **Delete resource group**.
 1. Enter the resource group name to confirm you want to delete it, and select **Delete**.
