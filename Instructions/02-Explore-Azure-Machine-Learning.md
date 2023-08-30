@@ -51,8 +51,7 @@ To explore the use of the assets and resources in the Azure Machine Learning wor
 
 A quick way to author a model training pipeline is by using the **Designer**.
 
-> [!Note]
-> Pop-ups may appear throughout to guide you through the studio. You can close and ignore all pop-ups and focus on the instructions of this lab.
+> **Note**: Pop-ups may appear throughout to guide you through the studio. You can close and ignore all pop-ups and focus on the instructions of this lab.
 
 1. Select the **Designer** page from the menu on the left side of the studio.
 1. Select the **Regression - Automobile Price Prediction (Basic)** sample. 
@@ -75,7 +74,7 @@ To run any workload within the Azure Machine Learning workspace, you'll need a c
 To train a machine learning model that you authored with the Designer, you can use either a compute instance or compute cluster.
 
 2. On the **Compute instances** tab, add a new compute instance with the following settings. 
-    - **Compute name**: *enter a unique name*
+    - **Compute name**: *Enter a unique name*
     - **Location**: *Automatically the same location as your workspace*
     - **Virtual machine type**: `CPU`
     - **Virtual machine size**: `Standard_DS11_v2`
