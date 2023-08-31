@@ -89,6 +89,7 @@ Though a compute instance is ideal for development, a compute cluster is better 
 To create a compute cluster, you can use the Azure CLI, similar to creating a compute instance. 
 
 You'll create a compute cluster with the following settings:
+
 - **Compute name**: aml-cluster
 - **Virtual machine size**: STANDARD_DS11_V2
 - **Compute type**: AmlCompute *(Creates a compute cluster)*
@@ -102,7 +103,7 @@ You'll create a compute cluster with the following settings:
     az ml compute create --name "aml-cluster" --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute -w mlw-dp100-labs -g rg-dp100-labs
     ```
 
-## Configure your work station with the Azure Machine Learning studio
+## Configure your workstation with the Azure Machine Learning studio
 
 Though the Azure CLI is ideal for automation, you may want to review the output of the commands you executed. You can use the Azure Machine Learning Studio to check whether resources and assets have been created, and to check whether jobs ran successfully or review why a job failed. 
 
@@ -129,15 +130,15 @@ Now that you've verified that the necessary compute has been created, you can us
 
     ```
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
-    ``` 
+    ```
 
 1. When the command has completed, in the **Files** pane, select **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/azure-ml-labs** folder has been created. 
 1. Open the **Labs/02/Run training script.ipynb** notebook.
     
-    > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate. 
+    > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate.
 
 1. Verify that the notebook uses the **Python 3.8 - AzureML** kernel. Each kernel has its own image with its own set of packages pre-installed.
-1. Run all cells in the notebook. 
+1. Run all cells in the notebook.
 
 A new job will be created in the Azure Machine Learning workspace. The job tracks the inputs defined in the job configuration, the code used, and the outputs like metrics to evaluate the model.
 
@@ -147,7 +148,7 @@ When you submit a job to the Azure Machine Learning workspace, you can review it
 
 1. Either select the job URL provided as output in the notebook, or navigate to the **Jobs** page in the Azure Machine Learning studio.
 1. A new experiment is listed named **diabetes-training**. Select the latest job **diabetes-pythonv2-train**.
-1. Review the job's **Properties**. Note the job **Status**: 
+1. Review the job's **Properties**. Note the job **Status**:
     - **Queued**: The job is waiting for compute to become available.
     - **Preparing**: The compute cluster is resizing or the environment is being installed on the compute target.
     - **Running**: The training script is being executed. 

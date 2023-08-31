@@ -51,7 +51,7 @@ To create the Azure Machine Learning workspace and compute resources, you'll use
 
 When you've created the workspace and necessary compute resources, you can open the Azure Machine Learning studio and clone the lab materials. 
 
-1. In the Azure portal, navigate to the Azure Machine Learning workspace named **mlw-dp100-labs**.
+1. In the Azure portal, navigate to the Azure Machine Learning workspace named **mlw-dp100-xxxx******.
 1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning studio.
 1. Close any pop-ups that appear in the studio.
 1. Within the Azure Machine Learning studio, navigate to the **Compute** page and verify that the compute instance and cluster you created in the previous section exist. The compute instance should be running, the cluster should be idle and have 0 nodes running.
@@ -69,19 +69,19 @@ When you've created the workspace and necessary compute resources, you can open 
 
     ```
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
-    ``` 
+    ```
 
-1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/azure-ml-labs** folder has been created. 
+1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/azure-ml-labs** folder has been created.
 
 ## Work with environments
 
-The code to create and manage environments with the Python SDK is provided in a notebook. 
+The code to create and manage environments with the Python SDK is provided in a notebook.
 
 1. Open the **Labs/04/Work with environments.ipynb** notebook.
 
-    > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate. 
+    > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate.
 
-1. Verify that the notebook uses the **Python 3.8 - AzureML** kernel. 
+1. Verify that the notebook uses the **Python 3.8 - AzureML** kernel.
 1. Run all cells in the notebook.
 
 ## Delete Azure resources
@@ -91,6 +91,5 @@ When you finish exploring Azure Machine Learning, you should delete the resource
 1. Close the Azure Machine Learning studio tab and return to the Azure portal.
 1. In the Azure portal, on the **Home** page, select **Resource groups**.
 1. Select the **rg-dp100-labs** resource group.
-1. At the top of the **Overview** page for your resource group, select **Delete resource group**. 
+1. At the top of the **Overview** page for your resource group, select **Delete resource group**.
 1. Enter the resource group name to confirm you want to delete it, and select **Delete**.
-
