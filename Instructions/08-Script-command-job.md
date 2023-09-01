@@ -61,7 +61,6 @@ When you've created the workspace and necessary compute resources, you can open 
     ```
     pip uninstall azure-ai-ml
     pip install azure-ai-ml
-    pip install mlflow
     ```
 
     > Ignore any (error) messages that say that the packages couldn't be found and uninstalled.
