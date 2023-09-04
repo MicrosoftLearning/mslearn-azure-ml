@@ -109,6 +109,6 @@ When you finish exploring Azure Machine Learning, you should delete the resource
 
 1. Close the Azure Machine Learning studio tab and return to the Azure portal.
 1. In the Azure portal, on the **Home** page, select **Resource groups**.
-1. Select the **rg-dp100-...** resource group.
+1. Select the **rg-dp100-xxxx** resource group.
 1. At the top of the **Overview** page for your resource group, select **Delete resource group**.
 1. Enter the resource group name to confirm you want to delete it, and select **Delete**.
