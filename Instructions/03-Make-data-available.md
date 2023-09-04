@@ -15,16 +15,17 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free?azure-porta
 
 ## Provision an Azure Machine Learning workspace
 
-An Azure Machine Learning *workspace* provides a central place for managing all resources and assets you need to train and manage your models. You can interact with the Azure Machine Learning workspace through the studio, Python SDK, and Azure CLI. 
+An Azure Machine Learning *workspace* provides a central place for managing all resources and assets you need to train and manage your models. You can interact with the Azure Machine Learning workspace through the studio, Python SDK, and Azure CLI.
 
 You'll use a Shell script which uses the Azure CLI to provision the workspace and necessary resources. Next, you'll use the Designer in the Azure Machine Learning studio to train and compare models.
 
 ### Create the workspace and compute resources
 
 To create the Azure Machine Learning workspace and compute resources, you'll use the Azure CLI. All necessary commands are grouped in a Shell script for you to execute.
+
 1. In a browser, open the Azure portal at `https://portal.azure.com/`, signing in with your Microsoft account.
 1. Select the \[>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
-1. Select **Bash** if asked. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). 
+1. Select **Bash** if asked. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*).
 1. Check that the correct subscription is specified and select **Create storage** if you are asked to create storage for your cloud shell. Wait for the storage to be created.
 1. Enter the following commands in the terminal to clone this repo:
 
@@ -33,7 +34,7 @@ To create the Azure Machine Learning workspace and compute resources, you'll use
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ```
 
-    > Use `SHIFT + INSERT` to paste your copied code into the Cloud Shell. 
+    > Use `SHIFT + INSERT` to paste your copied code into the Cloud Shell.
 
 1. Enter the following commands after the repo has been cloned, to change to the folder for this lab and run the **setup.sh** script it contains:
 
@@ -66,8 +67,8 @@ To create a datastore in the Azure Machine Learning workspace, you need to provi
 1. In the Storage Account, select the **Access keys** tab from the left menu.
 1. Note that two keys are provided: key1 and key2. Each key has the same functionality. 
 1. Select **Show** for the **Key** field under **key1**.
-1. Copy the value of the **Key** field to a notepad. You'll need to paste this value into the notebook later. 
-1. Copy the name of your storage account from the top of the page. The name should start with **mlwdp100storage...** You'll need to paste this value into the notebook later too. 
+1. Copy the value of the **Key** field to a notepad. You'll need to paste this value into the notebook later.
+1. Copy the name of your storage account from the top of the page. The name should start with **mlwdp100storage...** You'll need to paste this value into the notebook later too.
 
 > **Note**:
 > Copy the account key and name to a notepad to avoid automatic capitalization (which happens in Word). The key is case-sensitive.

@@ -21,7 +21,7 @@ To create the Azure Machine Learning workspace, you'll use the Azure CLI. All ne
 
 1. In a browser, open the Azure portal at `https://portal.azure.com/`, signing in with your Microsoft account.
 1. Select the \[>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
-1. Select **Bash** if asked. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*). 
+1. Select **Bash** if asked. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*).
 1. Check that the correct subscription is specified and select **Create storage** if you are asked to create storage for your cloud shell. Wait for the storage to be created.
 1. To avoid any conflicts with previous versions, remove any ML CLI extensions (both version 1 and 2) by running this command in the terminal:
 
@@ -30,9 +30,9 @@ To create the Azure Machine Learning workspace, you'll use the Azure CLI. All ne
     az extension remove -n ml
     ```
 
-    > Use `SHIFT + INSERT` to paste your copied code into the Cloud Shell. 
+    > Use `SHIFT + INSERT` to paste your copied code into the Cloud Shell.
 
-    > Ignore any (error) messages that say that the extensions were not installed. 
+    > Ignore any (error) messages that say that the extensions were not installed.
 
 1. Install the Azure Machine Learning (v2) extension with the following command:
     
@@ -52,7 +52,7 @@ To create the Azure Machine Learning workspace, you'll use the Azure CLI. All ne
     az ml workspace create --name "mlw-dp100-labs" -g "rg-dp100-labs"
     ```
 
-1. Wait for the command to complete - this typically takes around 5-10 minutes. 
+1. Wait for the command to complete - this typically takes around 5-10 minutes.
 
 ## Create the compute setup script
 
@@ -62,7 +62,7 @@ To run notebooks within the Azure Machine Learning workspace, you'll need a comp
 1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning studio.
 1. Close any pop-ups that appear in the studio.
 1. Within the Azure Machine Learning studio, navigate to the **Notebooks** page.
-1. In the **Files** pane, select the &#10753; icon to **Add files**. 
+1. In the **Files** pane, select the &#10753; icon to **Add files**.
 1. Select **Create new file**.
 1. Verify that the file location is **Users/*your-user-name***.
 1. Change the file type to **Bash (*.sh)**.
@@ -89,15 +89,15 @@ To create the compute instance, you can use the studio, Python SDK, or Azure CLI
     - **Virtual machine type**: *CPU*
     - **Virtual machine size**: *Standard_DS11_v2*
 1. Select **Next: Advanced settings**.
-1. Select **Add schedule** and configure the schedule to **stop** the compute instance every day at **18:00** or **6:00 PM**. 
-1. Select the toggle for **Provision with setup script**. 
+1. Select **Add schedule** and configure the schedule to **stop** the compute instance every day at **18:00** or **6:00 PM**.
+1. Select the toggle for **Provision with setup script**.
 1. Select the **compute-setup.sh** script you created previously.
 1. Review the other advanced settings but do **not** select them:
     - **Enable SSH access**: *You can use this to enable direct access to the virtual machine using an SSH client.*
     - **Enable virtual network**: *You would typically use this in an enterprise environment to enhance network security.*
     - **Assign to another user**: *You can use this to assign a compute instance to another data scientist.*
 1. **Create** the compute instance and wait for it to start and its state to change to **Running**.
-1. When the compute instance is running, navigate to the **Notebooks** page. In the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/dp100-azure-ml-labs** folder has been created. 
+1. When the compute instance is running, navigate to the **Notebooks** page. In the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/dp100-azure-ml-labs** folder has been created.
 
 ## Configure the compute instance
 
@@ -113,7 +113,7 @@ When you've created the the compute instance, you can run notebooks on it. You m
 
     > Ignore any (error) messages that say that the packages were not installed.
 
-1. When the packages are installed, you can close the tab to terminate the terminal. 
+1. When the packages are installed, you can close the tab to terminate the terminal.
 
 ## Create a compute cluster
 
@@ -121,9 +121,9 @@ Notebooks are ideal for development or iterative work during experimentation. Wh
 
 1. Open the **Labs/04/Work with compute.ipynb** notebook.
 
-    > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate. 
+    > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate.
 
-1. Verify that the notebook uses the **Python 3.8 - AzureML** kernel. 
+1. Verify that the notebook uses the **Python 3.8 - AzureML** kernel.
 1. Run all cells in the notebook.
 
 ## Delete Azure resources
@@ -133,5 +133,5 @@ When you finish exploring Azure Machine Learning, you should delete the resource
 1. Close the Azure Machine Learning studio tab and return to the Azure portal.
 1. In the Azure portal, on the **Home** page, select **Resource groups**.
 1. Select the **rg-dp100-labs** resource group.
-1. At the top of the **Overview** page for your resource group, select **Delete resource group**. 
+1. At the top of the **Overview** page for your resource group, select **Delete resource group**.
 1. Enter the resource group name to confirm you want to delete it, and select **Delete**.
