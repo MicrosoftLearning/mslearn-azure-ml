@@ -1,13 +1,13 @@
 ---
 lab:
-    title: 'Compare and evaluate models'
+    title: 'Create and explore the Responsible AI dashboard'
 ---
 
-# Compare and evaluate models
+# Create and explore the Responsible AI dashboard
 
-After you train your model, you'll want to evaluate your model to explore whether it's performing as expected. Next to performance metrics, there are other factors you can take into consideration. The responsible AI dashboard in Azure Machine Learning allows you to analyze the data and the model's predictions to identify any bias or unfairness.
+After you train your model, you'll want to evaluate your model to explore whether it's performing as expected. Next to performance metrics, there are other factors you can take into consideration. The Responsible AI dashboard in Azure Machine Learning allows you to analyze the data and the model's predictions to identify any bias or unfairness.
 
-In this exercise, you'll prepare your data and create a responsible AI dashboard in Azure Machine Learning.
+In this exercise, you'll prepare your data and create a Responsible AI dashboard in Azure Machine Learning.
 
 ## Before you start
 
