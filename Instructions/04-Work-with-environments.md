@@ -51,7 +51,7 @@ To create the Azure Machine Learning workspace and compute resources, you'll use
 
 When you've created the workspace and necessary compute resources, you can open the Azure Machine Learning studio and clone the lab materials. 
 
-1. In the Azure portal, navigate to the Azure Machine Learning workspace named **mlw-dp100-xxxx******.
+1. In the Azure portal, navigate to the Azure Machine Learning workspace named **mlw-dp100-xxxx**.
 1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning studio.
 1. Close any pop-ups that appear in the studio.
 1. Within the Azure Machine Learning studio, navigate to the **Compute** page and verify that the compute instance and cluster you created in the previous section exist. The compute instance should be running, the cluster should be idle and have 0 nodes running.
