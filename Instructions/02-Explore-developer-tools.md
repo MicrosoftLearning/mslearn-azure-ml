@@ -107,7 +107,7 @@ You'll create a compute cluster with the following settings:
 
 ## Configure your workstation with the Azure Machine Learning studio
 
-Though the Azure CLI is ideal for automation, you may want to review the output of the commands you executed. You can use the Azure Machine Learning Studio to check whether resources and assets have been created, and to check whether jobs ran successfully or review why a job failed.
+Though the Azure CLI is ideal for automation, you may want to review the output of the commands you executed. You can use the Azure Machine Learning studio to check whether resources and assets have been created, and to check whether jobs ran successfully or review why a job failed. 
 
 1. In the Azure portal, navigate to the Azure Machine Learning workspace named **mlw-dp100-labs**.
 1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning studio.
@@ -167,5 +167,5 @@ When you finish exploring Azure Machine Learning, you should delete the resource
 1. Close the Azure Machine Learning studio tab and return to the Azure portal.
 1. In the Azure portal, on the **Home** page, select **Resource groups**.
 1. Select the **rg-dp100-labs** resource group.
-1. At the top of the **Overview** page for your resource group, select **Delete resource group**.
+1. At the top of the **Overview** page for your resource group, select **Delete resource group**. 
 1. Enter the resource group name to confirm you want to delete it, and select **Delete**.

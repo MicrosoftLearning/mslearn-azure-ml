@@ -54,7 +54,7 @@ When you create an Azure Machine Learning workspace, a Storage Account is automa
 1. In the Azure portal, navigate to the new resource group named **rg-dp100-...**.
 1. Select the Storage Account in the resource group. The name often starts with the name you provided for the workspace (without hyphens).
 1. Review the **Overview** page of the Storage Account. Note that the Storage Account has several options for **Data storage** as shown in the Overview pane, and in the left menu.
-1. Select **Containers** to explore the Blob storage part of the Storage Account. 
+1. Select **Containers** to explore the Blob storage part of the Storage Account.
 1. Note the **azureml-blobstore-...** container. The default datastore for data assets uses this container to store data.
 1. Using the &#43; **Container** button at the top of the screen, create a new container and name it `training-data`.
 1. Select **File shares** from the left menu to explore the File share part of the Storage Account.
@@ -84,7 +84,7 @@ To create a datastore and data assets with the Python SDK, you'll need to clone 
 1. In the **Compute instances** tab, find your compute instance, and select the **Terminal** application.
 1. In the terminal, install the Python SDK on the compute instance by running the following commands in the terminal:
 
-    ```
+    ```azurecli
     pip uninstall azure-ai-ml
     pip install azure-ai-ml
     pip install mltable
@@ -94,10 +94,10 @@ To create a datastore and data assets with the Python SDK, you'll need to clone 
 
 1. Run the following command to clone a Git repository containing notebooks, data, and other files to your workspace:
 
-    ```
+    ```azurecli
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ```
- 
+
 1. When the command has completed, in the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/azure-ml-labs** folder has been created.
 
 **Optionally**, in another browser tab, navigate back to the [Azure portal](https://portal.azure.com?azure-portal=true). Explore the file share **code-...** in the Storage account again to find the cloned lab materials in the newly created **azure-ml-labs** folder.
@@ -117,7 +117,7 @@ The code to create a datastore and data assets with the Python SDK is provided i
 
 **Optionally**, you can explore how the data assets are stored in the associated Storage Account.
 
-1. Navigate to the **Data** tab in the Azure Machine Learning studio to explore the data assets. 
+1. Navigate to the **Data** tab in the Azure Machine Learning studio to explore the data assets.
 1. Select the **diabetes-local** data asset name to explore its details. 
 
     Under **Data sources** for the **diabetes-local** data asset, you'll find where the file has been uploaded to. The path starting with **LocalUpload/...** shows the path within the Storage Account container **azureml-blobstore-...**. You can verify the file exists by navigating to that path in the Azure portal.
