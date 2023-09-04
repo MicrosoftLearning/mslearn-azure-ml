@@ -51,7 +51,7 @@ To create the Azure Machine Learning workspace and compute resources, you'll use
 
 When you create an Azure Machine Learning workspace, a Storage Account is automatically created and connected to your workspace. You'll explore how the Storage Account is connected.
 
-1. In the Azure portal, navigate to the new resource group named **rg-dp100-xxxx**.
+1. In the Azure portal, navigate to the new resource group named **rg-dp100-...**.
 1. Select the Storage Account in the resource group. The name often starts with the name you provided for the workspace (without hyphens).
 1. Review the **Overview** page of the Storage Account. Note that the Storage Account has several options for **Data storage** as shown in the Overview pane, and in the left menu.
 1. Select **Containers** to explore the Blob storage part of the Storage Account. 
@@ -128,6 +128,6 @@ When you finish exploring Azure Machine Learning, you should delete the resource
 
 1. Close the Azure Machine Learning studio tab and return to the Azure portal.
 1. In the Azure portal, on the **Home** page, select **Resource groups**.
-1. Select the **rg-dp100-xxxx** resource group.
+1. Select the **rg-dp100-...** resource group.
 1. At the top of the **Overview** page for your resource group, select **Delete resource group**.
 1. Enter the resource group name to confirm you want to delete it, and select **Delete**.
