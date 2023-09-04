@@ -51,7 +51,7 @@ To create the Azure Machine Learning workspace and a compute cluster, you'll use
 
 When you've created the workspace and necessary compute cluster, you can open the Azure Machine Learning studio and create a training pipeline with the Designer.
 
-1. In the Azure portal, navigate to the Azure Machine Learning workspace named **mlw-dp100-xxxx**.
+1. In the Azure portal, navigate to the Azure Machine Learning workspace named **mlw-dp100-...**.
 1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning studio.
 1. Close any pop-ups that appear in the studio.
 1. Within the Azure Machine Learning studio, navigate to the **Compute** page and verify that the compute cluster you created in the previous section exist. The cluster should be idle and have 0 nodes running.
@@ -109,6 +109,6 @@ When you finish exploring Azure Machine Learning, you should delete the resource
 
 1. Close the Azure Machine Learning studio tab and return to the Azure portal.
 1. In the Azure portal, on the **Home** page, select **Resource groups**.
-1. Select the **rg-dp100-xxxx** resource group.
+1. Select the **rg-dp100-...** resource group.
 1. At the top of the **Overview** page for your resource group, select **Delete resource group**.
 1. Enter the resource group name to confirm you want to delete it, and select **Delete**.
