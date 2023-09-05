@@ -57,7 +57,7 @@ When you've created the workspace and necessary compute resources, you can open 
 1. In the **Compute instances** tab, find your compute instance, and select the **Terminal** application.
 1. In the terminal, install the Python SDK and the MLflow library on the compute instance by running the following commands in the terminal:
 
-    ``
+    ```
     pip uninstall azure-ai-ml
     pip install azure-ai-ml
     pip install mlflow
