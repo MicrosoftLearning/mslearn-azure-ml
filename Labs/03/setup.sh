@@ -1,4 +1,4 @@
-#! /usr/bin/sh
+#! /usr/bin/bash
 
 # Create random string
 guid=$(cat /proc/sys/kernel/random/uuid)
