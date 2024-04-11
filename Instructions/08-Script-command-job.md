@@ -87,6 +87,7 @@ Using a notebook attached to a compute instance is ideal for experimentation and
 1. Expand **Export as**, and select **Python (.py)** to convert the notebook to a Python script.
 1. Name the new file `train-classification-model`.
 1. Once the new file is created, the script should automatically be opened. Explore the file and note that it contains the same code as the notebook.
+1. Comment the line containing `pip show azure-ai-ml` as this will not be compatible with the Python script.
 1. Select the &#9655;&#9655; icon at the top of the notebook to **save and run the script in the terminal**.
 1. The script is initiated by the command **python train-classification-model.py** and the output should be shown below the command.
 
