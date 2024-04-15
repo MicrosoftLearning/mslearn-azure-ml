@@ -60,7 +60,7 @@ A quick way to author a model training pipeline is by using the **Designer**.
 1. Select **Configure & Submit** at the top of the page to open the **Set up pipeline job** dialogue
 1. On the **Basics** page select **Create new** and set the name of the experiment to `train-regression-designer` then select **Next** .
 1. On the **Inputs & outputs** page select **Next** without making any changes.
-1. On the **Runtime settings** page an error appears as you don´t a default compute to run the pipeline.
+1. On the **Runtime settings** page an error appears as you don´t have a default compute to run the pipeline.
 
 Let's create a compute target.
 
