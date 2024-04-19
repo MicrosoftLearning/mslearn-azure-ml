@@ -114,9 +114,10 @@ After converting a notebook to a script, you may want to further refine it. One 
 
     To run the script successfully, you'll need to specify the value for the training data parameters. Let's do that by referring to the **diabetes.csv** file which is stored in the same folder as the training script.
 
-1. In the terminal, run the following command:
+1. In the terminal, run the following commands:
 
     ```
+    cd azure-ml-labs/Labs/08/src/
     python train-model-parameters.py --training_data diabetes.csv
     ```
 
