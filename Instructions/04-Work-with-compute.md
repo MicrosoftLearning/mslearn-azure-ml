@@ -88,15 +88,17 @@ To create the compute instance, you can use the studio, Python SDK, or Azure CLI
     - **Compute name**: *enter a unique name*
     - **Virtual machine type**: *CPU*
     - **Virtual machine size**: *Standard_DS11_v2*
-1. Select **Next: Advanced settings**.
+1. Select **Next**.
 1. Select **Add schedule** and configure the schedule to **stop** the compute instance every day at **18:00** or **6:00 PM**.
-1. Select the toggle for **Provision with setup script**.
-1. Select the **compute-setup.sh** script you created previously.
-1. Review the other advanced settings but do **not** select them:
+1. Select **Next**.
+1. Review the security settings but do **not** select them:
     - **Enable SSH access**: *You can use this to enable direct access to the virtual machine using an SSH client.*
     - **Enable virtual network**: *You would typically use this in an enterprise environment to enhance network security.*
     - **Assign to another user**: *You can use this to assign a compute instance to another data scientist.*
-1. **Create** the compute instance and wait for it to start and its state to change to **Running**.
+1. Select **Next**.
+1. Select the toggle for **Provision with a creation script**.
+1. Select the **compute-setup.sh** script you created previously.
+1. Select **Review + Create** to create the compute instance and wait for it to start and its state to change to **Running**.
 1. When the compute instance is running, navigate to the **Notebooks** page. In the **Files** pane, click **&#8635;** to refresh the view and verify that a new **Users/*your-user-name*/dp100-azure-ml-labs** folder has been created.
 
 ## Configure the compute instance
