@@ -22,7 +22,7 @@ To create the Azure Machine Learning workspace, you'll use the Azure CLI. All ne
 1. In a browser, open the Azure portal at `https://portal.azure.com/`, signing in with your Microsoft account.
 1. Select the \[>_] (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
 1. Select **Bash** if asked. The first time you open the cloud shell, you will be asked to choose the type of shell you want to use (*Bash* or *PowerShell*).
-1. Check that the correct subscription is specified and select **Create storage** if you are asked to create storage for your cloud shell. Wait for the storage to be created.
+1. Check that the correct subscription is specified and that **No storage account required** is selected. Select **Apply**.
 1. To avoid any conflicts with previous versions, remove any ML CLI extensions (both version 1 and 2) by running this command in the terminal:
 
     ```azurecli
