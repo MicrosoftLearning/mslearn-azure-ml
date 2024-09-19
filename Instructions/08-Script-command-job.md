@@ -91,7 +91,7 @@ Using a notebook attached to a compute instance is ideal for experimentation and
 1. The script is initiated by the command **python train-classification-model.py** and the output should be shown below the command.
 
    > **Note:** If the script returns an ImportError for libstdc++6, run the following commands in the terminal before running the script again:
-   > ```python
+   > ```bash
    > sudo add-apt-repository ppa:ubuntu-toolchain-r/test
    > sudo apt-get update
    > sudo apt-get upgrade libstdc++6
