@@ -85,6 +85,8 @@ Now that you have all the necessary resources, you can run the notebook to confi
 1. Run all cells in the notebook.
 1. Review the new job that's created every time you train a model.
 
+    > **Note:** When you train a model, the cell's output will contain a link to the job run. If the link returns an error, you can still review the job run by selecting **Jobs** on the left side panel.
+    
 ## Delete Azure resources
 
 When you finish exploring Azure Machine Learning, you should delete the resources you've created to avoid unnecessary Azure costs.
