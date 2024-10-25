@@ -7,16 +7,17 @@ suffix=${suffix:0:18}
 
 # Set the necessary variables
 RESOURCE_GROUP="rg-dp100-l${suffix}"
-RESOURCE_PROVIDER="Microsoft.MachineLearning"
 REGIONS=("eastus" "westus" "centralus" "northeurope" "westeurope")
 RANDOM_REGION=${REGIONS[$RANDOM % ${#REGIONS[@]}]}
 WORKSPACE_NAME="mlw-dp100-l${suffix}"
 COMPUTE_INSTANCE="ci${suffix}"
 COMPUTE_CLUSTER="aml-cluster"
 
-# Register the Azure Machine Learning resource provider in the subscription
-echo "Register the Machine Learning resource provider:"
-az provider register --namespace $RESOURCE_PROVIDER
+# Register the Azure Machine Learning and additional resource providers in the subscription
+echo "Register the required resource providers:"
+az provider register --namespace "Microsoft.MachineLearningServices"
+az provider register --namespace "Microsoft.PolicyInsights"
+az provider register --namespace "Microsoft.Cdn"
 
 # Create the resource group and workspace and set to default
 echo "Create a resource group and set as default:"
