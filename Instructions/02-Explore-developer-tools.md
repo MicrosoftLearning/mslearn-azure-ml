@@ -118,7 +118,7 @@ Though the Azure CLI is ideal for automation, you may want to review the output 
 
 Now that you've verified that the necessary compute has been created, you can use the Python SDK to run a training script. You'll install and use the Python SDK on the compute instance and train the machine learning model on the compute cluster.
 
-1. Select the **Terminal** application for your **compute instance** to launch the terminal.
+1. In your **compute instance**, there are a number of options in the **Applications** field. Select the **Terminal** application to launch the terminal (you may need to click the ellipsis to expand the selection).
 1. In the terminal, install the Python SDK on the compute instance by running the following commands in the terminal:
 
     ```
