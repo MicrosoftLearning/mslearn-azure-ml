@@ -45,6 +45,11 @@ To create the Azure Machine Learning workspace, you'll use the Azure CLI. All ne
     ```azurecli
     az group create --name "rg-dp100-labs" --location "eastus"
     ```
+    > If required, you can list all the valid locations using the command below.
+
+    ```azurecli
+    az account list-locations --output table
+    ```
 
 1. Create a workspace:
 
