@@ -112,13 +112,13 @@ Though the Azure CLI is ideal for automation, you may want to review the output 
 1. In the Azure portal, navigate to the Azure Machine Learning workspace named **mlw-dp100-labs**.
 1. Select the Azure Machine Learning workspace, and in its **Overview** page, select **Launch studio**. Another tab will open in your browser to open the Azure Machine Learning studio.
 1. Close any pop-ups that appear in the studio.
-1. Within the Azure Machine Learning studio, navigate to the **Compute** page and verify that the compute instance and cluster you created in the previous section exist. The compute instance should be running, the cluster should be idle and have 0 nodes running.
+1. Within the Azure Machine Learning studio, navigate to the **Compute** page and verify that the compute instance and cluster you created in the previous section exist. The compute instance should be running, the cluster should be in Succeeded state and have 0 nodes running.
 
 ## Use the Python SDK to train a model
 
 Now that you've verified that the necessary compute has been created, you can use the Python SDK to run a training script. You'll install and use the Python SDK on the compute instance and train the machine learning model on the compute cluster.
 
-1. Select the **Terminal** application for your **compute instance** to launch the terminal.
+1. In your **compute instance**, there are a number of options in the **Applications** field. Select the **Terminal** application to launch the terminal (you may need to click the ellipsis to expand the selection).
 1. In the terminal, install the Python SDK on the compute instance by running the following commands in the terminal:
 
     ```
@@ -139,7 +139,7 @@ Now that you've verified that the necessary compute has been created, you can us
 
     > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate.
 
-1. Verify that the notebook uses the **Python 3.8 - AzureML** kernel. Each kernel has its own image with its own set of packages pre-installed.
+1. Verify that the notebook uses the **Python 3.8 - AzureML** kernel on the upper right corner of the notebook environment. Each kernel has its own image with its own set of packages pre-installed.
 1. Run all cells in the notebook.
 
 A new job will be created in the Azure Machine Learning workspace. The job tracks the inputs defined in the job configuration, the code used, and the outputs like metrics to evaluate the model.
