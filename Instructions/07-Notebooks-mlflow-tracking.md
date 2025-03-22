@@ -7,7 +7,7 @@ lab:
 
 Often, you'll start a new data science project by experimenting and training multiple models. To track your work and keep an overview of the models you train and how they perform, you can use MLflow tracking.
 
-In this exercise, you'll MLflow within a notebook running on a compute instance to log model training.
+In this exercise, you'll use MLflow within a notebook running on a compute instance to log model training.
 
 ## Before you start
 
