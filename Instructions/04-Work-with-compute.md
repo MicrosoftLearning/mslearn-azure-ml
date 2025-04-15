@@ -54,6 +54,27 @@ To create the Azure Machine Learning workspace, you'll use the Azure CLI. All ne
 
 1. Wait for the command to complete - this typically takes around 5-10 minutes.
 
+    <details>  
+    <summary><b>Troubleshooting tip</b>: Workspace creation error</summary><br>
+    <p>If you receive an error when creating a workspace through the CLI, you need to provision the resource manually:</p>
+    <ol>
+        <li>In the Azure portal home page, select <b>+ Create a resource</b>.</li>
+        <li>Search for <i>machine learning</i> and then select <b>Azure Machine Learning</b>. Select <b>Create</b>.</li>
+        <li>Create a new Azure Machine Learning resource with the following settings:
+            <ul>
+                <li><b>Subscription</b>: <i>Your Azure subscription</i></li>
+                <li><b>Resource group</b>: rg-dp100-labs</li>
+                <li><b>Workspace name</b>: mlw-dp100-labs</li>
+                <li><b>Region</b>: <i>Select the geographical region closest to you</i></li>
+                <li><b>Storage account</b>: <i>Note the default new storage account that will be created for your workspace</i></li>
+                <li><b>Key vault</b>: <i>Note the default new key vault that will be created for your workspace</i></li>
+                <li><b>Application insights</b>: <i>Note the default new application insights resource that will be created for your workspace</i></li>
+                <li><b>Container registry</b>: None (<i>one will be created automatically the first time you deploy a model to a container</i>)</li>
+            </ul>
+        <li>Select <b>Review + create</b> and wait for the workspace and its associated resources to be created - this typically takes around 5 minutes.</li>
+    </ol>
+    </details>
+
 ## Create the compute setup script
 
 To run notebooks within the Azure Machine Learning workspace, you'll need a compute instance. You can use a setup script to configure the compute instance on creation.
