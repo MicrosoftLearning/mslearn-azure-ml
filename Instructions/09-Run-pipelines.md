@@ -71,8 +71,15 @@ To create the Azure Machine Learning workspace, a compute instance, and a comput
         <li>Give the compute instance a unique name and then select <b>Standard_DS11_v2</b> as the virtual machine size.</li>
         <li>Select <b>Review + create</b> and then select <b>Create</b>.</li>
         <li>Next, select the <b>Compute clusters</b> tab and select <b>+ New</b>.</li>
-        <li>Choose the same region as the one where you created your workspace and then select <b>Standard_DS11_v2</b> as the virtual machine size. Select <b>Next</b></li>
+        <li>Choose the same region as the one where you created your workspace and then select <b>Standard_DS11_v2</b> as the virtual machine size. Select <b>Next</b>.</li>
         <li>Give the cluster a unique name and then select <b>Create</b>.</li>
+        <li>Download the training data from https://github.com/MicrosoftLearning/mslearn-azure-ml/raw/refs/heads/main/Labs/09/data/diabetes.csv</li>
+        <li>In the Azure Machine Learning studio, navigate to the <b>Data</b> page and select <b>+ Create</b>.</li>
+        <li>Name the data asset <b>diabetes-data</b> and verify that the type <b>File (uri_file)</b> is selected. Select <b>Next</b>.</li>
+        <li>Select <b>From local files</b> as your data source and then select <b>Next</b>.</li>
+        <li>Verify that <b>Azure Blob Storage</b> and <b>workspaceblobstore</b> are selected as your destination storage type and datastore respectively. Select <b>Next</b>.</li>
+        <li>Upload the .csv file you downloaded previously and then select <b>Next</b>.</li>
+        <li>Review the settings for your data asset and then select <b>Create</b>.</li>
     </ol>
     </details>
 
