@@ -60,6 +60,27 @@ To start, open the Azure Cloud Shell, install the Azure Machine Learning extensi
 
 1. Wait for the workspace and its associated resources to be created - this typically takes around 5 minutes.
 
+    <details>  
+    <summary><b>Troubleshooting tip</b>: Workspace creation error</summary><br>
+    <p>If you receive an error when creating a workspace through the CLI, you need to provision the resource manually:</p>
+    <ol>
+        <li>In the Azure portal home page, select <b>+ Create a resource</b>.</li>
+        <li>Search for <i>machine learning</i> and then select <b>Azure Machine Learning</b>. Select <b>Create</b>.</li>
+        <li>Create a new Azure Machine Learning resource with the following settings:
+            <ul>
+                <li><b>Subscription</b>: <i>Your Azure subscription</i></li>
+                <li><b>Resource group</b>: rg-dp100-labs</li>
+                <li><b>Workspace name</b>: mlw-dp100-labs</li>
+                <li><b>Region</b>: <i>Select the geographical region closest to you</i></li>
+                <li><b>Storage account</b>: <i>Note the default new storage account that will be created for your workspace</i></li>
+                <li><b>Key vault</b>: <i>Note the default new key vault that will be created for your workspace</i></li>
+                <li><b>Application insights</b>: <i>Note the default new application insights resource that will be created for your workspace</i></li>
+                <li><b>Container registry</b>: None (<i>one will be created automatically the first time you deploy a model to a container</i>)</li>
+            </ul>
+        <li>Select <b>Review + create</b> and wait for the workspace and its associated resources to be created - this typically takes around 5 minutes.</li>
+    </ol>
+    </details>
+
 ## Create a compute instance with the Azure CLI
 
 Another important part of the infrastructure needed to train a machine learning model is **compute**. Though you can train models locally, it's more scalable and cost efficient to use cloud compute.
@@ -84,6 +105,19 @@ In this exercise, you'll create a compute instance with the following settings:
 
     If you get an error message that a compute instance with the name already exists, change the name and retry the command.
 
+    <details>  
+    <summary><b>Troubleshooting tip</b>: Compute creation error</summary><br>
+    <p>If you receive an error when creating a compute instance through the CLI, you need to provision the resource manually:</p>
+    <ol>
+        <li>In the Azure portal, navigate to the Azure Machine Learning workspace named <b>mlw-dp100-labs</b>.</li>
+        <li>Select the Azure Machine Learning workspace, and in its <b>Overview</b> page, select <b>Launch studio</b>. Another tab will open in your browser to open the Azure Machine Learning studio.</li>
+        <li>Close any pop-ups that appear in the studio.</li>
+        <li>Within the Azure Machine Learning studio, navigate to the <b>Compute</b> page and select <b>+ New</b> under the <b>Compute instances</b> tab.</li>
+        <li>Give the compute instance a unique name and then select <b>Standard_DS11_v2</b> as the virtual machine size.</li>
+        <li>Select <b>Review + create</b> and then select <b>Create</b>.</li>
+    </ol>
+    </details>
+
 ## Create a compute cluster with the Azure CLI
 
 Though a compute instance is ideal for development, a compute cluster is better suited when we want to train machine learning models. Only when a job is submitted to use the compute cluster, will it resize to more than 0 nodes and run the job. Once the compute cluster is no longer needed, it will automatically resize back to 0 nodes to minimize costs. 
@@ -104,6 +138,19 @@ You'll create a compute cluster with the following settings:
     ```azurecli
     az ml compute create --name "aml-cluster" --size STANDARD_DS11_V2 --max-instances 2 --type AmlCompute -w mlw-dp100-labs -g rg-dp100-labs
     ```
+
+    <details>  
+    <summary><b>Troubleshooting tip</b>: Compute creation error</summary><br>
+    <p>If you receive an error when creating a compute cluster through the CLI, you need to provision the resource manually:</p>
+    <ol>
+        <li>In the Azure portal, navigate to the Azure Machine Learning workspace named <b>mlw-dp100-labs</b>.</li>
+        <li>Select the Azure Machine Learning workspace, and in its <b>Overview</b> page, select <b>Launch studio</b>. Another tab will open in your browser to open the Azure Machine Learning studio.</li>
+        <li>Close any pop-ups that appear in the studio.</li>
+        <li>Within the Azure Machine Learning studio, navigate to the <b>Compute</b> page and select <b>+ New</b> under the <b>Compute clusters</b> tab.</li>
+        <li>Choose the same region as the one where you created your workspace and then select <b>Standard_DS11_v2</b> as the virtual machine size. Select <b>Next</b></li>
+        <li>Give the cluster a unique name and then select <b>Create</b>.</li>
+    </ol>
+    </details>
 
 ## Configure your workstation with the Azure Machine Learning studio
 
