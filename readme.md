@@ -1,3 +1,6 @@
+**This course will be retiring on  **2025/04/30**.  Once course is retired, all GitHub repos will be removed. Thank you.**
+
+
 ## Hands-on exercises for Azure Machine Learning (v2)
 
 This repository contains the hands-on lab exercises for the Microsoft Learning Paths exploring Azure Machine Learning. The Learning Paths consists of self-paced modules on Microsoft Learn. The labs are designed to accompany the learning materials and enable you to practice using the technologies described them.
