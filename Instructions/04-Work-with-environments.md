@@ -110,7 +110,7 @@ The code to create and manage environments with the Python SDK is provided in a 
 
     > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate.
 
-1. Verify that the notebook uses the **Python 3.8 - AzureML** kernel.
+1. Verify that the notebook uses the **Python 3.10 - AzureML** kernel.
 1. Run all cells in the notebook.
 
 ## Delete Azure resources
