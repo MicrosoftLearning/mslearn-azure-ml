@@ -186,7 +186,7 @@ Now that you've verified that the necessary compute has been created, you can us
 
     > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate.
 
-1. Verify that the notebook uses the **Python 3.8 - AzureML** kernel on the upper right corner of the notebook environment. Each kernel has its own image with its own set of packages pre-installed.
+1. Verify that the notebook uses the **Python 3.10 - AzureML** kernel on the upper right corner of the notebook environment. Each kernel has its own image with its own set of packages pre-installed.
 1. Run all cells in the notebook.
 
 A new job will be created in the Azure Machine Learning workspace. The job tracks the inputs defined in the job configuration, the code used, and the outputs like metrics to evaluate the model.

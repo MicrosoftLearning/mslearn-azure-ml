@@ -110,7 +110,7 @@ Using a notebook attached to a compute instance is ideal for experimentation and
 
     > Select **Authenticate** and follow the necessary steps if a notification appears asking you to authenticate.
 
-1. Verify that the notebook uses the **Python 3.8 - AzureML** kernel.
+1. Verify that the notebook uses the **Python 3.10 - AzureML** kernel.
 1. Run all cells to explore the code and train a model.
 1. Select the &#9776; icon at the top of the notebook to view the **notebook menu**.
 1. Expand **Export as**, and select **Python (.py)** to convert the notebook to a Python script.
