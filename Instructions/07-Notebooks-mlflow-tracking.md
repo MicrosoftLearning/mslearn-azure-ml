@@ -88,8 +88,7 @@ When you've created the workspace and necessary compute resources, you can open 
 
     ```
     pip uninstall azure-ai-ml
-    pip install azure-ai-ml
-    pip install mlflow
+    pip install azure-ai-ml==1.27.1 mlflow==2.22.0 azureml-core==1.51.0 azureml-defaults==1.51.0 azureml-mlflow==1.51.0 azureml-telemetry==1.51.0 scikit-learn==0.24.1
     ```
 
     > Ignore any (error) messages that say that the packages couldn't be found and uninstalled.
