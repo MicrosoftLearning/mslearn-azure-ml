@@ -93,7 +93,7 @@ When you create an Azure Machine Learning workspace, a Storage Account is automa
 
 To create a datastore in the Azure Machine Learning workspace, you need to provide some credentials. An easy way to provide the workspace with access to a Blob storage is to use the account key.
 
-1. In your **Storage Account**, go to the **Security + networking** section in the left-hand menu, then select **Access keys**.
+1. In the Storage Account, select the **Access keys** tab from the left menu.
 1. Note that two keys are provided: key1 and key2. Each key has the same functionality. 
 1. Select **Show** for the **Key** field under **key1**.
 1. Copy the value of the **Key** field to a notepad. You'll need to paste this value into the notebook later.
