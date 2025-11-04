@@ -57,14 +57,17 @@ jobs:
               changes: file.changes
             }));
             
+            // Build file changes summary
+            const filesSummary = changedFiles.map(f => 
+              f.filename + ' (' + f.status + ', +' + f.additions + '/-' + f.deletions + ')'
+            ).join(', ');
+            
             // Prepare context for GitHub Copilot
-            const prompt = `Create a concise changelog entry for this pull request:
-
-Title: ${prTitle}
-Description: ${prBody}
-Files changed: ${changedFiles.map(f => `${f.filename} (${f.status}, +${f.additions}/-${f.deletions})`).join(', ')}
-
-Generate a professional, past-tense summary (max 2 sentences) focusing on what was changed and its impact.`;
+            const prompt = 'Create a concise changelog entry for this pull request:\n\n' +
+              'Title: ' + prTitle + '\n' +
+              'Description: ' + prBody + '\n' +
+              'Files changed: ' + filesSummary + '\n\n' +
+              'Generate a professional, past-tense summary (max 2 sentences) focusing on what was changed and its impact.';
 
             // Use GitHub Copilot Chat API
             try {
@@ -90,13 +93,9 @@ Generate a professional, past-tense summary (max 2 sentences) focusing on what w
               const date = new Date(mergedAt).toISOString().split('T')[0];
               
               // Create changelog entry
-              const changelogEntry = `## ${date} - PR #${prNumber}
-
-${summary}
-
-*Merged by: ${prAuthor}* | [View PR](${prUrl})
-
-`;
+              const changelogEntry = '## ' + date + ' - PR #' + prNumber + '\n\n' +
+                summary + '\n\n' +
+                '*Merged by: ' + prAuthor + '* | [View PR](' + prUrl + ')\n\n';
               
               // Read existing changelog or create new one
               const changelogPath = 'CHANGELOG.md';
@@ -106,11 +105,7 @@ ${summary}
                 existingContent = fs.readFileSync(changelogPath, 'utf8');
               } catch (error) {
                 // File doesn't exist, create header
-                existingContent = `# Changelog
-
-All notable changes to this project will be documented in this file.
-
-`;
+                existingContent = '# Changelog\n\nAll notable changes to this project will be documented in this file.\n\n';
               }
               
               // Insert new entry after the header
@@ -133,7 +128,7 @@ All notable changes to this project will be documented in this file.
               console.log('Copilot API failed, using fallback summary:', error.message);
               
               // Simple rule-based summary generation
-              let summary = `${prTitle}`;
+              let summary = prTitle;
               
               // Add context based on file types
               const fileTypes = [...new Set(changedFiles.map(f => {
@@ -146,20 +141,16 @@ All notable changes to this project will be documented in this file.
               }))];
               
               if (fileTypes.length > 0) {
-                summary += ` Updated ${fileTypes.join(', ')}.`;
+                summary += ' Updated ' + fileTypes.join(', ') + '.';
               }
               
               // Format date
               const date = new Date(mergedAt).toISOString().split('T')[0];
               
               // Create changelog entry
-              const changelogEntry = `## ${date} - PR #${prNumber}
-
-${summary}
-
-*Merged by: ${prAuthor}* | [View PR](${prUrl})
-
-`;
+              const changelogEntry = '## ' + date + ' - PR #' + prNumber + '\n\n' +
+                summary + '\n\n' +
+                '*Merged by: ' + prAuthor + '* | [View PR](' + prUrl + ')\n\n';
               
               // Read existing changelog or create new one
               const changelogPath = 'CHANGELOG.md';
@@ -168,11 +159,7 @@ ${summary}
               try {
                 existingContent = fs.readFileSync(changelogPath, 'utf8');
               } catch (error) {
-                existingContent = `# Changelog
-
-All notable changes to this project will be documented in this file.
-
-`;
+                existingContent = '# Changelog\n\nAll notable changes to this project will be documented in this file.\n\n';
               }
               
               // Insert new entry after the header
