@@ -35,6 +35,11 @@ jobs:
             
             // Get PR information
             const pr = context.payload.pull_request;
+            
+            if (!pr) {
+              throw new Error('Pull request data not available in context');
+            }
+            
             const prNumber = pr.number;
             const prTitle = pr.title;
             const prBody = pr.body || '';
@@ -42,11 +47,13 @@ jobs:
             const mergedAt = pr.merged_at;
             const prUrl = pr.html_url;
             
+            console.log('Processing PR #' + prNumber + ': ' + prTitle);
+            
             // Get list of changed files
             const { data: files } = await github.rest.pulls.listFiles({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              pull_request_number: prNumber
+              pull_number: prNumber
             });
             
             const changedFiles = files.map(file => ({
@@ -69,8 +76,10 @@ jobs:
               'Files changed: ' + filesSummary + '\n\n' +
               'Generate a professional, past-tense summary (max 2 sentences) focusing on what was changed and its impact.';
 
-            // Use GitHub Copilot Chat API
+            // Use GitHub Copilot Chat API (Note: This API may not be available in all Copilot plans)
+            let summary;
             try {
+              console.log('Attempting to use GitHub Copilot API...');
               const copilotResponse = await github.request('POST /copilot/chat/completions', {
                 messages: [
                   {
@@ -87,48 +96,16 @@ jobs:
                 temperature: 0.3
               });
               
-              const summary = copilotResponse.data.choices[0].message.content.trim();
-              
-              // Format date
-              const date = new Date(mergedAt).toISOString().split('T')[0];
-              
-              // Create changelog entry
-              const changelogEntry = '## ' + date + ' - PR #' + prNumber + '\n\n' +
-                summary + '\n\n' +
-                '*Merged by: ' + prAuthor + '* | [View PR](' + prUrl + ')\n\n';
-              
-              // Read existing changelog or create new one
-              const changelogPath = 'CHANGELOG.md';
-              let existingContent = '';
-              
-              try {
-                existingContent = fs.readFileSync(changelogPath, 'utf8');
-              } catch (error) {
-                // File doesn't exist, create header
-                existingContent = '# Changelog\n\nAll notable changes to this project will be documented in this file.\n\n';
-              }
-              
-              // Insert new entry after the header
-              const lines = existingContent.split('\n');
-              const headerEndIndex = lines.findIndex(line => line.startsWith('# Changelog')) + 3;
-              
-              lines.splice(headerEndIndex, 0, changelogEntry);
-              const newContent = lines.join('\n');
-              
-              // Write updated changelog
-              fs.writeFileSync(changelogPath, newContent);
-              
-              return {
-                entry: changelogEntry,
-                summary: summary
-              };
+              summary = copilotResponse.data.choices[0].message.content.trim();
+              console.log('Successfully generated summary with Copilot API');
               
             } catch (error) {
               // Fallback to rule-based summary if Copilot API fails
-              console.log('Copilot API failed, using fallback summary:', error.message);
+              console.log('Copilot API failed, using fallback summary. Error:', error.message);
+              console.log('This is normal if GitHub Copilot Chat API is not available in your plan.');
               
               // Simple rule-based summary generation
-              let summary = prTitle;
+              summary = prTitle;
               
               // Add context based on file types
               const fileTypes = [...new Set(changedFiles.map(f => {
@@ -143,40 +120,40 @@ jobs:
               if (fileTypes.length > 0) {
                 summary += ' Updated ' + fileTypes.join(', ') + '.';
               }
-              
-              // Format date
-              const date = new Date(mergedAt).toISOString().split('T')[0];
-              
-              // Create changelog entry
-              const changelogEntry = '## ' + date + ' - PR #' + prNumber + '\n\n' +
-                summary + '\n\n' +
-                '*Merged by: ' + prAuthor + '* | [View PR](' + prUrl + ')\n\n';
-              
-              // Read existing changelog or create new one
-              const changelogPath = 'CHANGELOG.md';
-              let existingContent = '';
-              
-              try {
-                existingContent = fs.readFileSync(changelogPath, 'utf8');
-              } catch (error) {
-                existingContent = '# Changelog\n\nAll notable changes to this project will be documented in this file.\n\n';
-              }
-              
-              // Insert new entry after the header
-              const lines = existingContent.split('\n');
-              const headerEndIndex = lines.findIndex(line => line.startsWith('# Changelog')) + 3;
-              
-              lines.splice(headerEndIndex, 0, changelogEntry);
-              const newContent = lines.join('\n');
-              
-              // Write updated changelog
-              fs.writeFileSync(changelogPath, newContent);
-              
-              return {
-                entry: changelogEntry,
-                summary: summary
-              };
             }
+            
+            // Format date
+            const date = new Date(mergedAt).toISOString().split('T')[0];
+            
+            // Create changelog entry
+            const changelogEntry = '## ' + date + ' - PR #' + prNumber + '\n\n' +
+              summary + '\n\n' +
+              '*Merged by: ' + prAuthor + '* | [View PR](' + prUrl + ')\n\n';
+            
+            // Read existing changelog or create new one
+            const changelogPath = 'CHANGELOG.md';
+            let existingContent = '';
+            
+            try {
+              existingContent = fs.readFileSync(changelogPath, 'utf8');
+            } catch (error) {
+              existingContent = '# Changelog\n\nAll notable changes to this project will be documented in this file.\n\n';
+            }
+            
+            // Insert new entry after the header
+            const lines = existingContent.split('\n');
+            const headerEndIndex = lines.findIndex(line => line.startsWith('# Changelog')) + 3;
+            
+            lines.splice(headerEndIndex, 0, changelogEntry);
+            const newContent = lines.join('\n');
+            
+            // Write updated changelog
+            fs.writeFileSync(changelogPath, newContent);
+            
+            return {
+              entry: changelogEntry,
+              summary: summary
+            };
       
       - name: Commit and push changelog
         run: |
