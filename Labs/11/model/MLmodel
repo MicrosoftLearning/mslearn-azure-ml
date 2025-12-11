@@ -13,15 +13,15 @@ flavors:
     pickled_model: model.pkl
     serialization_format: cloudpickle
     sklearn_version: 1.5.2
-is_signature_from_type_hint: false
 mlflow_version: 2.22.2
 model_size_bytes: 782
-model_uuid: a99a6d7aec81445e87c132304df4acf7
-prompts: null
-run_id: green_library_sgv9cc7hkh
+model_uuid: 746375f7efea49bcb7afa81380e80395
+run_id: teal_answer_v5t7yq9zwn
 signature:
-  inputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1, 8]}}]'
-  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
-  params: null
+  inputs: '[{"name": "Pregnancies", "type": "double"}, {"name": "PlasmaGlucose", "type": "double"},
+    {"name": "DiastolicBloodPressure", "type": "double"}, {"name": "TricepsThickness", "type": "double"}, {"name":
+    "SerumInsulin", "type": "double"}, {"name": "BMI", "type": "double"}, {"name": "DiabetesPedigree", "type":
+    "double"}, {"name": "Age", "type": "double"}]'
+  outputs: '[{"type": "double"}]'
 type_hint_from_example: false
-utc_time_created: '2025-12-11 01:57:37.302047'
+utc_time_created: '2025-12-11 03:22:29.198079'
