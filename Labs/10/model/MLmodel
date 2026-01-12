@@ -1,25 +1,27 @@
 artifact_path: model
 flavors:
   python_function:
-    env: conda.yaml
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
     loader_module: mlflow.sklearn
     model_path: model.pkl
     predict_fn: predict
-    python_version: 3.7.15
+    python_version: 3.10.19
   sklearn:
     code: null
     pickled_model: model.pkl
     serialization_format: cloudpickle
-    sklearn_version: 0.24.1
-mlflow_version: 1.30.0
-model_uuid: 580862f780fb48eda0a137857d12c9f9
-run_id: calm_garden_gzd94mfzcr
+    sklearn_version: 1.5.2
+mlflow_version: 2.22.2
+model_size_bytes: 782
+model_uuid: 746375f7efea49bcb7afa81380e80395
+run_id: teal_answer_v5t7yq9zwn
 signature:
-  inputs: '[{"name": "PatientID", "type": "integer"}, {"name": "Pregnancies", "type":
-    "integer"}, {"name": "PlasmaGlucose", "type": "integer"}, {"name": "DiastolicBloodPressure",
-    "type": "integer"}, {"name": "TricepsThickness", "type": "integer"}, {"name":
-    "DiastolicBloodPressure", "type": "integer"}, {"name": "SerumInsulin", "type":
-    "integer"}, {"name": "BMI", "type": "double"}, {"name": "DiabetesPedigree", "type":
-    "double"}, {"name": "Age", "type": "integer"}]'
-  outputs: '[{"type": "boolean"}]'
-utc_time_created: '2023-02-15 12:46:19.119720'
+  inputs: '[{"name": "Pregnancies", "type": "double"}, {"name": "PlasmaGlucose", "type": "double"},
+    {"name": "DiastolicBloodPressure", "type": "double"}, {"name": "TricepsThickness", "type": "double"}, {"name":
+    "SerumInsulin", "type": "double"}, {"name": "BMI", "type": "double"}, {"name": "DiabetesPedigree", "type":
+    "double"}, {"name": "Age", "type": "double"}]'
+  outputs: '[{"type": "double"}]'
+type_hint_from_example: false
+utc_time_created: '2025-12-11 03:22:29.198079'
