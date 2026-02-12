@@ -5,10 +5,13 @@ dependencies:
 - pip<=25.3
 - pip:
   - mlflow==2.22.2
+  - azureml-inference-server-http
+  - azureml-ai-monitoring
+  - azureml-core
   - backports-tempfile==1.0
   - cloudpickle==2.2.1
   - jaraco-collections==5.1.0
-  - numpy==1.22.4
+  - numpy==1.26.4
   - pandas==1.5.3
   - psutil==5.8.0
   - scikit-learn==1.5.2
