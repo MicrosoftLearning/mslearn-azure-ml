@@ -121,10 +121,7 @@ Now that you have all the necessary resources, you can run the notebook to confi
 1. Wait for its status to change to **Completed**.
 1. When the Automate Machine Learning job status has changed to **Completed**, explore the job details in the studio:
     - The **Data guardrails** tab shows whether your training data had any issues.
-    - The **Models + child jobs** tab will show all models that have been trained. Select **Explain model** for the best model and create the explanation job run using the **aml-cluster**.
-    - Wait until a new column **Explained** appears next to the **Algorithm name** column and select **View explanation**. You may need to refresh the algorithm list for this option to appear.
-    - Review the dashboard created to understand which features influenced the target value the most.
-
+    - The **Models + child jobs** tab will show all models that have been trained.
 ## Delete Azure resources
 
 When you finish exploring Azure Machine Learning, you should delete the resources you've created to avoid unnecessary Azure costs.
