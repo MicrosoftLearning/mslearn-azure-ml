@@ -1,6 +1,18 @@
 ---
 lab:
-    title: 'Explore the Azure Machine Learning workspace'
+  title: Explore the Azure Machine Learning workspace
+  description: Azure Machine Learning provides a data science platform to train and
+    manage machine learning models. In this lab, you'll create an Azure Machine Learning
+    workspace and explore the various ways to work with the workspace. The lab is
+    designed as an introduction of the various core capabilities of Azure Machine
+    Learning and the developer tools. If you want to learn about the capabilities
+    in more depth, there are other labs to explore.
+  duration: 5 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Machine Learning
 ---
 
 # Explore the Azure Machine Learning workspace
