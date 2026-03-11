@@ -1,6 +1,15 @@
 ---
 lab:
-    title: 'Work with environments in Azure Machine Learning'
+  title: Work with environments in Azure Machine Learning
+  description: To run notebooks and scripts, you must ensure that the required packages
+    are installed. Environments allow you to specify the runtimes and Python packages
+    that must be used by your compute to run your code.
+  duration: 10 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Machine Learning
 ---
 
 # Work with environments in Azure Machine Learning

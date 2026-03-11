@@ -1,6 +1,12 @@
 ---
 lab:
-    title: 'Track model training in notebooks with MLflow'
+  title: Track model training in notebooks with MLflow
+  description: Often, you'll start a new data science project by experimenting and
+    training multiple models. To track your work and keep an overview of the models
+    you train and how they perform, you can use MLflow tracking.
+  duration: 10 minutes
+  level: 400
+  islab: true
 ---
 
 # Track model training in notebooks with MLflow

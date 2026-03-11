@@ -1,6 +1,18 @@
 ---
 lab:
-    title: 'Explore developer tools for workspace interaction'
+  title: Explore developer tools for workspace interaction
+  description: You can use various tools to interact with the Azure Machine Learning
+    workspace. Depending on what task you need to perform and your preference for
+    developer tool, you can choose which tool to use when. This lab is designed as
+    an introduction to the developer tools commonly used for workspace interaction.
+    If you want to learn how to use a specific tool in more depth, there are other
+    labs to explore.
+  duration: 5 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Machine Learning
 ---
 
 # Explore developer tools for workspace interaction

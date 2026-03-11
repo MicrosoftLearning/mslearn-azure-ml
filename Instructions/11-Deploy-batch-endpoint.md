@@ -1,6 +1,15 @@
 ---
 lab:
-    title: 'Deploy a model to a batch endpoint'
+  title: Deploy a model to a batch endpoint
+  description: In many scenarios, inferencing is performed as a batch process that
+    uses a predictive model to score a large number of cases. To implement this kind
+    of inferencing solution in Azure Machine Learning, you can create a batch endpoint.
+  duration: 10 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Machine Learning
 ---
 
 # Deploy a model to a batch endpoint

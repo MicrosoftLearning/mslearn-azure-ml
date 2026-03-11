@@ -1,6 +1,12 @@
 ---
 lab:
-    title: 'Use MLflow to track training jobs'
+  title: Use MLflow to track training jobs
+  description: MLflow is an open-source platform for managing the end-to-end machine
+    learning lifecycle. MLflow Tracking is a component that logs and tracks your training
+    job metrics, parameters and model artifacts.
+  duration: 10 minutes
+  level: 400
+  islab: true
 ---
 
 # Use MLflow to track training jobs
