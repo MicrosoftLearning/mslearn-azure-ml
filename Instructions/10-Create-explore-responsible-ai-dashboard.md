@@ -1,6 +1,13 @@
 ---
 lab:
-    title: 'Create and explore the Responsible AI dashboard'
+  title: Create and explore the Responsible AI dashboard
+  description: In this exercise, you'll prepare your data and create a Responsible AI dashboard in Azure Machine Learning.
+  duration: 10 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Machine Learning
 ---
 
 # Create and explore the Responsible AI dashboard

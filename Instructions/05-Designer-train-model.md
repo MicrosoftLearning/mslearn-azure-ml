@@ -1,6 +1,14 @@
 ---
 lab:
-    title: 'Train a model with the Azure Machine Learning Designer'
+  title: Train a model with the Azure Machine Learning Designer
+  description: In this exercise, you'll use the Designer to quickly train and compare two classification algorithms.
+  duration: 10 minutes
+  level: 500
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Machine Learning
+    - Azure Machine Learning designer
 ---
 
 # Train a model with the Azure Machine Learning Designer

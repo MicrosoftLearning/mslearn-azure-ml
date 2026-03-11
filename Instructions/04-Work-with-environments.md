@@ -1,6 +1,13 @@
 ---
 lab:
-    title: 'Work with environments in Azure Machine Learning'
+  title: Work with environments in Azure Machine Learning
+  description: In this exercise, you will learn about environments and how to use them when training machine learning models with Azure Machine Learning compute.
+  duration: 10 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Machine Learning
 ---
 
 # Work with environments in Azure Machine Learning

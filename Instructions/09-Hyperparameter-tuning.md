@@ -1,6 +1,13 @@
 ---
 lab:
-    title: 'Perform hyperparameter tuning with a sweep job'
+  title: Perform hyperparameter tuning with a sweep job
+  description: In this exercise, you'll use Azure Machine Learning to tune hyperparameters by performing multiple training trials in parallel.
+  duration: 10 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Machine Learning
 ---
 
 # Perform hyperparameter tuning with a sweep job
