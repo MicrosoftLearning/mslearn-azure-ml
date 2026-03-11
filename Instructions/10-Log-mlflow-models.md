@@ -1,6 +1,10 @@
 ---
 lab:
-    title: 'Log and register models with MLflow'
+  title: Log and register models with MLflow
+  description: In this exercise, you'll use MLflow to log machine learning models.
+  duration: 10 minutes
+  level: 400
+  islab: true
 ---
 
 # Log and register models with MLflow
