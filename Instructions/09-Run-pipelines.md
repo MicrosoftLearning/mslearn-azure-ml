@@ -1,6 +1,16 @@
 ---
 lab:
-    title: 'Run pipelines in Azure Machine Learning'
+  title: Run pipelines in Azure Machine Learning
+  description: You can use the Python SDK to perform all of the tasks required to
+    create and operate a machine learning solution in Azure. Rather than perform these
+    tasks individually, you can use pipelines to orchestrate the steps required to
+    prepare data, run training scripts, and other tasks.
+  duration: 10 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Machine Learning
 ---
 
 # Run pipelines in Azure Machine Learning
