@@ -1,6 +1,13 @@
 ---
 lab:
-    title: 'Make data available in Azure Machine Learning'
+  title: Make data available in Azure Machine Learning
+  description: In this exercise, you'll explore datastores and data assets, which are the primary objects used to abstract data access in Azure Machine Learning.
+  duration: 10 minutes
+  level: 400
+  islab: true
+  primarytopics:
+    - Azure
+    - Azure Machine Learning
 ---
 
 # Make data available in Azure Machine Learning
