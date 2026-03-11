@@ -1,6 +1,16 @@
 ---
 lab:
-    title: 'Make data available in Azure Machine Learning'
+  title: Make data available in Azure Machine Learning
+  description: Although it's fairly common to work with data on their local file system,
+    in an enterprise environment it can be more effective to store the data in a central
+    location where multiple data scientists and machine learning engineers can access
+    it.
+  duration: 10 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Machine Learning
 ---
 
 # Make data available in Azure Machine Learning
