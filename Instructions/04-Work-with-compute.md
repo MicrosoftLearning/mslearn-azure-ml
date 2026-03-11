@@ -1,6 +1,14 @@
 ---
 lab:
-    title: 'Work with compute resources in Azure Machine Learning'
+  title: Work with compute resources in Azure Machine Learning
+  description: One of the key benefits of the cloud is the ability to use scalable,
+    on-demand compute resources for cost-effective processing of large data.
+  duration: 10 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Machine Learning
 ---
 
 # Work with compute resources in Azure Machine Learning
