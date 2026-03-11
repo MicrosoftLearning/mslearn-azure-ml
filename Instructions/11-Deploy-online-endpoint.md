@@ -1,6 +1,13 @@
 ---
 lab:
-    title: 'Deploy a model to a managed online endpoint'
+  title: Deploy a model to a managed online endpoint
+  description: To consume a model in an application, and get real-time predictions,
+    you'll want to deploy the model to a managed online endpoint. An MLflow model
+    is easily deployed since you won't need to define the environment or create the
+    scoring script.
+  duration: 10 minutes
+  level: 400
+  islab: true
 ---
 
 # Deploy a model to a managed online endpoint
