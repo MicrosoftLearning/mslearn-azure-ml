@@ -1,6 +1,10 @@
 ---
 lab:
-    title: 'Use MLflow to track training jobs'
+  title: Use MLflow to track training jobs
+  description: In this exercise, you'll use MLflow to track model training run as a command job.
+  duration: 10 minutes
+  level: 400
+  islab: true
 ---
 
 # Use MLflow to track training jobs
