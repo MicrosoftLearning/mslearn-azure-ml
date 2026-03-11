@@ -1,6 +1,10 @@
 ---
 lab:
-    title: 'Deploy a model to a batch endpoint'
+  title: Deploy a model to a batch endpoint
+  description: In this exercise, you'll deploy an MLflow model to a batch endpoint, and test it on sample data by submitting a job.
+  duration: 10 minutes
+  level: 400
+  islab: true
 ---
 
 # Deploy a model to a batch endpoint
