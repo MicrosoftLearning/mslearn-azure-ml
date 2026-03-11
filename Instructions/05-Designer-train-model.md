@@ -1,6 +1,16 @@
 ---
 lab:
-    title: 'Train a model with the Azure Machine Learning Designer'
+  title: Train a model with the Azure Machine Learning Designer
+  description: Azure Machine Learning Designer provides a drag and drop interface
+    with which you can define a workflow. You can create a workflow to train a model,
+    testing and comparing multiple algorithms with ease.
+  duration: 10 minutes
+  level: 500
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Machine Learning
+  - Azure Machine Learning designer
 ---
 
 # Train a model with the Azure Machine Learning Designer
