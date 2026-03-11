@@ -1,6 +1,17 @@
 ---
 lab:
-    title: 'Create and explore the Responsible AI dashboard'
+  title: Create and explore the Responsible AI dashboard
+  description: After you train your model, you'll want to evaluate your model to explore
+    whether it's performing as expected. Next to performance metrics, there are other
+    factors you can take into consideration. The Responsible AI dashboard in Azure
+    Machine Learning allows you to analyze the data and the model's predictions to
+    identify any bias or unfairness.
+  duration: 10 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Machine Learning
 ---
 
 # Create and explore the Responsible AI dashboard
