@@ -1,6 +1,12 @@
 ---
 lab:
-    title: 'Log and register models with MLflow'
+  title: Log and register models with MLflow
+  description: MLflow is an open-source platform for managing the end-to-end machine
+    learning lifecycle. When you log models with MLflow, you can easily move the model
+    across platforms and workloads.
+  duration: 10 minutes
+  level: 400
+  islab: true
 ---
 
 # Log and register models with MLflow
