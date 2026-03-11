@@ -1,6 +1,11 @@
 ---
 lab:
-    title: 'Find the best classification model with Automated Machine Learning'
+  title: Find the best classification model with Automated Machine Learning
+  description: Determining the right algorithm and preprocessing transformations for
+    model training can involve a lot of guesswork and experimentation.
+  duration: 10 minutes
+  level: 400
+  islab: true
 ---
 
 # Find the best classification model with Automated Machine Learning
