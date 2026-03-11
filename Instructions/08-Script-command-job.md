@@ -1,6 +1,15 @@
 ---
 lab:
-    title: 'Run a training script as a command job in Azure Machine Learning'
+  title: Run a training script as a command job in Azure Machine Learning
+  description: A notebook is ideal for experimentation and development. Once you've
+    developed a machine learning model and it's ready for production, you'll want
+    to train it with a script. You can run a script as a command job.
+  duration: 10 minutes
+  level: 400
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Machine Learning
 ---
 
 # Run a training script as a command job in Azure Machine Learning
